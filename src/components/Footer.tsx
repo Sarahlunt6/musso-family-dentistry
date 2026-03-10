@@ -67,10 +67,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="footer-content">
           {/* CTA Section */}
-          <div className="clinical-container p-8 sm:p-12 mb-16 bg-navy text-white">
+          <div className="rounded-4xl p-8 sm:p-12 mb-16 bg-[#1f2f5f] text-white">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div>
-                <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl">
+                <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl text-white">
                   Ready to transform your smile?
                 </h3>
                 <p className="mt-3 text-white/60 max-w-md">

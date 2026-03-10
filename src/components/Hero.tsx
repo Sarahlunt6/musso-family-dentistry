@@ -102,8 +102,8 @@ export default function Hero() {
       <div className="absolute inset-0">
         <div ref={imageRef} className="relative w-full h-full">
           <Image
-            src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069&auto=format&fit=crop"
-            alt="High-precision dental technology"
+            src="/dental-office.jpg"
+            alt="Musso Family Dentistry office"
             fill
             priority
             className="object-cover"

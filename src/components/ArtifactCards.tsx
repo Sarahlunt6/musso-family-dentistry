@@ -203,121 +203,6 @@ function SmileShuffler() {
 }
 
 // ============================================
-// TELEMETRY FEED - Monospace Typewriter
-// ============================================
-const telemetryLines = [
-  "SYSTEM LIVE .......................... OK",
-  "Scan Accuracy: 99.8% ................ PASS",
-  "Ceramic Grade: E-Max ................ LOADED",
-  "Shade Match: A2 ..................... VERIFIED",
-  "CAD/CAM Sync: 100ms ................. NOMINAL",
-  "Sterilization Cycle: Complete ....... READY",
-  "Patient Comfort Index: 98.4% ........ OPTIMAL",
-  "Digital Impression: Captured ........ SAVED",
-  "Treatment Plan: Finalized ........... APPROVED",
-];
-
-function TelemetryFeed() {
-  const [displayedLines, setDisplayedLines] = useState<string[]>([]);
-  const [currentLineIndex, setCurrentLineIndex] = useState(0);
-  const [currentCharIndex, setCurrentCharIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
-  const [lastSync, setLastSync] = useState<string>("--:--:-- --");
-
-  // Set time on client only to avoid hydration mismatch
-  useEffect(() => {
-    setLastSync(new Date().toLocaleTimeString());
-  }, []);
-
-  useEffect(() => {
-    if (!isTyping) return;
-
-    const currentLine = telemetryLines[currentLineIndex];
-
-    if (currentCharIndex < currentLine.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedLines((prev) => {
-          const newLines = [...prev];
-          newLines[currentLineIndex] = currentLine.substring(0, currentCharIndex + 1);
-          return newLines;
-        });
-        setCurrentCharIndex((prev) => prev + 1);
-      }, 15 + Math.random() * 25);
-
-      return () => clearTimeout(timeout);
-    } else {
-      // Line complete, move to next
-      if (currentLineIndex < telemetryLines.length - 1) {
-        const timeout = setTimeout(() => {
-          setCurrentLineIndex((prev) => prev + 1);
-          setCurrentCharIndex(0);
-          setDisplayedLines((prev) => [...prev, ""]);
-        }, 400);
-
-        return () => clearTimeout(timeout);
-      } else {
-        // All lines complete, restart
-        const timeout = setTimeout(() => {
-          setDisplayedLines([]);
-          setCurrentLineIndex(0);
-          setCurrentCharIndex(0);
-        }, 3000);
-
-        return () => clearTimeout(timeout);
-      }
-    }
-  }, [currentLineIndex, currentCharIndex, isTyping]);
-
-  return (
-    <div className="clinical-container overflow-hidden bg-navy text-white">
-      {/* Header */}
-      <div className="p-6 border-b border-white/10">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-3 h-3 rounded-full bg-green status-dot" />
-            <h3 className="font-display text-xl">Telemetry Feed</h3>
-          </div>
-          <button
-            onClick={() => setIsTyping(!isTyping)}
-            className={cn(
-              "px-3 py-1.5 rounded-full text-xs font-medium transition-colors",
-              isTyping ? "bg-green/20 text-green" : "bg-white/10 text-white/60"
-            )}
-          >
-            {isTyping ? "LIVE" : "PAUSED"}
-          </button>
-        </div>
-      </div>
-
-      {/* Terminal Display */}
-      <div className="p-6 font-mono text-sm h-[300px] overflow-hidden">
-        <div className="space-y-1">
-          {displayedLines.map((line, index) => (
-            <div key={index} className="flex items-center">
-              <span className="text-green mr-2">{">"}</span>
-              <span className="text-white/90">{line}</span>
-              {index === currentLineIndex && isTyping && (
-                <span className="typewriter-cursor" />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="p-4 bg-white/5 border-t border-white/10">
-        <div className="flex items-center justify-between text-xs">
-          <span className="text-white/40">
-            Last sync: {lastSync}
-          </span>
-          <span className="text-green">All systems operational</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ============================================
 // PROTOCOL SCHEDULER - Shimmer Calendar
 // ============================================
 function ProtocolScheduler() {
@@ -514,16 +399,13 @@ export default function ArtifactCards() {
           </p>
         </div>
 
-        {/* Three Artifact Cards Grid */}
-        <div className="artifact-cards-grid grid lg:grid-cols-3 gap-6">
-          <div className="artifact-card lg:col-span-1">
+        {/* Two Artifact Cards Grid */}
+        <div className="artifact-cards-grid grid lg:grid-cols-2 gap-6">
+          <div className="artifact-card">
             <ProtocolScheduler />
           </div>
-          <div className="artifact-card lg:col-span-1">
+          <div className="artifact-card">
             <SmileShuffler />
-          </div>
-          <div className="artifact-card lg:col-span-1">
-            <TelemetryFeed />
           </div>
         </div>
       </div>

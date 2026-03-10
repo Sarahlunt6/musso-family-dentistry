@@ -1102,3 +1102,42 @@ https://react.dev/link/hydration-mismatch
 [01:31:51.368] Server  LOG     ✓ Compiled in 270ms
 [01:44:09.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [01:44:09.379] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:45:09.685] Server  LOG     ✓ Compiled in 240ms
+[01:45:28.690] Server  LOG     ✓ Compiled in 76ms
+[01:48:32.121] Server  LOG     ✓ Compiled in 89ms
+[01:53:19.267] Server  LOG     ✓ Compiled in 182ms
+[01:55:37.251] Server  LOG     ✓ Compiled in 121ms
+[01:57:31.867] Server  LOG     ✓ Compiled in 106ms
+[01:57:42.610] Server  LOG     ✓ Compiled in 0ms
+[01:57:43.005] Browser WARN    Element not found: .doctor-section
+[01:57:43.005] Browser WARN    Element not found: .doctor-section
+[01:57:43.005] Browser WARN    Element not found: .doctor-section
+[01:57:43.005] Browser WARN    Element not found: .doctor-section
+[01:57:43.005] Browser WARN    Image with src "/dr-musso.webp" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[01:58:26.406] Server  LOG     ✓ Compiled in 201ms
+[01:59:30.243] Server  LOG     ✓ Compiled in 96ms
+[01:59:36.404] Server  LOG     ✓ Compiled in 21ms
+[02:00:03.081] Server  LOG     ✓ Compiled in 65ms
+[02:00:14.991] Server  LOG     ✓ Compiled in 60ms
+[02:00:16.006] Browser WARN    Image with src "/dr-mark-musso.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:00:16.006] Browser WARN    Image with src "/dr-musso.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:00:16.006] Browser WARN    Image with src "/dr-bounds.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:00:36.376] Server  LOG     ✓ Compiled in 197ms
+[02:00:50.942] Server  LOG     ✓ Compiled in 113ms
+[02:00:52.005] Browser WARN    Image with src "/dr-musso.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:00:52.005] Browser WARN    Image with src "/dr-mark-musso.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:00:52.005] Browser WARN    Image with src "/dr-bounds.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:02:50.357] Server  LOG     ✓ Compiled in 166ms
+[02:02:57.900] Server  LOG     ✓ Compiled in 67ms
+[02:03:06.836] Server  LOG     ✓ Compiled in 36ms
+[02:05:30.199] Server  LOG     ✓ Compiled in 216ms
+[02:05:54.322] Server  LOG     ✓ Compiled in 244ms
+[02:09:55.634] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:12:03.955] Server  LOG     ✓ Compiled in 131ms
+[02:12:04.890] Server  LOG     ✓ Compiled in 31ms
+[02:12:05.955] Server  LOG     ✓ Compiled in 34ms
+[02:12:06.004] Browser WARN    Image with src "/dental-office.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:12:06.004] Browser WARN    Image with src "/dental-office.jpg" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[02:14:17.001] Server  LOG     ✓ Compiled in 60ms
+[02:14:33.567] Server  LOG     ✓ Compiled in 136ms
+[02:14:41.527] Server  LOG     ✓ Compiled in 93ms

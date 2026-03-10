@@ -1593,212 +1593,6 @@ function SmileShuffler() {
     }, this);
 }
 // ============================================
-// TELEMETRY FEED - Monospace Typewriter
-// ============================================
-const telemetryLines = [
-    "SYSTEM LIVE .......................... OK",
-    "Scan Accuracy: 99.8% ................ PASS",
-    "Ceramic Grade: E-Max ................ LOADED",
-    "Shade Match: A2 ..................... VERIFIED",
-    "CAD/CAM Sync: 100ms ................. NOMINAL",
-    "Sterilization Cycle: Complete ....... READY",
-    "Patient Comfort Index: 98.4% ........ OPTIMAL",
-    "Digital Impression: Captured ........ SAVED",
-    "Treatment Plan: Finalized ........... APPROVED"
-];
-function TelemetryFeed() {
-    const [displayedLines, setDisplayedLines] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [currentLineIndex, setCurrentLineIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [currentCharIndex, setCurrentCharIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [isTyping, setIsTyping] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
-    const [lastSync, setLastSync] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("--:--:-- --");
-    // Set time on client only to avoid hydration mismatch
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        setLastSync(new Date().toLocaleTimeString());
-    }, []);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (!isTyping) return;
-        const currentLine = telemetryLines[currentLineIndex];
-        if (currentCharIndex < currentLine.length) {
-            const timeout = setTimeout(()=>{
-                setDisplayedLines((prev)=>{
-                    const newLines = [
-                        ...prev
-                    ];
-                    newLines[currentLineIndex] = currentLine.substring(0, currentCharIndex + 1);
-                    return newLines;
-                });
-                setCurrentCharIndex((prev)=>prev + 1);
-            }, 15 + Math.random() * 25);
-            return ()=>clearTimeout(timeout);
-        } else {
-            // Line complete, move to next
-            if (currentLineIndex < telemetryLines.length - 1) {
-                const timeout = setTimeout(()=>{
-                    setCurrentLineIndex((prev)=>prev + 1);
-                    setCurrentCharIndex(0);
-                    setDisplayedLines((prev)=>[
-                            ...prev,
-                            ""
-                        ]);
-                }, 400);
-                return ()=>clearTimeout(timeout);
-            } else {
-                // All lines complete, restart
-                const timeout = setTimeout(()=>{
-                    setDisplayedLines([]);
-                    setCurrentLineIndex(0);
-                    setCurrentCharIndex(0);
-                }, 3000);
-                return ()=>clearTimeout(timeout);
-            }
-        }
-    }, [
-        currentLineIndex,
-        currentCharIndex,
-        isTyping
-    ]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "clinical-container overflow-hidden bg-navy text-white",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 border-b border-white/10",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center justify-between",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center gap-3",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-3 h-3 rounded-full bg-green status-dot"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 277,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "font-display text-xl",
-                                    children: "Telemetry Feed"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 278,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 276,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            onClick: ()=>setIsTyping(!isTyping),
-                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("px-3 py-1.5 rounded-full text-xs font-medium transition-colors", isTyping ? "bg-green/20 text-green" : "bg-white/10 text-white/60"),
-                            children: isTyping ? "LIVE" : "PAUSED"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 280,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 275,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/components/ArtifactCards.tsx",
-                lineNumber: 274,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 font-mono text-sm h-[300px] overflow-hidden",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "space-y-1",
-                    children: displayedLines.map((line, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-green mr-2",
-                                    children: ">"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 297,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-white/90",
-                                    children: line
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 298,
-                                    columnNumber: 15
-                                }, this),
-                                index === currentLineIndex && isTyping && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "typewriter-cursor"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 300,
-                                    columnNumber: 17
-                                }, this)
-                            ]
-                        }, index, true, {
-                            fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 296,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
-                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 294,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/components/ArtifactCards.tsx",
-                lineNumber: 293,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-4 bg-white/5 border-t border-white/10",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center justify-between text-xs",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-white/40",
-                            children: [
-                                "Last sync: ",
-                                lastSync
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 310,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "text-green",
-                            children: "All systems operational"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 313,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 309,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/components/ArtifactCards.tsx",
-                lineNumber: 308,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/components/ArtifactCards.tsx",
-        lineNumber: 272,
-        columnNumber: 5
-    }, this);
-}
-// ============================================
 // PROTOCOL SCHEDULER - Shimmer Calendar
 // ============================================
 function ProtocolScheduler() {
@@ -1848,7 +1642,7 @@ function ProtocolScheduler() {
                                     children: "Schedule Your Visit"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 347,
+                                    lineNumber: 232,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1856,13 +1650,13 @@ function ProtocolScheduler() {
                                     children: "Select an available date"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 348,
+                                    lineNumber: 233,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 346,
+                            lineNumber: 231,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1872,7 +1666,7 @@ function ProtocolScheduler() {
                                     className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 236,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1884,24 +1678,24 @@ function ProtocolScheduler() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 352,
+                                    lineNumber: 237,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 350,
+                            lineNumber: 235,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 345,
+                    lineNumber: 230,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                lineNumber: 344,
+                lineNumber: 229,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1922,12 +1716,12 @@ function ProtocolScheduler() {
                                 children: day
                             }, day, false, {
                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 364,
+                                lineNumber: 249,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                        lineNumber: 362,
+                        lineNumber: 247,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1937,7 +1731,7 @@ function ProtocolScheduler() {
                                     className: "aspect-square"
                                 }, `pad-${index}`, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 374,
+                                    lineNumber: 259,
                                     columnNumber: 13
                                 }, this)),
                             days.map((day)=>{
@@ -1954,14 +1748,14 @@ function ProtocolScheduler() {
                                     children: day
                                 }, day, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 385,
+                                    lineNumber: 270,
                                     columnNumber: 15
                                 }, this);
                             })
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                        lineNumber: 371,
+                        lineNumber: 256,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1974,7 +1768,7 @@ function ProtocolScheduler() {
                                         className: "w-3 h-3 rounded bg-green"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                                        lineNumber: 409,
+                                        lineNumber: 294,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1982,13 +1776,13 @@ function ProtocolScheduler() {
                                         children: "Selected"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                                        lineNumber: 410,
+                                        lineNumber: 295,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 408,
+                                lineNumber: 293,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1998,7 +1792,7 @@ function ProtocolScheduler() {
                                         className: "w-3 h-3 rounded bg-green/20 border border-green/30"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                                        lineNumber: 413,
+                                        lineNumber: 298,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2006,13 +1800,13 @@ function ProtocolScheduler() {
                                         children: "Available"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                                        lineNumber: 414,
+                                        lineNumber: 299,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 412,
+                                lineNumber: 297,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2022,7 +1816,7 @@ function ProtocolScheduler() {
                                         className: "w-3 h-3 rounded bg-navy/10"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                                        lineNumber: 417,
+                                        lineNumber: 302,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2030,25 +1824,25 @@ function ProtocolScheduler() {
                                         children: "Unavailable"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                                        lineNumber: 418,
+                                        lineNumber: 303,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 416,
+                                lineNumber: 301,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                        lineNumber: 407,
+                        lineNumber: 292,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                lineNumber: 360,
+                lineNumber: 245,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -2080,12 +1874,12 @@ function ProtocolScheduler() {
                                                 className: "w-5 h-5 text-green"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                                lineNumber: 436,
+                                                lineNumber: 321,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                                            lineNumber: 435,
+                                            lineNumber: 320,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2101,7 +1895,7 @@ function ProtocolScheduler() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                                    lineNumber: 439,
+                                                    lineNumber: 324,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2109,19 +1903,19 @@ function ProtocolScheduler() {
                                                     children: "3 time slots available"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                                    lineNumber: 442,
+                                                    lineNumber: 327,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                                            lineNumber: 438,
+                                            lineNumber: 323,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 434,
+                                    lineNumber: 319,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2132,47 +1926,47 @@ function ProtocolScheduler() {
                                             children: "Book Now"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                                            lineNumber: 449,
+                                            lineNumber: 334,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                             className: "w-4 h-4 group-hover:translate-x-0.5 transition-transform"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                                            lineNumber: 450,
+                                            lineNumber: 335,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 445,
+                                    lineNumber: 330,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 433,
+                            lineNumber: 318,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ArtifactCards.tsx",
-                        lineNumber: 432,
+                        lineNumber: 317,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 426,
+                    lineNumber: 311,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                lineNumber: 424,
+                lineNumber: 309,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ArtifactCards.tsx",
-        lineNumber: 342,
+        lineNumber: 227,
         columnNumber: 5
     }, this);
 }
@@ -2224,14 +2018,14 @@ function ArtifactCards() {
                                     className: "status-dot w-1.5 h-1.5 rounded-full bg-green"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 505,
+                                    lineNumber: 390,
                                     columnNumber: 13
                                 }, this),
                                 "Digital Instruments"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 504,
+                            lineNumber: 389,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2243,13 +2037,13 @@ function ArtifactCards() {
                                     children: "Artifacts"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                                    lineNumber: 509,
+                                    lineNumber: 394,
                                     columnNumber: 23
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 508,
+                            lineNumber: 393,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2257,69 +2051,57 @@ function ArtifactCards() {
                             children: "Interactive demonstrations of our technical mastery and commitment to clinical excellence."
                         }, void 0, false, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 511,
+                            lineNumber: 396,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 503,
+                    lineNumber: 388,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "artifact-cards-grid grid lg:grid-cols-3 gap-6",
+                    className: "artifact-cards-grid grid lg:grid-cols-2 gap-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "artifact-card lg:col-span-1",
+                            className: "artifact-card",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProtocolScheduler, {}, void 0, false, {
                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 520,
+                                lineNumber: 405,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 519,
+                            lineNumber: 404,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "artifact-card lg:col-span-1",
+                            className: "artifact-card",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SmileShuffler, {}, void 0, false, {
                                 fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 523,
+                                lineNumber: 408,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 522,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "artifact-card lg:col-span-1",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TelemetryFeed, {}, void 0, false, {
-                                fileName: "[project]/src/components/ArtifactCards.tsx",
-                                lineNumber: 526,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ArtifactCards.tsx",
-                            lineNumber: 525,
+                            lineNumber: 407,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ArtifactCards.tsx",
-                    lineNumber: 518,
+                    lineNumber: 403,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ArtifactCards.tsx",
-            lineNumber: 501,
+            lineNumber: 386,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ArtifactCards.tsx",
-        lineNumber: 500,
+        lineNumber: 385,
         columnNumber: 5
     }, this);
 }
@@ -2792,29 +2574,27 @@ function StackingArchive() {
             const cards = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].utils.toArray(".stack-card");
             cards.forEach((card, index)=>{
                 const isLast = index === cards.length - 1;
-                // Pin each card and animate exit
+                // Pin each card
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollTrigger"].create({
                     trigger: card,
                     start: "top top",
                     end: isLast ? "top top" : "+=100%",
                     pin: true,
-                    pinSpacing: !isLast,
-                    scrub: 1,
-                    onUpdate: (self)=>{
-                        if (!isLast) {
-                            // Scale down to 0.9 and blur on exit
-                            const scale = 1 - self.progress * 0.1;
-                            const blur = self.progress * 15;
-                            const opacity = 1 - self.progress * 0.5;
-                            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].set(card, {
-                                scale,
-                                filter: `blur(${blur}px)`,
-                                opacity,
-                                transformOrigin: "center center"
-                            });
-                        }
-                    }
+                    pinSpacing: !isLast
                 });
+                // Animate exit with proper GSAP tween (smoother than onUpdate)
+                if (!isLast) {
+                    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].to(card, {
+                        scale: 0.9,
+                        opacity: 0.5,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top top",
+                            end: "+=100%",
+                            scrub: 0.5
+                        }
+                    });
+                }
                 // Card entrance animation
                 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].from(card.querySelector(".card-content"), {
                     opacity: 0,
@@ -2848,14 +2628,14 @@ function StackingArchive() {
                                     className: "status-dot w-1.5 h-1.5 rounded-full bg-green"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 146,
                                     columnNumber: 13
                                 }, this),
                                 "The Patient Journey"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/StackingArchive.tsx",
-                            lineNumber: 147,
+                            lineNumber: 145,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2868,13 +2648,13 @@ function StackingArchive() {
                                     children: "Lasting Confidence"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 151,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/StackingArchive.tsx",
-                            lineNumber: 151,
+                            lineNumber: 149,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2882,18 +2662,18 @@ function StackingArchive() {
                             children: "A systematic approach refined over 25 years, combining clinical science with genuine human care."
                         }, void 0, false, {
                             fileName: "[project]/src/components/StackingArchive.tsx",
-                            lineNumber: 155,
+                            lineNumber: 153,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/StackingArchive.tsx",
-                    lineNumber: 146,
+                    lineNumber: 144,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/StackingArchive.tsx",
-                lineNumber: 145,
+                lineNumber: 143,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2921,7 +2701,7 @@ function StackingArchive() {
                                                             children: protocol.number
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/StackingArchive.tsx",
-                                                            lineNumber: 190,
+                                                            lineNumber: 188,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2929,13 +2709,13 @@ function StackingArchive() {
                                                             children: protocol.icon
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/StackingArchive.tsx",
-                                                            lineNumber: 193,
+                                                            lineNumber: 191,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 189,
+                                                    lineNumber: 187,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2943,7 +2723,7 @@ function StackingArchive() {
                                                     children: protocol.phase
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 198,
+                                                    lineNumber: 196,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2951,7 +2731,7 @@ function StackingArchive() {
                                                     children: protocol.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 201,
+                                                    lineNumber: 199,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2959,7 +2739,7 @@ function StackingArchive() {
                                                     children: protocol.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 204,
+                                                    lineNumber: 202,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2971,25 +2751,25 @@ function StackingArchive() {
                                                                     className: "w-1.5 h-1.5 rounded-full bg-green"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                                    lineNumber: 215,
+                                                                    lineNumber: 213,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     children: detail
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                                    lineNumber: 216,
+                                                                    lineNumber: 214,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, detail, true, {
                                                             fileName: "[project]/src/components/StackingArchive.tsx",
-                                                            lineNumber: 211,
+                                                            lineNumber: 209,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 209,
+                                                    lineNumber: 207,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3010,24 +2790,24 @@ function StackingArchive() {
                                                                 d: "M17 8l4 4m0 0l-4 4m4-4H3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/StackingArchive.tsx",
-                                                                lineNumber: 233,
+                                                                lineNumber: 231,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/StackingArchive.tsx",
-                                                            lineNumber: 227,
+                                                            lineNumber: 225,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 222,
+                                                    lineNumber: 220,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/StackingArchive.tsx",
-                                            lineNumber: 182,
+                                            lineNumber: 180,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3041,7 +2821,7 @@ function StackingArchive() {
                                                     sizes: "(max-width: 768px) 100vw, 50vw"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 250,
+                                                    lineNumber: 248,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3051,50 +2831,50 @@ function StackingArchive() {
                                                         children: protocol.number
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/StackingArchive.tsx",
-                                                        lineNumber: 265,
+                                                        lineNumber: 263,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                                    lineNumber: 259,
+                                                    lineNumber: 257,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/StackingArchive.tsx",
-                                            lineNumber: 244,
+                                            lineNumber: 242,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/StackingArchive.tsx",
-                                    lineNumber: 175,
+                                    lineNumber: 173,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/StackingArchive.tsx",
-                                lineNumber: 174,
+                                lineNumber: 172,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/StackingArchive.tsx",
-                            lineNumber: 173,
+                            lineNumber: 171,
                             columnNumber: 13
                         }, this)
                     }, protocol.id, false, {
                         fileName: "[project]/src/components/StackingArchive.tsx",
-                        lineNumber: 165,
+                        lineNumber: 163,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/StackingArchive.tsx",
-                lineNumber: 163,
+                lineNumber: 161,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/StackingArchive.tsx",
-        lineNumber: 143,
+        lineNumber: 141,
         columnNumber: 5
     }, this);
 }
@@ -3222,14 +3002,14 @@ function Footer() {
                 className: "footer-content",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "clinical-container p-8 sm:p-12 mb-16 bg-navy text-white",
+                        className: "rounded-4xl p-8 sm:p-12 mb-16 bg-[#1f2f5f] text-white",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col lg:flex-row items-center justify-between gap-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-display text-2xl sm:text-3xl lg:text-4xl",
+                                            className: "font-display text-2xl sm:text-3xl lg:text-4xl text-white",
                                             children: "Ready to transform your smile?"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Footer.tsx",

@@ -96,30 +96,28 @@ export default function StackingArchive() {
       cards.forEach((card, index) => {
         const isLast = index === cards.length - 1;
 
-        // Pin each card and animate exit
+        // Pin each card
         ScrollTrigger.create({
           trigger: card,
           start: "top top",
           end: isLast ? "top top" : "+=100%",
           pin: true,
           pinSpacing: !isLast,
-          scrub: 1,
-          onUpdate: (self) => {
-            if (!isLast) {
-              // Scale down to 0.9 and blur on exit
-              const scale = 1 - self.progress * 0.1;
-              const blur = self.progress * 15;
-              const opacity = 1 - self.progress * 0.5;
-
-              gsap.set(card, {
-                scale,
-                filter: `blur(${blur}px)`,
-                opacity,
-                transformOrigin: "center center",
-              });
-            }
-          },
         });
+
+        // Animate exit with proper GSAP tween (smoother than onUpdate)
+        if (!isLast) {
+          gsap.to(card, {
+            scale: 0.9,
+            opacity: 0.5,
+            scrollTrigger: {
+              trigger: card,
+              start: "top top",
+              end: "+=100%",
+              scrub: 0.5,
+            },
+          });
+        }
 
         // Card entrance animation
         gsap.from(card.querySelector(".card-content"), {

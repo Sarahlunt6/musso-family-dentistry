@@ -65,6 +65,33 @@ const services = [
   "Preventive Care",
 ];
 
+const doctors = [
+  {
+    id: "mike",
+    name: "Dr. Mike A. Musso",
+    title: "DDS",
+    image: "/dr-musso.webp",
+    credentials: "Las Vegas Institute • Invisalign Certified",
+    years: "27+",
+  },
+  {
+    id: "mark",
+    name: "Dr. Mark C. Musso",
+    title: "DDS",
+    image: "/dr-mark-musso.webp",
+    credentials: "Implant Dentistry • Clear Aligners",
+    years: "30+",
+  },
+  {
+    id: "bounds",
+    name: "Dr. John Bounds",
+    title: "DDS",
+    image: "/dr-bounds.webp",
+    credentials: "Restorative & Functional Dentistry",
+    years: "15+",
+  },
+];
+
 export default function AlternativeB() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -285,8 +312,8 @@ export default function AlternativeB() {
         <div className="absolute inset-0">
           <div ref={imageRef} className="relative w-full h-full">
             <Image
-              src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069&auto=format&fit=crop"
-              alt="Modern dental precision"
+              src="/dental-office.jpg"
+              alt="Musso Family Dentistry office"
               fill
               priority
               className="object-cover"
@@ -462,8 +489,72 @@ export default function AlternativeB() {
         </div>
       </section>
 
+      {/* Meet Our Doctors */}
+      <section className="py-24 lg:py-32 bg-[#FAFAF8]">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-green" />
+              Meet Your Dentists
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-navy tracking-tight">
+              A Family <span className="hero-serif">Legacy</span> of Excellence
+            </h2>
+            <p className="mt-4 text-lg text-navy/50 max-w-2xl mx-auto">
+              Three generations committed to your smile. Your care is our family tradition.
+            </p>
+          </div>
+
+          {/* Doctors Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {doctors.map((doctor) => (
+              <div key={doctor.id} className="group">
+                <div className="clinical-container overflow-hidden">
+                  {/* Image */}
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <Image
+                      src={doctor.image}
+                      alt={doctor.name}
+                      fill
+                      className="object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Years Badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className="px-3 py-1.5 bg-green text-white text-sm font-medium rounded-full">
+                        {doctor.years} Years
+                      </div>
+                    </div>
+                  </div>
+                  {/* Content */}
+                  <div className="p-6 text-center">
+                    <h3 className="font-display text-xl text-navy">
+                      {doctor.name}, <span className="hero-serif">{doctor.title}</span>
+                    </h3>
+                    <p className="mt-2 text-green text-sm font-medium">
+                      {doctor.credentials}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* View Full Team Link */}
+          <div className="mt-12 text-center">
+            <a
+              href="/team"
+              className="inline-flex items-center gap-2 text-green font-medium hover:gap-3 transition-all"
+            >
+              Meet the Full Team
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section className="about-section py-24 lg:py-32 bg-[#FAFAF8] overflow-hidden">
+      <section className="about-section py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
@@ -562,8 +653,109 @@ export default function AlternativeB() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Map Section */}
       <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-green" />
+              Visit Us
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-navy tracking-tight">
+              Find Our <span className="hero-serif">Office</span>
+            </h2>
+            <p className="mt-4 text-lg text-navy/50 max-w-2xl mx-auto">
+              Conveniently located in Garland, TX. We look forward to welcoming you.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Contact Info */}
+            <div className="lg:col-span-1">
+              <div className="clinical-container p-8 h-full">
+                <h3 className="font-display text-xl text-navy mb-6">Contact Information</h3>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-green/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-green" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-navy mb-1">Address</p>
+                      <p className="text-navy/60 text-sm">513 W Centerville Rd<br />Garland, TX 75041</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-green/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-green" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-navy mb-1">Phone</p>
+                      <a href="tel:+19722781827" className="text-navy/60 text-sm hover:text-green transition-colors">(972) 278-1827</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-green/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-green" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-navy mb-1">Email</p>
+                      <a href="mailto:info@mussofamilydentistry.com" className="text-navy/60 text-sm hover:text-green transition-colors">info@mussofamilydentistry.com</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-green/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-green" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-navy mb-1">Hours</p>
+                      <div className="text-navy/60 text-sm space-y-1">
+                        <p>Mon - Fri: 8:00am - 5:00pm</p>
+                        <p>Saturday: By Appointment</p>
+                        <p>Sunday: Closed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir//513+W+Centerville+Rd,+Garland,+TX+75041"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-green text-white font-medium rounded-full hover:bg-navy transition-colors"
+                >
+                  Get Directions
+                  <MapPin className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Map */}
+            <div className="lg:col-span-2">
+              <div className="clinical-container overflow-hidden h-full min-h-[400px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6702.427230155997!2d-96.6375073!3d32.8660671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864ea7197be1533d%3A0xd4a3f180d2333d8!2s513%20W%20Centerville%20Rd%2C%20Garland%2C%20TX%2075041!5e0!3m2!1sen!2sus!4v1773165329310!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "400px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Musso Family Dentistry Location"
+                  className="rounded-4xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 lg:py-32 bg-[#FAFAF8]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-green" />
