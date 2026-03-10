@@ -1,0 +1,657 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Menu,
+  X,
+  ArrowRight,
+  ArrowUpRight,
+  Play,
+  Star,
+  Award,
+  Clock,
+  Sparkles,
+  Shield,
+  Heart,
+  Check,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+
+gsap.registerPlugin(ScrollTrigger);
+
+// ============================================
+// ALTERNATIVE B: ARCHITECTURAL ELEGANCE
+// Clean lines, premium feel, refined typography
+// ============================================
+
+const expertise = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "Deep listening, 3D imaging, and comprehensive assessment reveal the complete picture of your oral health.",
+    icon: <Sparkles className="w-5 h-5" />,
+  },
+  {
+    number: "02",
+    title: "Artistry",
+    description: "Precision techniques refined over decades transform your smile with meticulous attention to every detail.",
+    icon: <Shield className="w-5 h-5" />,
+  },
+  {
+    number: "03",
+    title: "Partnership",
+    description: "Your transformation continues with maintenance programs designed to protect your investment for decades.",
+    icon: <Heart className="w-5 h-5" />,
+  },
+];
+
+const stats = [
+  { value: "25+", label: "Years of Excellence" },
+  { value: "15,000+", label: "Smiles Transformed" },
+  { value: "98.7%", label: "Patient Satisfaction" },
+  { value: "4.9★", label: "Average Rating" },
+];
+
+const services = [
+  "Cosmetic Dentistry",
+  "Implant Restorations",
+  "Full-Mouth Rehabilitation",
+  "Preventive Care",
+];
+
+export default function AlternativeB() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
+  const line1Ref = useRef<HTMLSpanElement>(null);
+  const line2Ref = useRef<HTMLSpanElement>(null);
+  const sublineRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Hero animation timeline
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+      gsap.set([line1Ref.current, line2Ref.current, sublineRef.current, ctaRef.current], {
+        opacity: 0,
+        y: 80,
+      });
+      gsap.set(imageRef.current, {
+        opacity: 0,
+        scale: 1.15,
+        clipPath: "inset(100% 0 0 0)",
+      });
+      gsap.set(badgeRef.current, {
+        opacity: 0,
+        y: 20,
+      });
+
+      tl.to(line1Ref.current, { opacity: 1, y: 0, duration: 1.4 })
+        .to(line2Ref.current, { opacity: 1, y: 0, duration: 1.4 }, "-=1.1")
+        .to(sublineRef.current, { opacity: 1, y: 0, duration: 1 }, "-=0.9")
+        .to(ctaRef.current, { opacity: 1, y: 0, duration: 0.8 }, "-=0.6")
+        .to(imageRef.current, {
+          opacity: 1,
+          scale: 1,
+          clipPath: "inset(0% 0 0 0)",
+          duration: 1.6,
+          ease: "power3.inOut",
+        }, "-=1.2")
+        .to(badgeRef.current, { opacity: 1, y: 0, duration: 0.6 }, "-=0.5");
+
+      // Stats animation
+      gsap.fromTo(".stat-item",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".stats-section",
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Expertise items
+      gsap.fromTo(".expertise-item",
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".expertise-section",
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // About content
+      gsap.fromTo(".about-content",
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".about-section",
+            start: "top 70%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // About image parallax
+      gsap.to(".about-image-inner", {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
+      // Quote reveal
+      gsap.fromTo(".quote-content",
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".quote-section",
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Services list
+      gsap.fromTo(".service-item",
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".services-list",
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="bg-white text-navy">
+      {/* Navbar */}
+      <nav
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+          isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        )}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between h-20">
+            <a href="/alt-b" className="relative z-10">
+              <Image
+                src="/logo.webp"
+                alt="Musso Family Dentistry"
+                width={180}
+                height={45}
+                className="h-10 w-auto"
+              />
+            </a>
+
+            <div className="hidden lg:flex items-center gap-10">
+              {["About", "Services", "Team", "Contact"].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="text-sm text-navy/70 hover:text-green transition-colors"
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+
+            <a
+              href="/contact"
+              className="hidden lg:flex items-center gap-2 px-6 py-3 bg-green text-white text-sm font-medium rounded-full hover:bg-navy transition-colors"
+            >
+              Book Consultation
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="lg:hidden p-2 text-navy"
+            >
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {menuOpen && (
+          <div className="lg:hidden bg-navy px-6 py-8">
+            {["About", "Services", "Team", "Contact"].map((item) => (
+              <a key={item} href="#" className="block py-3 text-white/80 hover:text-white">{item}</a>
+            ))}
+            <a href="/contact" className="block w-full text-center mt-4 px-6 py-3 bg-green text-white rounded-full">
+              Book Consultation
+            </a>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero - Split Layout */}
+      <section
+        ref={heroRef}
+        className="relative min-h-[100dvh] flex items-center overflow-hidden bg-white"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <div ref={imageRef} className="relative w-full h-full">
+            <Image
+              src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069&auto=format&fit=crop"
+              alt="Modern dental precision"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+            {/* Professional gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-6 w-full pt-20">
+          <div className="max-w-3xl">
+            {/* Headline */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
+              <span ref={line1Ref} className="block hero-sans">
+                Precision meets
+              </span>
+              <span
+                ref={line2Ref}
+                className="block hero-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl mt-1"
+              >
+                Modern Care.
+              </span>
+            </h1>
+
+            {/* Subline */}
+            <p
+              ref={sublineRef}
+              className="mt-8 text-lg sm:text-xl text-navy/60 leading-relaxed max-w-xl"
+            >
+              Where clinical excellence meets genuine human connection. We craft smiles
+              with the same meticulous attention a master artisan devotes to each creation.
+            </p>
+
+            {/* CTA Buttons */}
+            <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="/contact"
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-green text-white font-medium rounded-full overflow-hidden"
+              >
+                <span className="relative z-10">Begin Your Journey</span>
+                <ArrowRight className="relative z-10 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              </a>
+
+              <button className="group flex items-center gap-3 px-6 py-4 text-navy/70 hover:text-navy transition-colors">
+                <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-clinical group-hover:shadow-clinical-lg transition-shadow">
+                  <Play className="w-4 h-4 ml-0.5 fill-navy text-navy" />
+                </span>
+                <span className="font-medium">Watch Our Story</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Floating Badge */}
+          <div
+            ref={badgeRef}
+            className="absolute bottom-12 right-6 lg:right-12 hidden md:block"
+          >
+            <div className="clinical-container px-6 py-4 flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="w-10 h-10 rounded-full bg-navy/10 border-2 border-white flex items-center justify-center"
+                  >
+                    <span className="text-xs font-medium text-navy/60">
+                      {["JM", "SK", "DR"][i - 1]}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-4 h-4 text-green fill-green"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-navy/60 mt-1">
+                  <span className="font-semibold text-navy">4.9</span> from 500+ reviews
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <span className="text-[10px] text-navy/30 uppercase tracking-[0.2em]">
+            Scroll
+          </span>
+          <div className="w-5 h-8 rounded-full border border-navy/20 flex items-start justify-center p-1">
+            <div className="w-1 h-2.5 rounded-full bg-green animate-bounce" />
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="stats-section py-12 bg-navy">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="stat-item text-center">
+                <p className="font-display text-4xl sm:text-5xl text-green font-semibold">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-white/50 text-sm">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise */}
+      <section className="expertise-section py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-green" />
+              The Patient Journey
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-navy tracking-tight max-w-3xl mx-auto">
+              Three Phases to{" "}
+              <span className="hero-serif">Lasting Confidence</span>
+            </h2>
+            <p className="mt-6 text-lg text-navy/50 max-w-2xl mx-auto">
+              A systematic approach refined over 25 years, combining clinical
+              science with genuine human care.
+            </p>
+          </div>
+
+          {/* Expertise Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {expertise.map((item) => (
+              <div
+                key={item.number}
+                className="expertise-item group"
+              >
+                <div className="clinical-container p-8 h-full hover:shadow-clinical-lg transition-all duration-300">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-5xl font-display font-bold text-navy/5">
+                      {item.number}
+                    </span>
+                    <div className="w-12 h-12 rounded-2xl bg-green/10 flex items-center justify-center text-green">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <h3 className="font-display text-xl text-navy mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-navy/60 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 mt-6 text-green text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="about-section py-24 lg:py-32 bg-[#FAFAF8] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image */}
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-4xl overflow-hidden">
+                <div className="about-image-inner relative w-full h-[120%]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop"
+                    alt="Dr. Musso with patient"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              {/* Floating credential */}
+              <div className="absolute -bottom-6 -right-6 lg:right-6">
+                <div className="clinical-container px-6 py-5 flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-green/10 flex items-center justify-center">
+                    <Award className="w-6 h-6 text-green" />
+                  </div>
+                  <div>
+                    <p className="font-display text-navy">Top Dentist 2024</p>
+                    <p className="text-sm text-navy/50">D Magazine Reader&apos;s Choice</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="about-content">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-green" />
+                About Our Practice
+              </span>
+              <h2 className="font-display text-3xl lg:text-4xl text-navy leading-tight mb-6">
+                25 years dedicated to one thing:{" "}
+                <span className="hero-serif">your confidence</span>
+              </h2>
+              <p className="text-navy/60 leading-relaxed mb-6">
+                Dr. Michael Musso founded this practice with a simple belief—that exceptional
+                dental care should be accessible, comfortable, and transformative.
+              </p>
+              <p className="text-navy/60 leading-relaxed mb-8">
+                Today, that founding philosophy guides every decision we make, from the
+                technology we invest in to the team members we hire.
+              </p>
+
+              {/* Services List */}
+              <div className="services-list space-y-3 mb-8">
+                {services.map((service) => (
+                  <div key={service} className="service-item flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full bg-green/10 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-green" />
+                    </div>
+                    <span className="text-navy/70">{service}</span>
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href="/about"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-medium rounded-full hover:bg-green transition-colors"
+              >
+                Meet the Full Team
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Section */}
+      <section className="quote-section py-24 lg:py-32 bg-navy relative overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-green/5 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none" />
+
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <div className="quote-content">
+            <blockquote className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+              &ldquo;We don&apos;t practice{" "}
+              <span className="text-green">commodity dentistry</span>. We craft
+              lasting confidence through precision, artistry, and genuine human
+              connection.&rdquo;
+            </blockquote>
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">
+                <span className="font-display text-lg text-white">DM</span>
+              </div>
+              <div className="text-left">
+                <p className="font-medium text-white">Dr. Michael Musso</p>
+                <p className="text-sm text-white/50">Founder & Lead Clinician</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-green" />
+            Get Started
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-navy mb-6">
+            Your transformation begins with{" "}
+            <span className="hero-serif">a conversation</span>
+          </h2>
+          <p className="text-navy/50 mb-10 max-w-xl mx-auto">
+            Schedule a consultation and discover what sets Musso Family Dentistry apart.
+            No pressure. No obligation. Just honest guidance.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-green text-white font-medium rounded-full overflow-hidden"
+            >
+              <span className="relative z-10">Book Your Consultation</span>
+              <ArrowRight className="relative z-10 w-4 h-4" />
+              <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            </a>
+            <a
+              href="tel:+15551234567"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-navy/20 text-navy rounded-full hover:border-green hover:text-green transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              (555) 123-4567
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-16 bg-navy">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-4 gap-12 mb-12">
+            <div className="lg:col-span-2">
+              <Image
+                src="/logo.webp"
+                alt="Musso Family Dentistry"
+                width={180}
+                height={45}
+                className="h-10 w-auto brightness-0 invert mb-6"
+              />
+              <p className="text-white/60 leading-relaxed max-w-sm">
+                Precision dentistry for the modern family. Serving Garland, TX
+                and surrounding communities since 1999.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white font-medium mb-4">Contact</h4>
+              <div className="space-y-3 text-white/60 text-sm">
+                <p className="flex items-center gap-3">
+                  <Phone className="w-4 h-4" /> (555) 123-4567
+                </p>
+                <p className="flex items-center gap-3">
+                  <Mail className="w-4 h-4" /> hello@mussodental.com
+                </p>
+                <p className="flex items-center gap-3">
+                  <MapPin className="w-4 h-4" /> Garland, TX
+                </p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-white font-medium mb-4">Hours</h4>
+              <div className="space-y-2 text-white/60 text-sm">
+                <p>Monday – Friday: 8am – 6pm</p>
+                <p>Saturday: 9am – 2pm</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-white/40">
+              © {new Date().getFullYear()} Musso Family Dentistry. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6 text-sm text-white/40">
+              <a href="/privacy" className="hover:text-white/60 transition-colors">
+                Privacy
+              </a>
+              <a href="/terms" className="hover:text-white/60 transition-colors">
+                Terms
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

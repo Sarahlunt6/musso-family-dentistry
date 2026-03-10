@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
@@ -234,18 +235,15 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-6 py-3">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9 rounded-full bg-navy flex items-center justify-center overflow-hidden">
-              <span className="font-display text-lg text-white font-semibold">M</span>
-            </div>
-            <div className="hidden sm:flex flex-col">
-              <span className="font-display text-base text-navy font-semibold tracking-tight leading-none">
-                Musso
-              </span>
-              <span className="text-[9px] text-navy/50 tracking-[0.15em] uppercase">
-                Family Dentistry
-              </span>
-            </div>
+          <a href="/" className="flex items-center group">
+            <Image
+              src="/logo.webp"
+              alt="Musso Family Dentistry"
+              width={180}
+              height={45}
+              className="h-9 w-auto"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}

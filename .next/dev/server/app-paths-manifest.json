@@ -1,3 +1,5 @@
 {
+  "/alt-a/page": "app/alt-a/page.js",
+  "/alt-b/page": "app/alt-b/page.js",
   "/page": "app/page.js"
 }

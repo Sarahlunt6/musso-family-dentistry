@@ -222,6 +222,12 @@ function TelemetryFeed() {
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  const [lastSync, setLastSync] = useState<string>("--:--:-- --");
+
+  // Set time on client only to avoid hydration mismatch
+  useEffect(() => {
+    setLastSync(new Date().toLocaleTimeString());
+  }, []);
 
   useEffect(() => {
     if (!isTyping) return;
@@ -302,7 +308,7 @@ function TelemetryFeed() {
       <div className="p-4 bg-white/5 border-t border-white/10">
         <div className="flex items-center justify-between text-xs">
           <span className="text-white/40">
-            Last sync: {new Date().toLocaleTimeString()}
+            Last sync: {lastSync}
           </span>
           <span className="text-green">All systems operational</span>
         </div>

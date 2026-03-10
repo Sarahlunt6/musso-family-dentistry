@@ -1,5 +1,8 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
+  "/alt-a/page": "/alt-a",
+  "/alt-b/page": "/alt-b",
+  "/designs/page": "/designs",
   "/page": "/"
 }

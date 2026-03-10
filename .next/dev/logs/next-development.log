@@ -994,3 +994,111 @@ It can also happen if the client has a browser extension installed which messes 
 [00:10:49.429] Server  LOG     ✓ Compiled in 50ms
 [00:11:20.202] Server  LOG     ✓ Compiled in 109ms
 [00:11:56.816] Server  LOG     ✓ Compiled in 18ms
+[00:12:42.712] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:42.941] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="page.tsx">
+        <SegmentTrieNode>
+        <Home>
+          <main className="relative">
+            <Navbar>
+            <Hero>
+            <ArtifactCards>
+              <section ref={{current:null}} className="py-24 lg:p...">
+                <div className="max-w-7xl ...">
+                  <div>
+                  <div className="artifact-c...">
+                    <div>
+                    <div>
+                    <div className="artifact-c...">
+                      <TelemetryFeed>
+                        <div className="clinical-c...">
+                          <div>
+                          <div>
+                          <div className="p-4 bg-whi...">
+                            <div className="flex items...">
+                              <span className="text-white/40">
++                               10:13:48 AM
+-                               10:13:47 AM
+                              ...
+            ...
+      ...
+
+[00:12:42.941] Browser WARN    Image with src "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:12:42.941] Browser WARN    Image with src "https://images.unsplash.com/photo-1559839914-17aae19cec71?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:13:57.113] Server  LOG     ✓ Compiled in 297ms
+[00:14:02.496] Server  LOG     ✓ Compiled in 45ms
+[00:17:19.344] Server  LOG     ✓ Compiled in 143ms
+[00:17:37.707] Server  LOG     ✓ Compiled in 140ms
+[00:17:47.996] Server  LOG     ✓ Compiled in 38ms
+[00:17:56.141] Server  LOG     ✓ Compiled in 89ms
+[00:18:43.590] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:43.738] Browser WARN    Image with src "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:18:43.738] Browser WARN    Image with src "https://images.unsplash.com/photo-1559839914-17aae19cec71?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:21:13.625] Server  LOG     ✓ Compiled in 146ms
+[00:22:10.365] Server  LOG     ✓ Compiled in 59ms
+[00:22:35.110] Server  LOG     ✓ Compiled in 28ms
+[00:23:03.342] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:03.472] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:23:07.075] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:07.206] Browser WARN    GSAP target .stat-item not found. https://gsap.com
+[00:23:07.206] Browser WARN    GSAP target  not found. https://gsap.com
+[00:23:07.206] Browser WARN    Element not found: .stats-section
+[00:23:07.206] Browser WARN    GSAP target .capability-card not found. https://gsap.com
+[00:23:07.206] Browser WARN    GSAP target  not found. https://gsap.com
+[00:23:07.206] Browser WARN    Element not found: .capabilities-section
+[00:24:38.244] Server  LOG     ✓ Compiled in 199ms
+[00:24:39.493] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:39.493] Browser WARN    Image with src "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=600&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:39.493] Browser WARN    Image with src "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:24:39.493] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:27:14.045] Server  LOG     ✓ Compiled in 170ms
+[00:28:22.998] Server  LOG     ✓ Compiled in 169ms
+[00:34:03.915] Server  LOG     ✓ Compiled in 282ms
+[00:34:04.492] Browser WARN    Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:35:22.589] Server  LOG     ✓ Compiled in 134ms
+[00:35:23.491] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:53:26.560] Server  LOG     ✓ Compiled in 236ms
+[00:53:40.345] Server  LOG     ✓ Compiled in 148ms
+[00:53:45.001] Server  LOG     ✓ Compiled in 53ms
+[00:53:51.871] Server  LOG     ✓ Compiled in 143ms
+[00:53:56.148] Server  LOG     ✓ Compiled in 32ms
+[00:54:27.755] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:27.895] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:54:27.895] Browser WARN    Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:54:32.855] Server  LOG     ✓ Compiled in 157ms
+[00:55:17.117] Server  LOG     ✓ Compiled in 199ms
+[00:55:17.252] Browser ERROR   uncaughtError: ReferenceError: features is not defined
+[00:55:32.165] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:55:32.178] Server  LOG     ✓ Compiled in 102ms
+[00:55:32.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:32.746] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:55:32.746] Browser WARN    Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:55:40.678] Server  LOG     ✓ Compiled in 71ms
+[00:58:12.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:58:13.073] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:58:13.073] Browser WARN    Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:58:23.232] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:58:23.362] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:47.495] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[01:00:47.495] Browser WARN    Image with src "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:47.495] Browser WARN    Image with src "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:28:13.366] Server  LOG     ✓ Compiled in 231ms
+[01:28:23.199] Server  LOG     ✓ Compiled in 40ms
+[01:28:55.741] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:28:55.898] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:31:51.368] Server  LOG     ✓ Compiled in 270ms
+[01:44:09.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:44:09.379] Browser WARN    Image with src "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

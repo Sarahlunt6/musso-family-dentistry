@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -90,20 +91,14 @@ export default function Footer() {
           <div className="grid lg:grid-cols-12 gap-12 pb-12 border-b border-navy/5">
             {/* Brand Column */}
             <div className="lg:col-span-4">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center">
-                  <span className="font-display text-lg text-white font-semibold">
-                    M
-                  </span>
-                </div>
-                <div>
-                  <span className="font-display text-lg text-navy font-semibold">
-                    Musso
-                  </span>
-                  <span className="block text-[9px] text-navy/40 tracking-[0.15em] uppercase">
-                    Family Dentistry
-                  </span>
-                </div>
+              <div className="mb-6">
+                <Image
+                  src="/logo.webp"
+                  alt="Musso Family Dentistry"
+                  width={200}
+                  height={50}
+                  className="h-12 w-auto"
+                />
               </div>
 
               <p className="text-navy/60 leading-relaxed mb-8 max-w-sm text-sm">

@@ -39,6 +39,24 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/alt-a",
+      "regex": "^/alt\\-a(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/alt\\-a(?:/)?$"
+    },
+    {
+      "page": "/alt-b",
+      "regex": "^/alt\\-b(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/alt\\-b(?:/)?$"
+    },
+    {
+      "page": "/designs",
+      "regex": "^/designs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/designs(?:/)?$"
     }
   ],
   "dataRoutes": [],
