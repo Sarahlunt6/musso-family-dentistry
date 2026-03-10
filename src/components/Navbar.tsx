@@ -7,8 +7,6 @@ import {
   Menu,
   X,
   Phone,
-  MapPin,
-  Clock,
   Sparkles,
   Cpu,
   Heart,
@@ -50,7 +48,7 @@ const navigation: NavDropdown[] = [
         label: "About Us",
         href: "/about",
         icon: <Building2 className="w-4 h-4" />,
-        description: "Our philosophy and approach to care",
+        description: "Our philosophy and approach",
       },
       {
         label: "Meet the Team",
@@ -171,48 +169,21 @@ const navigation: NavDropdown[] = [
 const dropdownVariants = {
   hidden: {
     opacity: 0,
-    y: 10,
+    y: 8,
     scale: 0.98,
-    transition: {
-      duration: 0.15,
-      ease: [0.16, 1, 0.3, 1],
-    },
+    transition: { duration: 0.15, ease: [0.16, 1, 0.3, 1] },
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: {
-      duration: 0.25,
-      ease: [0.16, 1, 0.3, 1],
-      staggerChildren: 0.03,
-    },
+    transition: { duration: 0.2, ease: [0.16, 1, 0.3, 1], staggerChildren: 0.02 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: -10 },
+  hidden: { opacity: 0, x: -8 },
   visible: { opacity: 1, x: 0 },
-};
-
-const mobileMenuVariants = {
-  hidden: {
-    opacity: 0,
-    height: 0,
-    transition: {
-      duration: 0.3,
-      ease: [0.16, 1, 0.3, 1],
-    },
-  },
-  visible: {
-    opacity: 1,
-    height: "auto",
-    transition: {
-      duration: 0.4,
-      ease: [0.16, 1, 0.3, 1],
-      staggerChildren: 0.05,
-    },
-  },
 };
 
 export default function Navbar() {
@@ -227,7 +198,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -238,87 +208,48 @@ export default function Navbar() {
         setActiveDropdown(null);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleMouseEnter = (label: string) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setActiveDropdown(label);
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
-  };
-
-  const toggleMobileDropdown = (label: string) => {
-    setMobileActiveDropdown(mobileActiveDropdown === label ? null : label);
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 100);
   };
 
   return (
-    <nav
-      ref={navRef}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "glass py-3 shadow-lg shadow-forest/5"
-          : "bg-transparent py-5"
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Top Bar - Contact Info */}
-        <div
-          className={cn(
-            "flex items-center justify-between text-xs text-navy/60 mb-4 transition-all duration-500 overflow-hidden",
-            isScrolled ? "h-0 opacity-0 mb-0" : "h-auto opacity-100"
-          )}
-        >
-          <div className="hidden md:flex items-center gap-6">
-            <a
-              href="tel:+15551234567"
-              className="flex items-center gap-2 hover:text-forest transition-colors"
-            >
-              <Phone className="w-3 h-3" />
-              <span>(555) 123-4567</span>
-            </a>
-            <span className="flex items-center gap-2">
-              <MapPin className="w-3 h-3" />
-              <span>123 Dental Way, Suite 100</span>
-            </span>
-          </div>
-          <div className="hidden md:flex items-center gap-2">
-            <Clock className="w-3 h-3" />
-            <span>Mon-Fri: 8am-6pm</span>
-          </div>
-        </div>
-
-        {/* Main Navigation */}
-        <div className="flex items-center justify-between">
+    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4">
+      {/* Floating Island Container */}
+      <div
+        className={cn(
+          "max-w-6xl mx-auto rounded-full transition-all duration-500",
+          isScrolled
+            ? "floating-island shadow-clinical"
+            : "floating-island-transparent"
+        )}
+      >
+        <div className="flex items-center justify-between px-6 py-3">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-forest to-navy flex items-center justify-center overflow-hidden">
-              <span className="font-display text-xl text-cream font-semibold">
-                M
-              </span>
-              <div className="absolute inset-0 bg-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative w-9 h-9 rounded-full bg-navy flex items-center justify-center overflow-hidden">
+              <span className="font-display text-lg text-white font-semibold">M</span>
             </div>
-            <div className="flex flex-col">
-              <span className="font-display text-lg text-navy font-semibold tracking-tight">
+            <div className="hidden sm:flex flex-col">
+              <span className="font-display text-base text-navy font-semibold tracking-tight leading-none">
                 Musso
               </span>
-              <span className="text-[10px] text-forest/70 tracking-[0.2em] uppercase -mt-0.5">
+              <span className="text-[9px] text-navy/50 tracking-[0.15em] uppercase">
                 Family Dentistry
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-0.5">
             {navigation.map((dropdown) => (
               <div
                 key={dropdown.label}
@@ -328,16 +259,16 @@ export default function Navbar() {
               >
                 <button
                   className={cn(
-                    "flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-colors rounded-full",
+                    "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-full",
                     activeDropdown === dropdown.label
-                      ? "text-forest bg-forest/5"
-                      : "text-navy/80 hover:text-forest hover:bg-forest/5"
+                      ? "text-green bg-green/5"
+                      : "text-navy/70 hover:text-navy hover:bg-navy/5"
                   )}
                 >
                   {dropdown.label}
                   <ChevronDown
                     className={cn(
-                      "w-3.5 h-3.5 transition-transform duration-300",
+                      "w-3.5 h-3.5 transition-transform duration-200",
                       activeDropdown === dropdown.label ? "rotate-180" : ""
                     )}
                   />
@@ -351,16 +282,16 @@ export default function Navbar() {
                       exit="hidden"
                       variants={dropdownVariants}
                       className={cn(
-                        "absolute top-full left-0 mt-2 glass rounded-2xl p-2 shadow-xl shadow-forest/10 min-w-[280px]",
-                        dropdown.label === "Services" && "min-w-[320px]"
+                        "absolute top-full left-0 mt-2 rounded-4xl bg-white p-2 shadow-clinical-lg min-w-[280px]",
+                        "border border-navy/5"
                       )}
                       onMouseEnter={() => handleMouseEnter(dropdown.label)}
                       onMouseLeave={handleMouseLeave}
                     >
                       <div
                         className={cn(
-                          "grid gap-1",
-                          dropdown.label === "Services" && "grid-cols-1 max-h-[400px] overflow-y-auto"
+                          "grid gap-0.5",
+                          dropdown.label === "Services" && "max-h-[380px] overflow-y-auto"
                         )}
                       >
                         {dropdown.items.map((item) => (
@@ -368,17 +299,17 @@ export default function Navbar() {
                             key={item.label}
                             href={item.href}
                             variants={itemVariants}
-                            className="flex items-start gap-3 p-3 rounded-xl hover:bg-forest/5 transition-colors group"
+                            className="flex items-start gap-3 p-3 rounded-2xl hover:bg-navy/5 transition-colors group"
                           >
-                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-forest/10 flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-cream transition-colors">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-xl bg-navy/5 flex items-center justify-center text-navy/60 group-hover:bg-green group-hover:text-white transition-colors">
                               {item.icon}
                             </div>
                             <div className="flex-1 min-w-0">
-                              <span className="block text-sm font-medium text-navy group-hover:text-forest transition-colors">
+                              <span className="block text-sm font-medium text-navy group-hover:text-green transition-colors">
                                 {item.label}
                               </span>
                               {item.description && (
-                                <span className="block text-xs text-navy/50 mt-0.5 leading-snug">
+                                <span className="block text-xs text-navy/40 mt-0.5">
                                   {item.description}
                                 </span>
                               )}
@@ -393,28 +324,31 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Right Side: Status + CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            {/* Status Indicator */}
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green/5">
+              <span className="status-dot w-2 h-2 rounded-full bg-green" />
+              <span className="text-xs font-medium text-green">Accepting New Patients</span>
+            </div>
+
+            {/* CTA Button */}
             <a
               href="/contact"
-              className="magnetic-button relative px-6 py-2.5 bg-forest text-cream text-sm font-medium rounded-full overflow-hidden group"
+              className="relative px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full overflow-hidden group"
             >
-              <span className="relative z-10">Book Appointment</span>
-              <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <span className="relative z-10">Book Now</span>
+              <div className="absolute inset-0 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-navy hover:text-forest transition-colors"
+            className="lg:hidden p-2 text-navy hover:text-green transition-colors"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -422,26 +356,34 @@ export default function Navbar() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={mobileMenuVariants}
-              className="lg:hidden overflow-hidden"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:hidden overflow-hidden border-t border-navy/5"
             >
-              <div className="pt-6 pb-4 space-y-2">
+              <div className="px-4 py-6 space-y-2">
+                {/* Mobile Status */}
+                <div className="flex items-center gap-2 px-4 py-2 mb-4">
+                  <span className="status-dot w-2 h-2 rounded-full bg-green" />
+                  <span className="text-sm text-green font-medium">Accepting New Patients</span>
+                </div>
+
                 {navigation.map((dropdown) => (
-                  <motion.div key={dropdown.label} variants={itemVariants}>
+                  <div key={dropdown.label}>
                     <button
-                      onClick={() => toggleMobileDropdown(dropdown.label)}
-                      className="flex items-center justify-between w-full px-4 py-3 text-left text-navy hover:text-forest hover:bg-forest/5 rounded-xl transition-colors"
+                      onClick={() =>
+                        setMobileActiveDropdown(
+                          mobileActiveDropdown === dropdown.label ? null : dropdown.label
+                        )
+                      }
+                      className="flex items-center justify-between w-full px-4 py-3 text-left text-navy hover:bg-navy/5 rounded-2xl transition-colors"
                     >
                       <span className="font-medium">{dropdown.label}</span>
                       <ChevronDown
                         className={cn(
-                          "w-4 h-4 transition-transform duration-300",
-                          mobileActiveDropdown === dropdown.label
-                            ? "rotate-180"
-                            : ""
+                          "w-4 h-4 transition-transform duration-200",
+                          mobileActiveDropdown === dropdown.label ? "rotate-180" : ""
                         )}
                       />
                     </button>
@@ -452,7 +394,7 @@ export default function Navbar() {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                          transition={{ duration: 0.2 }}
                           className="overflow-hidden"
                         >
                           <div className="pl-4 py-2 space-y-1">
@@ -460,11 +402,9 @@ export default function Navbar() {
                               <a
                                 key={item.label}
                                 href={item.href}
-                                className="flex items-center gap-3 px-4 py-2.5 text-sm text-navy/70 hover:text-forest hover:bg-forest/5 rounded-lg transition-colors"
+                                className="flex items-center gap-3 px-4 py-2.5 text-sm text-navy/70 hover:text-green hover:bg-green/5 rounded-xl transition-colors"
                               >
-                                <span className="text-forest/50">
-                                  {item.icon}
-                                </span>
+                                <span className="text-navy/40">{item.icon}</span>
                                 <span>{item.label}</span>
                               </a>
                             ))}
@@ -472,34 +412,24 @@ export default function Navbar() {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </div>
                 ))}
 
-                <motion.div variants={itemVariants} className="pt-4">
+                <div className="pt-4 space-y-3">
                   <a
                     href="/contact"
-                    className="block w-full px-6 py-3 bg-forest text-cream text-center font-medium rounded-full hover:bg-navy transition-colors"
+                    className="block w-full px-6 py-3 bg-navy text-white text-center font-medium rounded-full hover:bg-green transition-colors"
                   >
                     Book Appointment
                   </a>
-                </motion.div>
-
-                <motion.div
-                  variants={itemVariants}
-                  className="pt-4 space-y-3 text-sm text-navy/60"
-                >
                   <a
                     href="tel:+15551234567"
-                    className="flex items-center gap-2 px-4 hover:text-forest transition-colors"
+                    className="flex items-center justify-center gap-2 px-6 py-3 text-navy hover:text-green transition-colors"
                   >
                     <Phone className="w-4 h-4" />
                     <span>(555) 123-4567</span>
                   </a>
-                  <span className="flex items-center gap-2 px-4">
-                    <Clock className="w-4 h-4" />
-                    <span>Mon-Fri: 8am-6pm</span>
-                  </span>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           )}

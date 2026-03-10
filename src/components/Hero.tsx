@@ -3,47 +3,53 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import { ArrowRight, Play, Star } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowRight, Play } from "lucide-react";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
+  const line1Ref = useRef<HTMLSpanElement>(null);
+  const line2Ref = useRef<HTMLSpanElement>(null);
   const sublineRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        defaults: {
-          ease: "power4.out",
-        },
+        defaults: { ease: "power4.out" },
       });
 
       // Initial setup
-      gsap.set([headlineRef.current, sublineRef.current, ctaRef.current, statsRef.current], {
+      gsap.set([line1Ref.current, line2Ref.current, sublineRef.current, ctaRef.current], {
         opacity: 0,
-        y: 60,
+        y: 80,
       });
       gsap.set(imageRef.current, {
         opacity: 0,
-        scale: 1.1,
+        scale: 1.15,
         clipPath: "inset(100% 0 0 0)",
       });
       gsap.set(badgeRef.current, {
         opacity: 0,
-        x: -20,
+        y: 20,
       });
 
-      // Animation sequence
-      tl.to(headlineRef.current, {
+      // Animation sequence - staggered text reveals
+      tl.to(line1Ref.current, {
         opacity: 1,
         y: 0,
-        duration: 1.2,
+        duration: 1.4,
       })
+        .to(
+          line2Ref.current,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.4,
+          },
+          "-=1.1"
+        )
         .to(
           sublineRef.current,
           {
@@ -51,7 +57,7 @@ export default function Hero() {
             y: 0,
             duration: 1,
           },
-          "-=0.8"
+          "-=0.9"
         )
         .to(
           ctaRef.current,
@@ -68,38 +74,20 @@ export default function Hero() {
             opacity: 1,
             scale: 1,
             clipPath: "inset(0% 0 0 0)",
-            duration: 1.4,
+            duration: 1.6,
             ease: "power3.inOut",
           },
-          "-=1"
+          "-=1.2"
         )
         .to(
           badgeRef.current,
           {
             opacity: 1,
-            x: 0,
+            y: 0,
             duration: 0.6,
           },
-          "-=0.4"
-        )
-        .to(
-          statsRef.current,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-          },
-          "-=0.4"
+          "-=0.5"
         );
-
-      // Floating animation for badge
-      gsap.to(badgeRef.current, {
-        y: -8,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
     }, heroRef);
 
     return () => ctx.revert();
@@ -108,164 +96,105 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden"
+      className="relative h-[100dvh] min-h-[700px] flex items-center overflow-hidden bg-white"
     >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream to-forest/5 pointer-events-none" />
+      {/* Background Image - Macro dental/architectural */}
+      <div className="absolute inset-0">
+        <div ref={imageRef} className="relative w-full h-full">
+          <Image
+            src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069&auto=format&fit=crop"
+            alt="High-precision dental technology"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          {/* Gradient Overlay for text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
+        </div>
+      </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-forest/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content Column */}
-          <div className="order-2 lg:order-1">
-            {/* Headline */}
-            <h1
-              ref={headlineRef}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-navy leading-[1.1] tracking-tight"
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-6 w-full pt-20">
+        <div className="max-w-3xl">
+          {/* Headline - Contrast Driven Typography */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
+            <span ref={line1Ref} className="block hero-sans">
+              Legacy meets
+            </span>
+            <span
+              ref={line2Ref}
+              className="block hero-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl mt-1"
             >
-              Precision Care,{" "}
-              <span className="relative">
-                <span className="gradient-text">Lasting</span>
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  viewBox="0 0 200 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 8C50 4 150 4 198 8"
-                    stroke="#D4AF37"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>{" "}
-              Confidence
-            </h1>
+              Modern Artistry.
+            </span>
+          </h1>
 
-            {/* Subline */}
-            <p
-              ref={sublineRef}
-              className="mt-6 text-lg sm:text-xl text-navy/70 leading-relaxed max-w-xl"
+          {/* Subline */}
+          <p
+            ref={sublineRef}
+            className="mt-8 text-lg sm:text-xl text-navy/60 leading-relaxed max-w-xl"
+          >
+            Where clinical precision meets architectural luxury. We craft smiles
+            with the same meticulous attention a master watchmaker devotes to
+            each movement.
+          </p>
+
+          {/* CTA Buttons */}
+          <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="/contact"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-green text-white font-medium rounded-full overflow-hidden"
             >
-              Where clinical excellence meets patient-centered care. Experience
-              dentistry reimagined through advanced technology, meticulous
-              technique, and genuine human connection.
-            </p>
+              <span className="relative z-10">Begin Your Journey</span>
+              <ArrowRight className="relative z-10 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+              <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            </a>
 
-            {/* CTA Buttons */}
-            <div
-              ref={ctaRef}
-              className="mt-8 flex flex-wrap items-center gap-4"
-            >
-              <a
-                href="/contact"
-                className="magnetic-button group relative inline-flex items-center gap-2 px-8 py-4 bg-forest text-cream font-medium rounded-full overflow-hidden"
-              >
-                <span className="relative z-10">Schedule Consultation</span>
-                <ArrowRight className="relative z-10 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </a>
-
-              <button className="group flex items-center gap-3 px-6 py-4 text-navy hover:text-forest transition-colors">
-                <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg shadow-forest/10 group-hover:shadow-xl group-hover:shadow-forest/15 transition-shadow">
-                  <Play className="w-4 h-4 ml-0.5 fill-forest text-forest" />
-                  <span className="absolute inset-0 rounded-full border-2 border-forest/20 group-hover:border-forest/40 transition-colors" />
-                </span>
-                <span className="font-medium">Watch Our Story</span>
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div
-              ref={statsRef}
-              className="mt-12 pt-8 border-t border-navy/10 grid grid-cols-3 gap-8"
-            >
-              <div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl sm:text-4xl font-display font-semibold text-forest">
-                    25
-                  </span>
-                  <span className="text-forest text-lg">+</span>
-                </div>
-                <p className="mt-1 text-sm text-navy/60">Years Excellence</p>
-              </div>
-              <div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl sm:text-4xl font-display font-semibold text-forest">
-                    15k
-                  </span>
-                  <span className="text-forest text-lg">+</span>
-                </div>
-                <p className="mt-1 text-sm text-navy/60">Happy Patients</p>
-              </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  <span className="text-3xl sm:text-4xl font-display font-semibold text-forest">
-                    4.9
-                  </span>
-                  <Star className="w-5 h-5 fill-gold text-gold" />
-                </div>
-                <p className="mt-1 text-sm text-navy/60">Patient Rating</p>
-              </div>
-            </div>
+            <button className="group flex items-center gap-3 px-6 py-4 text-navy/70 hover:text-navy transition-colors">
+              <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-clinical group-hover:shadow-clinical-lg transition-shadow">
+                <Play className="w-4 h-4 ml-0.5 fill-navy text-navy" />
+              </span>
+              <span className="font-medium">Watch Our Story</span>
+            </button>
           </div>
+        </div>
 
-          {/* Image Column */}
-          <div className="order-1 lg:order-2 relative">
-            <div
-              ref={imageRef}
-              className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-forest/20"
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop"
-                alt="Modern dental office with state-of-the-art equipment"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating Badge */}
-            <div
-              ref={badgeRef}
-              className="absolute -left-4 sm:-left-8 top-1/4 glass-dark px-5 py-4 rounded-2xl"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-gold"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-cream font-medium">Top Rated</p>
-                  <p className="text-cream/60 text-sm">2024 Excellence</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Decorative Dots */}
-            <div className="absolute -right-4 bottom-1/4 grid grid-cols-3 gap-2">
-              {[...Array(9)].map((_, i) => (
+        {/* Floating Badge - Bottom Right */}
+        <div
+          ref={badgeRef}
+          className="absolute bottom-12 right-6 lg:right-12 hidden md:block"
+        >
+          <div className="clinical-container px-6 py-4 flex items-center gap-4">
+            <div className="flex -space-x-3">
+              {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className={cn(
-                    "w-2 h-2 rounded-full",
-                    i % 2 === 0 ? "bg-forest/30" : "bg-gold/30"
-                  )}
-                />
+                  className="w-10 h-10 rounded-full bg-navy/10 border-2 border-white flex items-center justify-center"
+                >
+                  <span className="text-xs font-medium text-navy/60">
+                    {["JM", "SK", "DR"][i - 1]}
+                  </span>
+                </div>
               ))}
+            </div>
+            <div>
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-4 h-4 text-green fill-green"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-sm text-navy/60 mt-1">
+                <span className="font-semibold text-navy">4.9</span> from 500+
+                reviews
+              </p>
             </div>
           </div>
         </div>
@@ -273,11 +202,11 @@ export default function Hero() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-xs text-navy/40 uppercase tracking-widest">
+        <span className="text-[10px] text-navy/30 uppercase tracking-[0.2em]">
           Scroll
         </span>
-        <div className="w-6 h-10 rounded-full border-2 border-navy/20 flex items-start justify-center p-1.5">
-          <div className="w-1.5 h-3 rounded-full bg-forest animate-bounce" />
+        <div className="w-5 h-8 rounded-full border border-navy/20 flex items-start justify-center p-1">
+          <div className="w-1 h-2.5 rounded-full bg-green animate-bounce" />
         </div>
       </div>
     </section>

@@ -1,1 +1,996 @@
 [00:00:00.852] Server  LOG     ✓ Ready in 640ms
+[00:04:11.917] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:12.815] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <Home>
+        <main className="relative">
+          <Navbar>
+          <Hero>
+          <ProtocolStack>
+          <FeatureCards>
+            <section ref={{current:null}} className="py-24 lg:p...">
+              <div className="max-w-7xl ...">
+                <div>
+                <div className="feature-ca...">
+                  <div>
+                  <div className="feature-card">
+                    <TelemetryFeed>
+                      <div className="relative b...">
+                        <div>
+                        <div className="p-6 grid g...">
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "46.49698419808823%"
+-                                   height: "48.0662%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "47.108323419248464%"
+-                                   height: "33.6467%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "48.4440490816705%"
+-                                   height: "41.988%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "49.65489135500286%"
+-                                   height: "84.8243%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "87.54905431423863%"
+-                                   height: "62.9148%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "43.201943579950886%"
+-                                   height: "76.4979%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "91.05111773031663%"
+-                                   height: "77.3983%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "44.0095539313603%"
+-                                   height: "32.6665%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "37.10536851996909%"
+-                                   height: "71.3988%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "89.16112240779694%"
+-                                   height: "36.7252%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "70.5188083000892%"
+-                                   height: "50.8684%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "47.36881805348686%"
+-                                   height: "39.5405%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "74.8340704788312%"
+-                                   height: "34.4834%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "39.409054023185945%"
+-                                   height: "54.3163%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "66.80223553704107%"
+-                                   height: "87.6147%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "59.678115073034824%"
+-                                   height: "70.8816%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "86.15332399213385%"
+-                                   height: "74.3419%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "99.3563759862751%"
+-                                   height: "88.8319%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "70.65881259184964%"
+-                                   height: "69.5865%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "83.4469596698956%"
+-                                   height: "55.7548%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "63.6733804299998%"
+-                                   height: "91.2129%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "31.37340978816117%"
+-                                   height: "80.0816%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "87.87582952445896%"
+-                                   height: "58.5484%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "82.7497047532388%"
+-                                   height: "44.7449%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "64.98590105562869%"
+-                                   height: "62.2678%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "95.17783368662394%"
+-                                   height: "84.6088%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "71.78843736594087%"
+-                                   height: "66.9132%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "38.0352419447478%"
+-                                   height: "42.1873%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "64.30406480018871%"
+-                                   height: "32.1404%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "86.8615280874284%"
+-                                   height: "91.5514%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "95.03075778486333%"
+-                                   height: "86.5763%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "48.97584085967144%"
+-                                   height: "63.0402%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "67.77726372124127%"
+-                                   height: "67.0872%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "86.35933017688708%"
+-                                   height: "85.6977%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "79.26761991424932%"
+-                                   height: "59.627%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "45.711971613319065%"
+-                                   height: "83.5716%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "39.33628577925654%"
+-                                   height: "81.4748%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "58.4498207581163%"
+-                                   height: "94.6696%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "59.89024234793484%"
+-                                   height: "60.065%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "36.6543919017804%"
+-                                   height: "98.9191%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "91.76942712735756%"
+-                                   height: "39.2726%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "82.15091651480166%"
+-                                   height: "76.3023%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "31.02204308506034%"
+-                                   height: "65.1997%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "89.0145969219574%"
+-                                   height: "61.4644%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "43.30828514673668%"
+-                                   height: "48.9313%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "57.35053274125019%"
+-                                   height: "60.2243%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "34.73080004337297%"
+-                                   height: "68.9714%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "88.02896268030639%"
+-                                   height: "73.3783%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                        ...
+          ...
+    ...
+
+[00:04:18.173] Browser WARN    Image with src "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:43.403] Server  LOG     ✓ Compiled in 790ms
+[00:06:09.034] Server  LOG     ✓ Compiled in 191ms
+[00:06:29.676] Server  LOG     ✓ Compiled in 884ms
+[00:06:30.362] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:31.491] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <Home>
+        <main className="relative">
+          <Navbar>
+          <Hero>
+          <ProtocolStack>
+          <FeatureCards>
+            <section ref={{current:null}} className="py-24 lg:p...">
+              <div className="max-w-7xl ...">
+                <div>
+                <div className="feature-ca...">
+                  <div>
+                  <div className="feature-card">
+                    <TelemetryFeed>
+                      <div className="relative b...">
+                        <div>
+                        <div className="p-6 grid g...">
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "67.37576383815613%"
+-                                   height: "71.8123%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "67.74179987067807%"
+-                                   height: "89.0187%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "99.58702269857035%"
+-                                   height: "89.5327%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "43.72370588294925%"
+-                                   height: "80.7353%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "95.76936866895973%"
+-                                   height: "97.8471%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "61.79010647400251%"
+-                                   height: "49.8084%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "58.29446531888882%"
+-                                   height: "33.4302%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "76.1346279379963%"
+-                                   height: "89.5154%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "91.70606600508707%"
+-                                   height: "35.0396%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "41.04412769893729%"
+-                                   height: "61.0874%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "86.68050003722209%"
+-                                   height: "64.1771%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-rose-400"
+                                  style={{
++                                   height: "31.84243514181307%"
+-                                   height: "89.6729%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "63.62339385139028%"
+-                                   height: "94.4324%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "61.98396801010133%"
+-                                   height: "43.0128%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "81.46740592802252%"
+-                                   height: "79.3125%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "61.697210752877005%"
+-                                   height: "38.7569%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "87.75961524922172%"
+-                                   height: "87.2643%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "99.8772220390902%"
+-                                   height: "62.5884%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "78.68222633609604%"
+-                                   height: "57.3987%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "67.78447552013517%"
+-                                   height: "72.5778%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "72.2103474268437%"
+-                                   height: "55.5553%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "65.36720891929167%"
+-                                   height: "88.1846%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "58.91289047959005%"
+-                                   height: "70.4082%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-forest"
+                                  style={{
++                                   height: "92.26853103467934%"
+-                                   height: "70.886%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "93.73839397817463%"
+-                                   height: "77.7022%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "43.481113823372276%"
+-                                   height: "47.8482%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "51.30047930134221%"
+-                                   height: "77.6252%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "57.034733707136986%"
+-                                   height: "69.2626%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "47.0493078623892%"
+-                                   height: "36.5747%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "38.97615036850435%"
+-                                   height: "44.0947%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "39.9531587322731%"
+-                                   height: "84.3048%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "40.45010633215348%"
+-                                   height: "49.665%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "38.77929042812456%"
+-                                   height: "89.7431%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "37.93261742072032%"
+-                                   height: "74.1444%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "80.65088175016328%"
+-                                   height: "39.8182%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-navy"
+                                  style={{
++                                   height: "75.05686744501224%"
+-                                   height: "48.0975%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                          <motion.div layout={true} className="p-4 rounde...">
+                            <MeasureLayout>
+                            <div className="p-4 rounde..." style={{}} ref={function useMotionRef.useCallback}>
+                              <div>
+                              <div>
+                              <div className="mt-3 h-8 f...">
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "47.77196320190064%"
+-                                   height: "66.9209%"
++                                   opacity: 0.3
+-                                   opacity: "0.3"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "52.30630819930601%"
+-                                   height: "88.9918%"
++                                   opacity: 0.35833333333333334
+-                                   opacity: "0.358333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "99.55487073474619%"
+-                                   height: "50.5106%"
++                                   opacity: 0.41666666666666663
+-                                   opacity: "0.416667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "44.887026804918534%"
+-                                   height: "49.5501%"
++                                   opacity: 0.475
+-                                   opacity: "0.475"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "44.28972972356154%"
+-                                   height: "44.4982%"
++                                   opacity: 0.5333333333333333
+-                                   opacity: "0.533333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "52.028108319314896%"
+-                                   height: "47.2648%"
++                                   opacity: 0.5916666666666667
+-                                   opacity: "0.591667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "72.43981898143586%"
+-                                   height: "88.3188%"
++                                   opacity: 0.6499999999999999
+-                                   opacity: "0.65"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "72.43243759840641%"
+-                                   height: "62.573%"
++                                   opacity: 0.7083333333333333
+-                                   opacity: "0.708333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "86.50951610831981%"
+-                                   height: "55.8234%"
++                                   opacity: 0.7666666666666666
+-                                   opacity: "0.766667"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "82.26627924315244%"
+-                                   height: "90.8507%"
++                                   opacity: 0.825
+-                                   opacity: "0.825"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "33.30514786122269%"
+-                                   height: "36.6215%"
++                                   opacity: 0.8833333333333333
+-                                   opacity: "0.883333"
+                                  }}
+                                >
+                                <div
+                                  className="flex-1 rounded-t transition-all duration-500 bg-gold"
+                                  style={{
++                                   height: "36.82803551034294%"
+-                                   height: "81.4424%"
++                                   opacity: 0.9416666666666667
+-                                   opacity: "0.941667"
+                                  }}
+                                >
+                        ...
+          ...
+    ...
+
+[00:07:43.519] Server  LOG     ✓ Compiled in 222ms
+[00:08:27.678] Server  LOG     ✓ Compiled in 134ms
+[00:09:36.501] Server  LOG     ✓ Compiled in 47ms
+[00:10:23.437] Server  LOG     ✓ Compiled in 49ms
+[00:10:49.429] Server  LOG     ✓ Compiled in 50ms
+[00:11:20.202] Server  LOG     ✓ Compiled in 109ms
+[00:11:56.816] Server  LOG     ✓ Compiled in 18ms

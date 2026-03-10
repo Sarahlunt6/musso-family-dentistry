@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Lora, Plus_Jakarta_Sans, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const lora = Lora({
@@ -20,20 +20,27 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Musso Family Dentistry | Precision Care, Lasting Confidence",
+  title: "Musso Family Dentistry | Legacy Meets Modern Artistry",
   description:
-    "Experience dentistry reimagined. Musso Family Dentistry combines clinical excellence with patient-centered care for transformative results.",
+    "Where clinical precision meets architectural luxury. Musso Family Dentistry delivers transformative results through advanced technology and meticulous care.",
   keywords: [
     "dentistry",
     "family dentist",
     "cosmetic dentistry",
     "dental care",
     "orthodontics",
+    "luxury dentistry",
   ],
   openGraph: {
     title: "Musso Family Dentistry",
-    description: "Precision Care, Lasting Confidence",
+    description: "Legacy Meets Modern Artistry",
     type: "website",
   },
 };
@@ -46,13 +53,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${lora.variable} ${jakarta.variable} ${playfair.variable}`}
+      className={`${lora.variable} ${jakarta.variable} ${playfair.variable} ${mono.variable}`}
     >
-      <body className="font-sans antialiased">
-        {/* SVG Noise Filter Definition */}
+      <body className="font-sans antialiased bg-white">
+        {/* SVG Grain Filter Definition */}
         <svg className="hidden" aria-hidden="true">
           <defs>
-            <filter id="noise">
+            <filter id="grain">
               <feTurbulence
                 type="fractalNoise"
                 baseFrequency="0.80"
@@ -64,11 +71,11 @@ export default function RootLayout({
           </defs>
         </svg>
 
-        {/* Global Noise Overlay */}
+        {/* The Grain Layer - PRD 0.05 opacity */}
         <div
-          className="noise-overlay"
+          className="grain-overlay"
           style={{
-            filter: "url(#noise)",
+            filter: "url(#grain)",
           }}
         />
 
