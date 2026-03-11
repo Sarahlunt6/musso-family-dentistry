@@ -108,24 +108,8 @@ export function SmileShuffler() {
             transition={{ duration: 0.3 }}
             className="absolute inset-0"
           >
-            {/* After Image (Full - base layer on right) */}
+            {/* Before Image (Full - base layer on left) */}
             <div className="absolute inset-0">
-              <Image
-                src={current.after}
-                alt="After transformation"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute top-4 right-4 px-3 py-1.5 bg-green/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
-                After
-              </div>
-            </div>
-
-            {/* Before Image (Clipped from right - reveals from left) */}
-            <div
-              className="absolute inset-0 overflow-hidden"
-              style={{ clipPath: `inset(0 ${sliderPosition}% 0 0)` }}
-            >
               <Image
                 src={current.before}
                 alt="Before transformation"
@@ -137,10 +121,26 @@ export function SmileShuffler() {
               </div>
             </div>
 
+            {/* After Image (Clipped - reveals from right as you drag right) */}
+            <div
+              className="absolute inset-0 overflow-hidden"
+              style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
+            >
+              <Image
+                src={current.after}
+                alt="After transformation"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute top-4 right-4 px-3 py-1.5 bg-green/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
+                After
+              </div>
+            </div>
+
             {/* Slider Handle */}
             <div
               className="spring-handle absolute top-0 bottom-0 w-1 bg-white shadow-lg"
-              style={{ left: `${100 - sliderPosition}%`, transform: "translateX(-50%)" }}
+              style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
             >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-clinical flex items-center justify-center">
                 <div className="flex items-center gap-0.5">
