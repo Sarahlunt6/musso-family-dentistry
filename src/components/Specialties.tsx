@@ -302,18 +302,6 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
                           )}>
                             <SpecialtyIcon type={specialty.id} />
                           </div>
-
-                          {/* Number Badge */}
-                          <div className="ml-auto">
-                            <span className={cn(
-                              "inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-mono font-medium",
-                              isActive
-                                ? "bg-green text-white"
-                                : "bg-navy/5 text-navy/40"
-                            )}>
-                              {String(index + 1).padStart(2, '0')}
-                            </span>
-                          </div>
                         </div>
 
                         {/* Title */}
