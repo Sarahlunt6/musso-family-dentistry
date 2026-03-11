@@ -50,6 +50,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 const navigation = [
   {
+    label: "Mockups",
+    items: [
+      {
+        label: "Mockup 1 (Original)",
+        href: "/",
+        icon: <Building2 className="w-4 h-4" />,
+        description: "Main design with floating island nav",
+      },
+      {
+        label: "Mockup 2 (Alt A)",
+        href: "/alt-a",
+        icon: <Sparkles className="w-4 h-4" />,
+        description: "Warm professional design",
+      },
+      {
+        label: "Mockup 3 (Alt B)",
+        href: "/alt-b",
+        icon: <Award className="w-4 h-4" />,
+        description: "Architectural elegance design",
+      },
+    ],
+  },
+  {
     label: "About",
     items: [
       {

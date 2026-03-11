@@ -26,6 +26,7 @@ import {
   Users,
   Building2,
   Camera,
+  Award,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
