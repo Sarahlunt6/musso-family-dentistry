@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, Users, Moon, CircleDot, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Users, Moon, CircleDot, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +15,7 @@ const specialties = [
     title: "Family Dentistry",
     description:
       "We provide comprehensive dental care for patients of all ages, focusing on maintaining optimal oral health for every member of your family.",
+    extendedInfo: "From routine cleanings and exams to fillings and preventive care, we ensure your entire family receives personalized attention in a comfortable environment.",
     icon: "/icons/family-dentistry.svg",
     href: "/services/family-dentistry",
   },
@@ -21,6 +24,7 @@ const specialties = [
     title: "Sleep Apnea",
     description:
       "Our expert team of general dentists offers effective sleep apnea solutions such as dental devices, ensuring you achieve restful and restorative sleep.",
+    extendedInfo: "Custom oral appliances can reposition your jaw to keep airways open, offering a comfortable alternative to CPAP machines for mild to moderate sleep apnea.",
     icon: "/icons/sleep-apnea.svg",
     href: "/services/sleep-apnea",
   },
@@ -29,6 +33,7 @@ const specialties = [
     title: "Dental Implants",
     description:
       "We specialize in advanced dental implant procedures to replace missing teeth and restore your smile with a natural look and feel.",
+    extendedInfo: "Our implant solutions include single tooth replacements, implant-supported bridges, and full-arch restorations using the latest techniques and materials.",
     icon: "/icons/dental-implants.svg",
     href: "/services/dental-implants",
   },
@@ -37,6 +42,7 @@ const specialties = [
     title: "Cosmetic Dentistry",
     description:
       "Our cosmetic dentistry services are designed to enhance the appearance of your smile with personalized treatments that boost your confidence.",
+    extendedInfo: "Services include professional teeth whitening, porcelain veneers, bonding, and smile makeovers tailored to achieve your ideal aesthetic goals.",
     icon: "/icons/cosmetic-dentistry.svg",
     href: "/services/cosmetic-dentistry",
   },
@@ -44,7 +50,7 @@ const specialties = [
 
 // Icon component using Lucide icons
 const SpecialtyIcon = ({ type }: { type: string }) => {
-  const iconClass = "w-10 h-10";
+  const iconClass = "w-8 h-8";
 
   switch (type) {
     case "family":
@@ -63,6 +69,52 @@ const SpecialtyIcon = ({ type }: { type: string }) => {
 export default function Specialties() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Navigation handlers
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? specialties.length - 1 : prev - 1));
+    setExpandedCard(null);
+  }, []);
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % specialties.length);
+    setExpandedCard(null);
+  }, []);
+
+  // Drag to scroll handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  // Toggle card expansion
+  const toggleExpand = (id: string) => {
+    setExpandedCard(expandedCard === id ? null : id);
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -83,18 +135,17 @@ export default function Specialties() {
         }
       );
 
-      // Cards stagger animation
+      // Carousel animation
       gsap.fromTo(
-        ".specialty-card",
+        ".specialties-carousel",
         { opacity: 0, y: 60 },
         {
           opacity: 1,
           y: 0,
           duration: 0.8,
-          stagger: 0.15,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".specialties-grid",
+            trigger: ".specialties-carousel",
             start: "top 75%",
             toggleActions: "play none none none",
           },
@@ -105,11 +156,23 @@ export default function Specialties() {
     return () => ctx.revert();
   }, []);
 
+  // Auto-scroll effect
+  useEffect(() => {
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.querySelector('.specialty-card')?.clientWidth || 0;
+      const gap = 24; // gap-6 = 24px
+      carouselRef.current.scrollTo({
+        left: currentIndex * (cardWidth + gap),
+        behavior: 'smooth'
+      });
+    }
+  }, [currentIndex]);
+
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-gradient-to-b from-white to-[#f0f7f2]">
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-gradient-to-b from-white to-[#f0f7f2] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div ref={headerRef} className="text-center mb-16">
+        <div ref={headerRef} className="text-center mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-green" />
             What We Offer
@@ -123,40 +186,168 @@ export default function Specialties() {
           </p>
         </div>
 
-        {/* Specialties Grid */}
-        <div className="specialties-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {specialties.map((specialty) => (
-            <div
-              key={specialty.id}
-              className="specialty-card group"
+        {/* Navigation Controls */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-3">
+            {specialties.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setExpandedCard(null);
+                }}
+                className={cn(
+                  "h-2 rounded-full transition-all duration-300",
+                  index === currentIndex
+                    ? "w-8 bg-green"
+                    : "w-2 bg-navy/20 hover:bg-navy/40"
+                )}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={goToPrevious}
+              className="w-10 h-10 rounded-full border border-navy/10 flex items-center justify-center text-navy/50 hover:text-green hover:border-green transition-colors"
+              aria-label="Previous specialty"
             >
-              <div className="clinical-container p-6 h-full flex flex-col text-center hover:shadow-clinical-lg transition-all duration-300 border-t-4 border-t-green/20 group-hover:border-t-green">
-                {/* Icon */}
-                <div className="mx-auto mb-6 w-20 h-20 rounded-full border-2 border-green/20 flex items-center justify-center text-green/70 group-hover:text-green group-hover:border-green/40 transition-colors">
-                  <SpecialtyIcon type={specialty.id} />
-                </div>
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="w-10 h-10 rounded-full border border-navy/10 flex items-center justify-center text-navy/50 hover:text-green hover:border-green transition-colors"
+              aria-label="Next specialty"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
 
-                {/* Title */}
-                <h3 className="font-display text-lg text-navy uppercase tracking-wide mb-4">
-                  {specialty.title}
-                </h3>
+        {/* Scrolling Carousel */}
+        <div
+          ref={carouselRef}
+          className="specialties-carousel flex gap-6 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing pb-4"
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {specialties.map((specialty, index) => {
+            const isExpanded = expandedCard === specialty.id;
+            const isActive = currentIndex === index;
 
-                {/* Description */}
-                <p className="text-navy/60 text-sm leading-relaxed flex-grow mb-6">
-                  {specialty.description}
-                </p>
-
-                {/* Link */}
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 text-green text-sm font-medium hover:gap-3 transition-all"
+            return (
+              <motion.div
+                key={specialty.id}
+                className={cn(
+                  "specialty-card flex-shrink-0 w-[320px] sm:w-[360px] lg:w-[400px]",
+                  "transition-transform duration-300",
+                  isActive && "scale-[1.02]"
+                )}
+                layout
+              >
+                <div
+                  className={cn(
+                    "clinical-container h-full flex flex-col overflow-hidden",
+                    "transition-all duration-300",
+                    isActive ? "shadow-clinical-lg border-green/30" : "hover:shadow-clinical",
+                    "border-t-4",
+                    isActive ? "border-t-green" : "border-t-green/20"
+                  )}
                 >
-                  View More About {specialty.title}
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          ))}
+                  {/* Card Header */}
+                  <div className="p-6 pb-4">
+                    <div className="flex items-start gap-4">
+                      {/* Icon */}
+                      <div className={cn(
+                        "w-14 h-14 rounded-xl flex items-center justify-center transition-colors",
+                        isActive
+                          ? "bg-green/10 text-green"
+                          : "bg-navy/5 text-navy/50"
+                      )}>
+                        <SpecialtyIcon type={specialty.id} />
+                      </div>
+
+                      {/* Number Badge */}
+                      <div className="ml-auto">
+                        <span className={cn(
+                          "inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-mono font-medium",
+                          isActive
+                            ? "bg-green text-white"
+                            : "bg-navy/5 text-navy/40"
+                        )}>
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-display text-xl text-navy mt-4">
+                      {specialty.title}
+                    </h3>
+                  </div>
+
+                  {/* Card Body */}
+                  <div className="px-6 flex-grow">
+                    <p className="text-navy/60 text-sm leading-relaxed">
+                      {specialty.description}
+                    </p>
+
+                    {/* Expandable Content */}
+                    <AnimatePresence>
+                      {isExpanded && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pt-4 mt-4 border-t border-navy/10">
+                            <p className="text-navy/70 text-sm leading-relaxed">
+                              {specialty.extendedInfo}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Card Footer */}
+                  <div className="p-6 pt-4 mt-auto">
+                    <div className="flex items-center justify-between">
+                      <button
+                        onClick={() => toggleExpand(specialty.id)}
+                        className={cn(
+                          "text-sm font-medium transition-colors",
+                          isExpanded ? "text-navy/50" : "text-green hover:text-navy"
+                        )}
+                      >
+                        {isExpanded ? "Show Less" : "Learn More"}
+                      </button>
+
+                      <a
+                        href="#"
+                        className="group inline-flex items-center gap-2 px-4 py-2 bg-green/5 hover:bg-green text-green hover:text-white rounded-full text-sm font-medium transition-all"
+                      >
+                        <span>View Service</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Mobile Swipe Hint */}
+        <div className="flex items-center justify-center gap-2 mt-6 text-sm text-navy/40 lg:hidden">
+          <ChevronLeft className="w-4 h-4" />
+          <span>Swipe to explore</span>
+          <ChevronRight className="w-4 h-4" />
         </div>
       </div>
     </section>
