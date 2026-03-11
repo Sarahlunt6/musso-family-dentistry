@@ -43,6 +43,29 @@ interface NavDropdown {
 
 const navigation: NavDropdown[] = [
   {
+    label: "Mockups",
+    items: [
+      {
+        label: "Mockup 1 (Original)",
+        href: "/",
+        icon: <Building2 className="w-4 h-4" />,
+        description: "Main design with floating island nav",
+      },
+      {
+        label: "Mockup 2 (Alt A)",
+        href: "/alt-a",
+        icon: <Sparkles className="w-4 h-4" />,
+        description: "Warm professional design",
+      },
+      {
+        label: "Mockup 3 (Alt B)",
+        href: "/alt-b",
+        icon: <Award className="w-4 h-4" />,
+        description: "Architectural elegance design",
+      },
+    ],
+  },
+  {
     label: "About",
     items: [
       {
@@ -227,10 +250,12 @@ export default function Navbar() {
       {/* Floating Island Container */}
       <div
         className={cn(
-          "max-w-6xl mx-auto rounded-full transition-all duration-500",
-          isScrolled
-            ? "floating-island shadow-clinical"
-            : "floating-island-transparent"
+          "max-w-6xl mx-auto transition-all duration-500",
+          isMobileMenuOpen
+            ? "rounded-3xl bg-white shadow-clinical"
+            : isScrolled
+              ? "rounded-full floating-island shadow-clinical"
+              : "rounded-full floating-island-transparent"
         )}
       >
         <div className="flex items-center justify-between px-6 py-3">
@@ -358,9 +383,9 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:hidden overflow-hidden border-t border-navy/5"
+              className="lg:hidden overflow-hidden border-t border-navy/5 bg-white"
             >
-              <div className="px-4 py-6 space-y-2">
+              <div className="px-4 py-6 space-y-2 bg-white">
                 {/* Mobile Status */}
                 <div className="flex items-center gap-2 px-4 py-2 mb-4">
                   <span className="status-dot w-2 h-2 rounded-full bg-green" />

@@ -461,54 +461,54 @@ export default function AlternativeA() {
       </nav>
 
       {/* Hero */}
-      <section ref={heroRef} className="pt-32 pb-20 lg:pt-40 lg:pb-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="hero-content">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#245532]/10 text-[#245532] text-sm font-medium mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#245532]" />
+      <section ref={heroRef} className="pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="hero-content order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-[#245532]/10 text-[#245532] text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#245532]" />
                 Welcoming New Patients
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1f2f5f] leading-[1.1]">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#1f2f5f] leading-[1.1]">
                 Where families find their
-                <span className="block text-[#245532] mt-2">forever dentist.</span>
+                <span className="block text-[#245532] mt-1 sm:mt-2">forever dentist.</span>
               </h1>
 
-              <p className="mt-6 text-lg text-[#1f2f5f]/60 leading-relaxed max-w-lg">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#1f2f5f]/60 leading-relaxed max-w-lg">
                 For 25 years, we&apos;ve been more than a dental practice—we&apos;ve been a partner
                 in your family&apos;s health. Gentle care, honest guidance, and lasting relationships.
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <a
                   href="/contact"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-[#245532] text-white font-medium rounded-full hover:bg-[#1a472a] transition-colors"
+                  className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#245532] text-white font-medium rounded-full hover:bg-[#1a472a] transition-colors text-sm sm:text-base"
                 >
                   Schedule Your Visit
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="tel:+15551234567" className="flex items-center gap-2 px-6 py-4 text-[#1f2f5f]/70 hover:text-[#245532] transition-colors">
+                <a href="tel:+19722781827" className="flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 text-[#1f2f5f]/70 hover:text-[#245532] transition-colors border border-[#1f2f5f]/10 sm:border-0 rounded-full sm:rounded-none">
                   <Phone className="w-5 h-5" />
-                  <span>Call Us</span>
+                  <span>(972) 278-1827</span>
                 </a>
               </div>
 
-              <div className="mt-12 flex items-center gap-8 pt-8 border-t border-[#1f2f5f]/10">
+              <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-8 pt-6 sm:pt-8 border-t border-[#1f2f5f]/10">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#245532] text-[#245532]" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-[#245532] text-[#245532]" />
                   ))}
                 </div>
                 <div>
                   <p className="font-semibold text-[#1f2f5f]">4.9 out of 5</p>
-                  <p className="text-sm text-[#1f2f5f]/50">from 500+ patient reviews</p>
+                  <p className="text-xs sm:text-sm text-[#1f2f5f]/50">from 500+ patient reviews</p>
                 </div>
               </div>
             </div>
 
-            <div className="hero-image relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden">
+            <div className="hero-image relative order-1 lg:order-2">
+              <div className="aspect-[4/3] sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden">
                 <Image
                   src="/dental-office.jpg"
                   alt="Musso Family Dentistry office"
@@ -517,14 +517,14 @@ export default function AlternativeA() {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#245532]/10 flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-[#245532]" />
+              <div className="absolute -bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-xl">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#245532]/10 flex items-center justify-center">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-[#245532]" />
                   </div>
                   <div>
-                    <p className="text-sm text-[#1f2f5f]/50">Open Today</p>
-                    <p className="font-semibold text-[#1f2f5f]">8:00 AM – 6:00 PM</p>
+                    <p className="text-xs sm:text-sm text-[#1f2f5f]/50">Open Today</p>
+                    <p className="font-semibold text-sm sm:text-base text-[#1f2f5f]">8:00 AM – 5:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -570,33 +570,34 @@ export default function AlternativeA() {
       </section>
 
       {/* Meet Our Doctors */}
-      <section className="py-24 bg-[#FDFBF7]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-sm text-[#245532] font-medium uppercase tracking-wide mb-4">Meet Your Dentists</p>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1f2f5f]">
+      <section className="py-16 sm:py-20 lg:py-24 bg-[#FDFBF7]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <p className="text-xs sm:text-sm text-[#245532] font-medium uppercase tracking-wide mb-3 sm:mb-4">Meet Your Dentists</p>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1f2f5f]">
               A family legacy of care.
             </h2>
-            <p className="mt-4 text-[#1f2f5f]/60 max-w-2xl mx-auto">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-[#1f2f5f]/60 max-w-2xl mx-auto px-4">
               Three generations of Musso dentists committed to your smile. Your care is our family tradition.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {doctors.map((doctor) => (
               <div key={doctor.id} className="group text-center">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-6">
+                <div className="relative aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6">
                   <Image
                     src={doctor.image}
                     alt={doctor.name}
                     fill
                     className="object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <h3 className="font-serif text-xl text-[#1f2f5f]">
+                <h3 className="font-serif text-lg sm:text-xl text-[#1f2f5f]">
                   {doctor.name}, {doctor.title}
                 </h3>
-                <p className="mt-3 text-[#1f2f5f]/60 text-sm leading-relaxed">
+                <p className="mt-2 sm:mt-3 text-[#1f2f5f]/60 text-sm leading-relaxed px-2">
                   {doctor.bio}
                 </p>
               </div>
@@ -652,51 +653,51 @@ export default function AlternativeA() {
       </section>
 
       {/* Map Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-sm text-[#245532] font-medium uppercase tracking-wide mb-4">Visit Us</p>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1f2f5f]">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <p className="text-xs sm:text-sm text-[#245532] font-medium uppercase tracking-wide mb-3 sm:mb-4">Visit Us</p>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1f2f5f]">
               Find our office.
             </h2>
-            <p className="mt-4 text-[#1f2f5f]/60 max-w-2xl mx-auto">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-[#1f2f5f]/60 max-w-2xl mx-auto">
               Conveniently located in Garland, TX. We look forward to welcoming you.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Contact Info */}
-            <div className="bg-[#FDFBF7] rounded-2xl p-8">
-              <h3 className="font-serif text-xl text-[#1f2f5f] mb-6">Contact Information</h3>
+            <div className="bg-[#FDFBF7] rounded-xl sm:rounded-2xl p-6 sm:p-8">
+              <h3 className="font-serif text-lg sm:text-xl text-[#1f2f5f] mb-5 sm:mb-6">Contact Information</h3>
 
-              <div className="space-y-5">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#245532]/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#245532]" />
+              <div className="space-y-4 sm:space-y-5">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#245532]/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#245532]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#1f2f5f]">Address</p>
-                    <p className="text-[#1f2f5f]/60 text-sm">513 W Centerville Rd<br />Garland, TX 75041</p>
+                    <p className="font-medium text-[#1f2f5f] text-sm sm:text-base">Address</p>
+                    <p className="text-[#1f2f5f]/60 text-xs sm:text-sm">513 W Centerville Rd<br />Garland, TX 75041</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#245532]/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[#245532]" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#245532]/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#245532]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#1f2f5f]">Phone</p>
-                    <a href="tel:+19722781827" className="text-[#1f2f5f]/60 text-sm hover:text-[#245532]">(972) 278-1827</a>
+                    <p className="font-medium text-[#1f2f5f] text-sm sm:text-base">Phone</p>
+                    <a href="tel:+19722781827" className="text-[#1f2f5f]/60 text-xs sm:text-sm hover:text-[#245532]">(972) 278-1827</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#245532]/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-[#245532]" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#245532]/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#245532]" />
                   </div>
                   <div>
-                    <p className="font-medium text-[#1f2f5f]">Hours</p>
-                    <div className="text-[#1f2f5f]/60 text-sm">
+                    <p className="font-medium text-[#1f2f5f] text-sm sm:text-base">Hours</p>
+                    <div className="text-[#1f2f5f]/60 text-xs sm:text-sm">
                       <p>Mon - Fri: 8:00am - 5:00pm</p>
                       <p>Sat: By Appointment</p>
                     </div>
@@ -708,7 +709,7 @@ export default function AlternativeA() {
                 href="https://www.google.com/maps/dir//513+W+Centerville+Rd,+Garland,+TX+75041"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#245532] text-white font-medium rounded-full hover:bg-[#1a472a] transition-colors"
+                className="mt-6 sm:mt-8 w-full inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-[#245532] text-white text-sm sm:text-base font-medium rounded-full hover:bg-[#1a472a] transition-colors"
               >
                 Get Directions
                 <MapPin className="w-4 h-4" />
@@ -716,12 +717,12 @@ export default function AlternativeA() {
             </div>
 
             {/* Map */}
-            <div className="lg:col-span-2 rounded-2xl overflow-hidden min-h-[400px]">
+            <div className="lg:col-span-2 rounded-xl sm:rounded-2xl overflow-hidden min-h-[300px] sm:min-h-[400px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6702.427230155997!2d-96.6375073!3d32.8660671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864ea7197be1533d%3A0xd4a3f180d2333d8!2s513%20W%20Centerville%20Rd%2C%20Garland%2C%20TX%2075041!5e0!3m2!1sen!2sus!4v1773165329310!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: "400px" }}
+                style={{ border: 0, minHeight: "300px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
