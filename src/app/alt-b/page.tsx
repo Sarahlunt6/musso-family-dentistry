@@ -40,6 +40,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SmileShuffler } from "@/components/ArtifactCards";
+import Specialties from "@/components/Specialties";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -762,6 +763,9 @@ export default function AlternativeB() {
         </div>
       </section>
 
+      {/* Specialties */}
+      <Specialties />
+
       {/* Meet Our Doctors */}
       <section className="py-16 sm:py-20 lg:py-32 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -855,8 +859,8 @@ export default function AlternativeB() {
               <div className="aspect-[4/5] rounded-4xl overflow-hidden">
                 <div className="about-image-inner relative w-full h-[120%]">
                   <Image
-                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop"
-                    alt="Dr. Musso with patient"
+                    src="/dental-office.jpg"
+                    alt="Musso Family Dentistry office"
                     fill
                     className="object-cover"
                   />

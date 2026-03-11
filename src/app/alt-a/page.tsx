@@ -41,6 +41,7 @@ import {
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { SmileShuffler } from "@/components/ArtifactCards";
+import Specialties from "@/components/Specialties";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -556,6 +557,9 @@ export default function AlternativeA() {
           </div>
         </div>
       </section>
+
+      {/* Specialties */}
+      <Specialties />
 
       {/* Services */}
       <section ref={servicesRef} className="py-24 bg-white">
