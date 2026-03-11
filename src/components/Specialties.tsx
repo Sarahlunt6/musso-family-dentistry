@@ -178,7 +178,7 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
         {/* Main Content Grid */}
         <div className={cn(
           "specialties-content grid gap-8",
-          showSmileShuffler ? "lg:grid-cols-2" : "lg:grid-cols-1 max-w-2xl mx-auto"
+          showSmileShuffler ? "lg:grid-cols-[1fr,300px]" : "lg:grid-cols-1 max-w-2xl mx-auto"
         )}>
           {/* Left Column: Single Card Display */}
           <div>
@@ -221,7 +221,7 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
             </div>
 
             {/* Single Card with Animation */}
-            <div className="relative min-h-[320px]">
+            <div className="relative min-h-[420px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSpecialty.id}
@@ -229,14 +229,14 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="w-full"
+                  className="w-full h-full"
                 >
-                  <div className="clinical-container h-full flex flex-col overflow-hidden shadow-clinical-lg border-t-4 border-t-green">
+                  <div className="clinical-container h-full min-h-[420px] flex flex-col overflow-hidden shadow-clinical-lg border-t-4 border-t-green">
                     {/* Card Header */}
-                    <div className="p-6 pb-4">
+                    <div className="p-8 pb-6">
                       <div className="flex items-start gap-4">
                         {/* Icon */}
-                        <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-green/10 text-green">
+                        <div className="w-16 h-16 rounded-xl flex items-center justify-center bg-green/10 text-green">
                           <SpecialtyIcon type={currentSpecialty.id} />
                         </div>
 
@@ -247,14 +247,14 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-display text-2xl text-navy mt-4">
+                      <h3 className="font-display text-2xl lg:text-3xl text-navy mt-6">
                         {currentSpecialty.title}
                       </h3>
                     </div>
 
                     {/* Card Body */}
-                    <div className="px-6 flex-grow">
-                      <p className="text-navy/60 text-base leading-relaxed">
+                    <div className="px-8 flex-grow">
+                      <p className="text-navy/60 text-base lg:text-lg leading-relaxed">
                         {currentSpecialty.description}
                       </p>
 
@@ -268,8 +268,8 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
                             transition={{ duration: 0.3 }}
                             className="overflow-hidden"
                           >
-                            <div className="pt-4 mt-4 border-t border-navy/10">
-                              <p className="text-navy/70 text-base leading-relaxed">
+                            <div className="pt-5 mt-5 border-t border-navy/10">
+                              <p className="text-navy/70 text-base lg:text-lg leading-relaxed">
                                 {currentSpecialty.extendedInfo}
                               </p>
                             </div>
@@ -279,7 +279,7 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
                     </div>
 
                     {/* Card Footer */}
-                    <div className="p-6 pt-4 mt-auto">
+                    <div className="p-8 pt-6 mt-auto">
                       <div className="flex items-center justify-between">
                         <button
                           onClick={toggleExpand}
@@ -293,7 +293,7 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
 
                         <a
                           href="#"
-                          className="group inline-flex items-center gap-2 px-4 py-2 bg-green/5 hover:bg-green text-green hover:text-white rounded-full text-sm font-medium transition-all"
+                          className="group inline-flex items-center gap-2 px-5 py-2.5 bg-green/5 hover:bg-green text-green hover:text-white rounded-full text-sm font-medium transition-all"
                         >
                           <span>View Service</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -309,13 +309,15 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
           {/* Right Column: Smile Shuffler */}
           {showSmileShuffler && (
             <div className="smile-shuffler-wrapper">
-              <div className="lg:sticky lg:top-24">
-                <div className="mb-4">
-                  <p className="text-xs text-green font-medium uppercase tracking-wide mb-2">Real Results</p>
-                  <h3 className="font-display text-xl text-navy">See the Transformation</h3>
-                  <p className="text-sm text-navy/50 mt-1">Drag to reveal before & after</p>
+              <div className="lg:sticky lg:top-24 max-w-[320px] mx-auto lg:mx-0">
+                <div className="mb-3">
+                  <p className="text-xs text-green font-medium uppercase tracking-wide mb-1">Real Results</p>
+                  <h3 className="font-display text-lg text-navy">See the Transformation</h3>
+                  <p className="text-xs text-navy/50 mt-1">Drag to reveal before & after</p>
                 </div>
-                <SmileShuffler />
+                <div className="transform scale-90 origin-top-left">
+                  <SmileShuffler />
+                </div>
               </div>
             </div>
           )}
