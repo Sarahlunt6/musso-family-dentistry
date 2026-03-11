@@ -358,7 +358,7 @@ export default function Navbar() {
 
             {/* CTA Button */}
             <a
-              href="/contact"
+              href="#"
               className="relative px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full overflow-hidden group"
             >
               <span className="relative z-10">Book Now</span>
@@ -441,13 +441,13 @@ export default function Navbar() {
 
                 <div className="pt-4 space-y-3">
                   <a
-                    href="/contact"
+                    href="#"
                     className="block w-full px-6 py-3 bg-navy text-white text-center font-medium rounded-full hover:bg-green transition-colors"
                   >
                     Book Appointment
                   </a>
                   <a
-                    href="tel:+15551234567"
+                    href="#"
                     className="flex items-center justify-center gap-2 px-6 py-3 text-navy hover:text-green transition-colors"
                   >
                     <Phone className="w-4 h-4" />

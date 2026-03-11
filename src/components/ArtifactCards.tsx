@@ -16,26 +16,10 @@ gsap.registerPlugin(ScrollTrigger);
 const smileTransformations = [
   {
     id: 1,
-    before: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop",
-    after: "https://images.unsplash.com/photo-1559839914-17aae19cec71?q=80&w=800&auto=format&fit=crop",
-    procedure: "Veneers",
-    patient: "Sarah M.",
-    testimonial: "I finally smile without hesitation.",
-  },
-  {
-    id: 2,
-    before: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
-    after: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop",
-    procedure: "Invisalign",
-    patient: "Michael R.",
-    testimonial: "The confidence boost is immeasurable.",
-  },
-  {
-    id: 3,
-    before: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
-    after: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+    before: "/before-after-before.jpg",
+    after: "/before-after-after.jpg",
     procedure: "Full Restoration",
-    patient: "David K.",
+    patient: "Patient",
     testimonial: "They gave me my smile back.",
   },
 ];

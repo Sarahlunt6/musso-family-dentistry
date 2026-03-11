@@ -508,13 +508,13 @@ export default function AlternativeB() {
                   )}
                 </div>
               ))}
-              <a href="/contact" className="px-4 py-2 text-sm text-navy/70 hover:text-green transition-colors">
+              <a href="#" className="px-4 py-2 text-sm text-navy/70 hover:text-green transition-colors">
                 Contact
               </a>
             </div>
 
             <a
-              href="/contact"
+              href="#"
               className="hidden lg:flex items-center gap-2 px-6 py-3 bg-green text-white text-sm font-medium rounded-full hover:bg-navy transition-colors"
             >
               Book Consultation
@@ -567,8 +567,8 @@ export default function AlternativeB() {
                 )}
               </div>
             ))}
-            <a href="/contact" className="block py-3 text-white/80 hover:text-white font-medium">Contact</a>
-            <a href="/contact" className="block w-full text-center mt-4 px-6 py-3 bg-green text-white rounded-full">
+            <a href="#" className="block py-3 text-white/80 hover:text-white font-medium">Contact</a>
+            <a href="#" className="block w-full text-center mt-4 px-6 py-3 bg-green text-white rounded-full">
               Book Consultation
             </a>
           </div>
@@ -625,7 +625,7 @@ export default function AlternativeB() {
             {/* CTA Buttons */}
             <div ref={ctaRef} className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <a
-                href="/contact"
+                href="#"
                 className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-green text-white text-sm sm:text-base font-medium rounded-full overflow-hidden"
               >
                 <span className="relative z-10">Begin Your Journey</span>
@@ -1044,7 +1044,7 @@ export default function AlternativeB() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/contact"
+              href="#"
               className="group relative inline-flex items-center gap-2 px-8 py-4 bg-green text-white font-medium rounded-full overflow-hidden"
             >
               <span className="relative z-10">Book Your Consultation</span>

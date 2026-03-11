@@ -78,7 +78,7 @@ export default function Footer() {
                 </p>
               </div>
               <a
-                href="/contact"
+                href="#"
                 className="group flex items-center gap-3 px-8 py-4 bg-green text-white font-medium rounded-full hover:bg-white hover:text-navy transition-colors"
               >
                 <span>Book Appointment</span>

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users, Moon, CircleDot, Sparkles } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,51 +42,19 @@ const specialties = [
   },
 ];
 
-// Simple SVG icons for each specialty
+// Icon component using Lucide icons
 const SpecialtyIcon = ({ type }: { type: string }) => {
+  const iconClass = "w-10 h-10";
+
   switch (type) {
     case "family":
-      return (
-        <svg viewBox="0 0 64 64" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="32" cy="20" r="8" />
-          <path d="M20 52V40c0-6.627 5.373-12 12-12s12 5.373 12 12v12" />
-          <path d="M28 20c-2 4-2 8 0 12" strokeLinecap="round" />
-          <path d="M36 20c2 4 2 8 0 12" strokeLinecap="round" />
-        </svg>
-      );
+      return <Users className={iconClass} />;
     case "sleep":
-      return (
-        <svg viewBox="0 0 64 64" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M20 44c0-8 6-16 16-16s16 8 16 16" />
-          <circle cx="28" cy="36" r="2" fill="currentColor" />
-          <circle cx="40" cy="36" r="2" fill="currentColor" />
-          <path d="M44 16l4-4m-4 0l4 4" strokeLinecap="round" />
-          <path d="M50 24l4-4m-4 0l4 4" strokeLinecap="round" />
-          <path d="M48 34l4-4m-4 0l4 4" strokeLinecap="round" />
-        </svg>
-      );
+      return <Moon className={iconClass} />;
     case "implants":
-      return (
-        <svg viewBox="0 0 64 64" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <ellipse cx="32" cy="18" rx="10" ry="8" />
-          <path d="M26 26l-2 30h16l-2-30" />
-          <path d="M28 34h8" strokeLinecap="round" />
-          <path d="M28 42h8" strokeLinecap="round" />
-          <path d="M29 50h6" strokeLinecap="round" />
-        </svg>
-      );
+      return <CircleDot className={iconClass} />;
     case "cosmetic":
-      return (
-        <svg viewBox="0 0 64 64" className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M16 32c0-10 7-18 16-18s16 8 16 18" />
-          <path d="M20 32v8c0 6 5 10 12 10s12-4 12-10v-8" />
-          <rect x="24" y="32" width="4" height="8" rx="1" />
-          <rect x="30" y="32" width="4" height="10" rx="1" />
-          <rect x="36" y="32" width="4" height="8" rx="1" />
-          <circle cx="48" cy="16" r="3" />
-          <path d="M48 19v4" strokeLinecap="round" />
-        </svg>
-      );
+      return <Sparkles className={iconClass} />;
     default:
       return null;
   }
@@ -180,7 +148,7 @@ export default function Specialties() {
 
                 {/* Link */}
                 <a
-                  href={specialty.href}
+                  href="#"
                   className="inline-flex items-center justify-center gap-2 text-green text-sm font-medium hover:gap-3 transition-all"
                 >
                   View More About {specialty.title}

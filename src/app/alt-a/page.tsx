@@ -414,7 +414,7 @@ export default function AlternativeA() {
                   )}
                 </div>
               ))}
-              <a href="/contact" className="px-4 py-2 text-sm text-[#1f2f5f]/70 hover:text-[#245532] transition-colors">
+              <a href="#" className="px-4 py-2 text-sm text-[#1f2f5f]/70 hover:text-[#245532] transition-colors">
                 Contact
               </a>
             </div>
@@ -425,7 +425,7 @@ export default function AlternativeA() {
                 (972) 278-1827
               </a>
               <a
-                href="/contact"
+                href="#"
                 className="px-6 py-3 bg-[#245532] text-white text-sm font-medium rounded-full hover:bg-[#1a472a] transition-colors"
               >
                 Book Appointment
@@ -475,8 +475,8 @@ export default function AlternativeA() {
                 )}
               </div>
             ))}
-            <a href="/contact" className="block py-3 text-[#1f2f5f] font-medium">Contact</a>
-            <a href="/contact" className="block w-full text-center mt-4 px-6 py-3 bg-[#245532] text-white rounded-full">
+            <a href="#" className="block py-3 text-[#1f2f5f] font-medium">Contact</a>
+            <a href="#" className="block w-full text-center mt-4 px-6 py-3 bg-[#245532] text-white rounded-full">
               Book Appointment
             </a>
           </div>
@@ -505,7 +505,7 @@ export default function AlternativeA() {
 
               <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <a
-                  href="/contact"
+                  href="#"
                   className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#245532] text-white font-medium rounded-full hover:bg-[#1a472a] transition-colors text-sm sm:text-base"
                 >
                   Schedule Your Visit
@@ -767,7 +767,7 @@ export default function AlternativeA() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/contact"
+              href="#"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#245532] text-white font-medium rounded-full hover:bg-[#1a472a] transition-colors"
             >
               Book Your Appointment

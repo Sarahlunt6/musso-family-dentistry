@@ -144,7 +144,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="/contact"
+              href="#"
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-green text-white font-medium rounded-full overflow-hidden"
             >
               <span className="relative z-10">Begin Your Journey</span>
