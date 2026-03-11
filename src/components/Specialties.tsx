@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,51 +74,24 @@ interface SpecialtiesProps {
 export default function Specialties({ showSmileShuffler = false }: SpecialtiesProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
-  const carouselRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
   // Navigation handlers
-  const goToPrevious = useCallback(() => {
+  const goToPrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? specialties.length - 1 : prev - 1));
     setExpandedCard(null);
-  }, []);
+  };
 
-  const goToNext = useCallback(() => {
+  const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % specialties.length);
     setExpandedCard(null);
-  }, []);
-
-  // Drag to scroll handlers
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!carouselRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !carouselRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
   };
 
   // Toggle card expansion
-  const toggleExpand = (id: string) => {
-    setExpandedCard(expandedCard === id ? null : id);
+  const toggleExpand = () => {
+    const currentId = specialties[currentIndex].id;
+    setExpandedCard(expandedCard === currentId ? null : currentId);
   };
 
   useEffect(() => {
@@ -140,9 +113,9 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
         }
       );
 
-      // Carousel animation
+      // Content animation
       gsap.fromTo(
-        ".specialties-carousel",
+        ".specialties-content",
         { opacity: 0, y: 60 },
         {
           opacity: 1,
@@ -150,7 +123,7 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
           duration: 0.8,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: ".specialties-carousel",
+            trigger: ".specialties-content",
             start: "top 75%",
             toggleActions: "play none none none",
           },
@@ -181,17 +154,8 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
     return () => ctx.revert();
   }, [showSmileShuffler]);
 
-  // Auto-scroll effect
-  useEffect(() => {
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.querySelector('.specialty-card')?.clientWidth || 0;
-      const gap = 24; // gap-6 = 24px
-      carouselRef.current.scrollTo({
-        left: currentIndex * (cardWidth + gap),
-        behavior: 'smooth'
-      });
-    }
-  }, [currentIndex]);
+  const currentSpecialty = specialties[currentIndex];
+  const isExpanded = expandedCard === currentSpecialty.id;
 
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 bg-gradient-to-b from-white to-[#f0f7f2] overflow-hidden">
@@ -211,13 +175,13 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
           </p>
         </div>
 
-        {/* Main Content Grid - Carousel + SmileShuffler side by side */}
+        {/* Main Content Grid */}
         <div className={cn(
-          "grid gap-8",
-          showSmileShuffler ? "lg:grid-cols-[1fr,400px]" : "lg:grid-cols-1"
+          "specialties-content grid gap-8",
+          showSmileShuffler ? "lg:grid-cols-2" : "lg:grid-cols-1 max-w-2xl mx-auto"
         )}>
-          {/* Left Column: Carousel */}
-          <div className="min-w-0">
+          {/* Left Column: Single Card Display */}
+          <div>
             {/* Navigation Controls */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
@@ -234,7 +198,7 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
                         ? "w-8 bg-green"
                         : "w-2 bg-navy/20 hover:bg-navy/40"
                     )}
-                    aria-label={`Go to slide ${index + 1}`}
+                    aria-label={`Go to specialty ${index + 1}`}
                   />
                 ))}
               </div>
@@ -256,126 +220,96 @@ export default function Specialties({ showSmileShuffler = false }: SpecialtiesPr
               </div>
             </div>
 
-            {/* Scrolling Carousel */}
-            <div
-              ref={carouselRef}
-              className="specialties-carousel flex gap-6 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing pb-4"
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseLeave}
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {specialties.map((specialty, index) => {
-                const isExpanded = expandedCard === specialty.id;
-                const isActive = currentIndex === index;
-
-                return (
-                  <motion.div
-                    key={specialty.id}
-                    className={cn(
-                      "specialty-card flex-shrink-0",
-                      showSmileShuffler ? "w-[280px] sm:w-[300px]" : "w-[320px] sm:w-[360px] lg:w-[400px]",
-                      "transition-transform duration-300",
-                      isActive && "scale-[1.02]"
-                    )}
-                    layout
-                  >
-                    <div
-                      className={cn(
-                        "clinical-container h-full flex flex-col overflow-hidden",
-                        "transition-all duration-300",
-                        isActive ? "shadow-clinical-lg border-green/30" : "hover:shadow-clinical",
-                        "border-t-4",
-                        isActive ? "border-t-green" : "border-t-green/20"
-                      )}
-                    >
-                      {/* Card Header */}
-                      <div className="p-5 pb-3">
-                        <div className="flex items-start gap-3">
-                          {/* Icon */}
-                          <div className={cn(
-                            "w-12 h-12 rounded-xl flex items-center justify-center transition-colors",
-                            isActive
-                              ? "bg-green/10 text-green"
-                              : "bg-navy/5 text-navy/50"
-                          )}>
-                            <SpecialtyIcon type={specialty.id} />
-                          </div>
+            {/* Single Card with Animation */}
+            <div className="relative min-h-[320px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSpecialty.id}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="w-full"
+                >
+                  <div className="clinical-container h-full flex flex-col overflow-hidden shadow-clinical-lg border-t-4 border-t-green">
+                    {/* Card Header */}
+                    <div className="p-6 pb-4">
+                      <div className="flex items-start gap-4">
+                        {/* Icon */}
+                        <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-green/10 text-green">
+                          <SpecialtyIcon type={currentSpecialty.id} />
                         </div>
 
-                        {/* Title */}
-                        <h3 className="font-display text-lg text-navy mt-3">
-                          {specialty.title}
-                        </h3>
+                        {/* Counter */}
+                        <div className="ml-auto text-sm text-navy/40 font-medium">
+                          {currentIndex + 1} / {specialties.length}
+                        </div>
                       </div>
 
-                      {/* Card Body */}
-                      <div className="px-5 flex-grow">
-                        <p className="text-navy/60 text-sm leading-relaxed">
-                          {specialty.description}
-                        </p>
+                      {/* Title */}
+                      <h3 className="font-display text-2xl text-navy mt-4">
+                        {currentSpecialty.title}
+                      </h3>
+                    </div>
 
-                        {/* Expandable Content */}
-                        <AnimatePresence>
-                          {isExpanded && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="pt-3 mt-3 border-t border-navy/10">
-                                <p className="text-navy/70 text-sm leading-relaxed">
-                                  {specialty.extendedInfo}
-                                </p>
-                              </div>
-                            </motion.div>
+                    {/* Card Body */}
+                    <div className="px-6 flex-grow">
+                      <p className="text-navy/60 text-base leading-relaxed">
+                        {currentSpecialty.description}
+                      </p>
+
+                      {/* Expandable Content */}
+                      <AnimatePresence>
+                        {isExpanded && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pt-4 mt-4 border-t border-navy/10">
+                              <p className="text-navy/70 text-base leading-relaxed">
+                                {currentSpecialty.extendedInfo}
+                              </p>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Card Footer */}
+                    <div className="p-6 pt-4 mt-auto">
+                      <div className="flex items-center justify-between">
+                        <button
+                          onClick={toggleExpand}
+                          className={cn(
+                            "text-sm font-medium transition-colors",
+                            isExpanded ? "text-navy/50" : "text-green hover:text-navy"
                           )}
-                        </AnimatePresence>
-                      </div>
+                        >
+                          {isExpanded ? "Show Less" : "Learn More"}
+                        </button>
 
-                      {/* Card Footer */}
-                      <div className="p-5 pt-3 mt-auto">
-                        <div className="flex items-center justify-between">
-                          <button
-                            onClick={() => toggleExpand(specialty.id)}
-                            className={cn(
-                              "text-sm font-medium transition-colors",
-                              isExpanded ? "text-navy/50" : "text-green hover:text-navy"
-                            )}
-                          >
-                            {isExpanded ? "Show Less" : "Learn More"}
-                          </button>
-
-                          <a
-                            href="#"
-                            className="group inline-flex items-center gap-2 px-3 py-1.5 bg-green/5 hover:bg-green text-green hover:text-white rounded-full text-xs font-medium transition-all"
-                          >
-                            <span>View</span>
-                            <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                          </a>
-                        </div>
+                        <a
+                          href="#"
+                          className="group inline-flex items-center gap-2 px-4 py-2 bg-green/5 hover:bg-green text-green hover:text-white rounded-full text-sm font-medium transition-all"
+                        >
+                          <span>View Service</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                        </a>
                       </div>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            {/* Mobile Swipe Hint */}
-            <div className="flex items-center justify-center gap-2 mt-4 text-sm text-navy/40 lg:hidden">
-              <ChevronLeft className="w-4 h-4" />
-              <span>Swipe to explore</span>
-              <ChevronRight className="w-4 h-4" />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
 
           {/* Right Column: Smile Shuffler */}
           {showSmileShuffler && (
             <div className="smile-shuffler-wrapper">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-24">
                 <div className="mb-4">
                   <p className="text-xs text-green font-medium uppercase tracking-wide mb-2">Real Results</p>
                   <h3 className="font-display text-xl text-navy">See the Transformation</h3>
