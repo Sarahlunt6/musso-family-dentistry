@@ -40,7 +40,6 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { SmileShuffler } from "@/components/ArtifactCards";
 import Specialties from "@/components/Specialties";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -558,8 +557,8 @@ export default function AlternativeA() {
         </div>
       </section>
 
-      {/* Specialties */}
-      <Specialties />
+      {/* Specialties with Smile Shuffler */}
+      <Specialties showSmileShuffler={true} />
 
       {/* Services */}
       <section ref={servicesRef} className="py-24 bg-white">
@@ -631,22 +630,6 @@ export default function AlternativeA() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Smile Transformation */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="max-w-xl mx-auto px-8 sm:px-12 lg:px-16">
-          <div className="text-center mb-8 sm:mb-12">
-            <p className="text-xs sm:text-sm text-[#245532] font-medium uppercase tracking-wide mb-3 sm:mb-4">Real Results</p>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1f2f5f]">
-              See the transformation.
-            </h2>
-            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-[#1f2f5f]/60 max-w-2xl mx-auto">
-              Drag to reveal the before and after of our smile transformations.
-            </p>
-          </div>
-          <SmileShuffler />
         </div>
       </section>
 

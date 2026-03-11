@@ -17,8 +17,8 @@ export default function Home() {
       {/* Entry: Hero Impact → Immediate Brand Authority */}
       <Hero />
 
-      {/* Services: Our Specialties → Core Offerings */}
-      <Specialties />
+      {/* Services: Our Specialties with Smile Shuffler */}
+      <Specialties showSmileShuffler={true} />
 
       {/* About: Meet Dr. Musso → Build Trust */}
       <MeetTheDoctor />
