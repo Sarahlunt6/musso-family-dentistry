@@ -24,7 +24,7 @@ const smileTransformations = [
   },
 ];
 
-function SmileShuffler() {
+export function SmileShuffler() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -96,7 +96,7 @@ function SmileShuffler() {
       {/* Slider Container */}
       <div
         ref={containerRef}
-        className="relative aspect-[16/10] cursor-ew-resize select-none"
+        className="relative aspect-[4/3] cursor-ew-resize select-none"
         onMouseDown={() => setIsDragging(true)}
       >
         <AnimatePresence mode="wait">
@@ -108,24 +108,8 @@ function SmileShuffler() {
             transition={{ duration: 0.3 }}
             className="absolute inset-0"
           >
-            {/* Before Image (Full) */}
+            {/* After Image (Full - base layer on right) */}
             <div className="absolute inset-0">
-              <Image
-                src={current.before}
-                alt="Before transformation"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute top-4 left-4 px-3 py-1.5 bg-navy/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
-                Before
-              </div>
-            </div>
-
-            {/* After Image (Clipped) */}
-            <div
-              className="absolute inset-0 overflow-hidden"
-              style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
-            >
               <Image
                 src={current.after}
                 alt="After transformation"
@@ -137,10 +121,26 @@ function SmileShuffler() {
               </div>
             </div>
 
-            {/* Slider Handle - Spring Physics */}
+            {/* Before Image (Clipped from right - reveals from left) */}
+            <div
+              className="absolute inset-0 overflow-hidden"
+              style={{ clipPath: `inset(0 ${sliderPosition}% 0 0)` }}
+            >
+              <Image
+                src={current.before}
+                alt="Before transformation"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute top-4 left-4 px-3 py-1.5 bg-navy/80 backdrop-blur-sm rounded-full text-white text-xs font-medium">
+                Before
+              </div>
+            </div>
+
+            {/* Slider Handle */}
             <div
               className="spring-handle absolute top-0 bottom-0 w-1 bg-white shadow-lg"
-              style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
+              style={{ left: `${100 - sliderPosition}%`, transform: "translateX(-50%)" }}
             >
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-clinical flex items-center justify-center">
                 <div className="flex items-center gap-0.5">
@@ -367,7 +367,7 @@ export default function ArtifactCards() {
 
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-16">
         {/* Section Header */}
         <div ref={headerRef} className="text-center mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
@@ -384,7 +384,7 @@ export default function ArtifactCards() {
         </div>
 
         {/* Two Artifact Cards Grid */}
-        <div className="artifact-cards-grid grid lg:grid-cols-2 gap-6">
+        <div className="artifact-cards-grid grid lg:grid-cols-2 gap-8">
           <div className="artifact-card">
             <ProtocolScheduler />
           </div>

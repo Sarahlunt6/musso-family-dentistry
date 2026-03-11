@@ -39,6 +39,7 @@ import {
   PenLine,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SmileShuffler } from "@/components/ArtifactCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -823,6 +824,25 @@ export default function AlternativeB() {
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Smile Transformation */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="max-w-xl mx-auto px-8 sm:px-12 lg:px-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-green/5 text-green text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-green" />
+              Real Results
+            </span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-navy tracking-tight">
+              See the <span className="hero-serif">Transformation</span>
+            </h2>
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-navy/50 max-w-2xl mx-auto">
+              Drag to reveal the before and after of our smile transformations.
+            </p>
+          </div>
+          <SmileShuffler />
         </div>
       </section>
 

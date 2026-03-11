@@ -27,21 +27,79 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Musso Family Dentistry | Legacy Meets Modern Artistry",
+  title: {
+    default: "Musso Family Dentistry | Family Dentist in Garland, TX",
+    template: "%s | Musso Family Dentistry",
+  },
   description:
-    "Where clinical precision meets architectural luxury. Musso Family Dentistry delivers transformative results through advanced technology and meticulous care.",
+    "Musso Family Dentistry in Garland, TX offers comprehensive dental care for the whole family. Services include cosmetic dentistry, dental implants, sleep apnea treatment, and more. Call (972) 278-1827.",
   keywords: [
-    "dentistry",
-    "family dentist",
-    "cosmetic dentistry",
-    "dental care",
-    "orthodontics",
-    "luxury dentistry",
+    "dentist Garland TX",
+    "family dentist Garland",
+    "cosmetic dentistry Garland TX",
+    "dental implants Garland",
+    "sleep apnea dentist",
+    "Musso Family Dentistry",
+    "dentist near me",
+    "family dental care",
+    "teeth whitening Garland",
+    "Invisalign Garland TX",
   ],
+  authors: [{ name: "Musso Family Dentistry" }],
+  creator: "Musso Family Dentistry",
+  publisher: "Musso Family Dentistry",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://mussofamilydentistry.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Musso Family Dentistry",
-    description: "Legacy Meets Modern Artistry",
+    title: "Musso Family Dentistry | Family Dentist in Garland, TX",
+    description:
+      "Comprehensive dental care for the whole family in Garland, TX. Cosmetic dentistry, dental implants, sleep apnea treatment & more.",
+    url: "https://mussofamilydentistry.com",
+    siteName: "Musso Family Dentistry",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/logo.webp",
+        width: 180,
+        height: 45,
+        alt: "Musso Family Dentistry Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Musso Family Dentistry | Family Dentist in Garland, TX",
+    description:
+      "Comprehensive dental care for the whole family in Garland, TX. Call (972) 278-1827.",
+    images: ["/logo.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/logo.webp",
+    shortcut: "/logo.webp",
+    apple: "/logo.webp",
+  },
+  verification: {
+    // Add verification codes when available
+    // google: "google-site-verification-code",
   },
 };
 
