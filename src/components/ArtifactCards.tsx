@@ -70,27 +70,8 @@ export function SmileShuffler() {
   return (
     <div className="clinical-container overflow-hidden">
       {/* Header */}
-      <div className="p-6 border-b border-navy/5">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="font-display text-xl text-navy">Smile Shuffler</h3>
-            <p className="text-sm text-navy/50 mt-1">Drag to reveal transformation</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={goToPrevious}
-              className="w-9 h-9 rounded-full border border-navy/10 flex items-center justify-center text-navy/50 hover:text-green hover:border-green transition-colors"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={goToNext}
-              className="w-9 h-9 rounded-full border border-navy/10 flex items-center justify-center text-navy/50 hover:text-green hover:border-green transition-colors"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
+      <div className="p-4 border-b border-navy/5">
+        <p className="text-sm text-navy/50 text-center">Drag to reveal transformation</p>
       </div>
 
       {/* Slider Container */}
