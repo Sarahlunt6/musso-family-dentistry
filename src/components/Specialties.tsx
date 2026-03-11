@@ -12,24 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const specialties = [
   {
-    id: "family",
-    title: "Family Dentistry",
-    description:
-      "We provide comprehensive dental care for patients of all ages, focusing on maintaining optimal oral health for every member of your family.",
-    extendedInfo: "From routine cleanings and exams to fillings and preventive care, we ensure your entire family receives personalized attention in a comfortable environment.",
-    icon: "/icons/family-dentistry.svg",
-    href: "/services/family-dentistry",
-  },
-  {
-    id: "sleep",
-    title: "Sleep Apnea",
-    description:
-      "Our expert team of general dentists offers effective sleep apnea solutions such as dental devices, ensuring you achieve restful and restorative sleep.",
-    extendedInfo: "Custom oral appliances can reposition your jaw to keep airways open, offering a comfortable alternative to CPAP machines for mild to moderate sleep apnea.",
-    icon: "/icons/sleep-apnea.svg",
-    href: "/services/sleep-apnea",
-  },
-  {
     id: "implants",
     title: "Dental Implants",
     description:
@@ -46,6 +28,24 @@ const specialties = [
     extendedInfo: "Services include professional teeth whitening, porcelain veneers, bonding, and smile makeovers tailored to achieve your ideal aesthetic goals.",
     icon: "/icons/cosmetic-dentistry.svg",
     href: "/services/cosmetic-dentistry",
+  },
+  {
+    id: "family",
+    title: "Family Dentistry",
+    description:
+      "We provide comprehensive dental care for patients of all ages, focusing on maintaining optimal oral health for every member of your family.",
+    extendedInfo: "From routine cleanings and exams to fillings and preventive care, we ensure your entire family receives personalized attention in a comfortable environment.",
+    icon: "/icons/family-dentistry.svg",
+    href: "/services/family-dentistry",
+  },
+  {
+    id: "sleep",
+    title: "Sleep Apnea",
+    description:
+      "Our expert team of general dentists offers effective sleep apnea solutions such as dental devices, ensuring you achieve restful and restorative sleep.",
+    extendedInfo: "Custom oral appliances can reposition your jaw to keep airways open, offering a comfortable alternative to CPAP machines for mild to moderate sleep apnea.",
+    icon: "/icons/sleep-apnea.svg",
+    href: "/services/sleep-apnea",
   },
 ];
 
