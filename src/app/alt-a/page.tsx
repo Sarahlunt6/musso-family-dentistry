@@ -318,25 +318,88 @@ export default function AlternativeA() {
   return (
     <main className="bg-[#FDFBF7] text-[#1f2f5f]">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#1f2f5f]/5">
+      <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-[#1f2f5f]/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <a href="/alt-a">
               <Image src="/logo.webp" alt="Musso Family Dentistry" width={180} height={45} className="h-10 w-auto" />
             </a>
 
-            <div className="hidden lg:flex items-center gap-10">
-              {["About", "Services", "Team", "Patient Info", "Contact"].map((item) => (
-                <a key={item} href="#" className="text-sm text-[#1f2f5f]/70 hover:text-[#245532] transition-colors">
-                  {item}
-                </a>
+            <div className="hidden lg:flex items-center gap-1">
+              {navigation.map((dropdown) => (
+                <div
+                  key={dropdown.label}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(dropdown.label)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <button
+                    className={cn(
+                      "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-full",
+                      activeDropdown === dropdown.label
+                        ? "text-[#245532] bg-[#245532]/5"
+                        : "text-[#1f2f5f]/70 hover:text-[#1f2f5f] hover:bg-[#1f2f5f]/5"
+                    )}
+                  >
+                    {dropdown.label}
+                    <ChevronDown
+                      className={cn(
+                        "w-3.5 h-3.5 transition-transform duration-200",
+                        activeDropdown === dropdown.label ? "rotate-180" : ""
+                      )}
+                    />
+                  </button>
+
+                  {activeDropdown === dropdown.label && (
+                    <div
+                      className={cn(
+                        "absolute top-full left-0 mt-2 rounded-2xl bg-white p-2 shadow-xl min-w-[280px]",
+                        "border border-[#1f2f5f]/5"
+                      )}
+                      onMouseEnter={() => handleMouseEnter(dropdown.label)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div
+                        className={cn(
+                          "grid gap-0.5",
+                          dropdown.label === "Services" && "max-h-[380px] overflow-y-auto"
+                        )}
+                      >
+                        {dropdown.items.map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#1f2f5f]/5 transition-colors group"
+                          >
+                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#1f2f5f]/5 flex items-center justify-center text-[#1f2f5f]/60 group-hover:bg-[#245532] group-hover:text-white transition-colors">
+                              {item.icon}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <span className="block text-sm font-medium text-[#1f2f5f] group-hover:text-[#245532] transition-colors">
+                                {item.label}
+                              </span>
+                              {item.description && (
+                                <span className="block text-xs text-[#1f2f5f]/40 mt-0.5">
+                                  {item.description}
+                                </span>
+                              )}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
+              <a href="/contact" className="px-4 py-2 text-sm text-[#1f2f5f]/70 hover:text-[#245532] transition-colors">
+                Contact
+              </a>
             </div>
 
             <div className="hidden lg:flex items-center gap-6">
-              <a href="tel:+15551234567" className="flex items-center gap-2 text-sm text-[#1f2f5f]/60">
+              <a href="tel:+19722781827" className="flex items-center gap-2 text-sm text-[#1f2f5f]/60">
                 <Phone className="w-4 h-4" />
-                (555) 123-4567
+                (972) 278-1827
               </a>
               <a
                 href="/contact"
@@ -354,9 +417,42 @@ export default function AlternativeA() {
 
         {menuOpen && (
           <div className="lg:hidden bg-[#FDFBF7] border-t border-[#1f2f5f]/5 px-6 py-8">
-            {["About", "Services", "Team", "Contact"].map((item) => (
-              <a key={item} href="#" className="block py-3 text-[#1f2f5f]">{item}</a>
+            {navigation.map((dropdown) => (
+              <div key={dropdown.label}>
+                <button
+                  onClick={() =>
+                    setMobileActiveDropdown(
+                      mobileActiveDropdown === dropdown.label ? null : dropdown.label
+                    )
+                  }
+                  className="flex items-center justify-between w-full py-3 text-left text-[#1f2f5f]"
+                >
+                  <span className="font-medium">{dropdown.label}</span>
+                  <ChevronDown
+                    className={cn(
+                      "w-4 h-4 transition-transform duration-200",
+                      mobileActiveDropdown === dropdown.label ? "rotate-180" : ""
+                    )}
+                  />
+                </button>
+
+                {mobileActiveDropdown === dropdown.label && (
+                  <div className="pl-4 pb-2 space-y-1">
+                    {dropdown.items.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        className="flex items-center gap-3 px-3 py-2 text-sm text-[#1f2f5f]/70 hover:text-[#245532] rounded-lg transition-colors"
+                      >
+                        <span className="text-[#1f2f5f]/40">{item.icon}</span>
+                        <span>{item.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
+            <a href="/contact" className="block py-3 text-[#1f2f5f] font-medium">Contact</a>
             <a href="/contact" className="block w-full text-center mt-4 px-6 py-3 bg-[#245532] text-white rounded-full">
               Book Appointment
             </a>

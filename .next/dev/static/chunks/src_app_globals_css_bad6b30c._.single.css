@@ -2090,6 +2090,10 @@ img, video {
   padding-top: .25rem;
 }
 
+.pb-2 {
+  padding-bottom: .5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3033,6 +3037,10 @@ button:focus-visible, a:focus-visible {
   background-color: rgb(31 47 95 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#1f2f5f\]\/5:hover {
+  background-color: #1f2f5f0d;
+}
+
 .hover\:text-cream\/60:hover {
   color: #fff9;
 }
@@ -3073,6 +3081,11 @@ button:focus-visible, a:focus-visible {
 
 .hover\:text-white\/60:hover {
   color: #fff9;
+}
+
+.hover\:text-\[\#1f2f5f\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 47 95 / var(--tw-text-opacity, 1));
 }
 
 .hover\:shadow-lg:hover {

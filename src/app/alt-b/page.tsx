@@ -20,6 +20,23 @@ import {
   Shield,
   Heart,
   Check,
+  ChevronDown,
+  Building2,
+  Camera,
+  Users,
+  Cpu,
+  Stethoscope,
+  Smile,
+  ShoppingBag,
+  Wrench,
+  Moon,
+  Syringe,
+  BookOpen,
+  CreditCard,
+  FileText,
+  User,
+  Leaf,
+  PenLine,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -29,6 +46,132 @@ gsap.registerPlugin(ScrollTrigger);
 // ALTERNATIVE B: ARCHITECTURAL ELEGANCE
 // Clean lines, premium feel, refined typography
 // ============================================
+
+const navigation = [
+  {
+    label: "About",
+    items: [
+      {
+        label: "About Us",
+        href: "/about",
+        icon: <Building2 className="w-4 h-4" />,
+        description: "Our philosophy and approach",
+      },
+      {
+        label: "Meet the Team",
+        href: "/team",
+        icon: <Users className="w-4 h-4" />,
+        description: "Expert clinicians dedicated to you",
+      },
+      {
+        label: "Office Tour",
+        href: "/tour",
+        icon: <Camera className="w-4 h-4" />,
+        description: "Experience our modern facility",
+      },
+    ],
+  },
+  {
+    label: "Services",
+    items: [
+      {
+        label: "Cosmetic",
+        href: "/services/cosmetic",
+        icon: <Sparkles className="w-4 h-4" />,
+        description: "Veneers, whitening & smile design",
+      },
+      {
+        label: "Technology",
+        href: "/services/technology",
+        icon: <Cpu className="w-4 h-4" />,
+        description: "Digital imaging & CAD/CAM",
+      },
+      {
+        label: "General",
+        href: "/services/general",
+        icon: <Stethoscope className="w-4 h-4" />,
+        description: "Preventive care & checkups",
+      },
+      {
+        label: "Oral Health",
+        href: "/services/oral-health",
+        icon: <Heart className="w-4 h-4" />,
+        description: "Gum health & disease prevention",
+      },
+      {
+        label: "Ortho",
+        href: "/services/orthodontics",
+        icon: <Smile className="w-4 h-4" />,
+        description: "Invisalign & clear aligners",
+      },
+      {
+        label: "Products",
+        href: "/services/products",
+        icon: <ShoppingBag className="w-4 h-4" />,
+        description: "Professional-grade oral care",
+      },
+      {
+        label: "Restorative",
+        href: "/services/restorative",
+        icon: <Wrench className="w-4 h-4" />,
+        description: "Implants, crowns & bridges",
+      },
+      {
+        label: "Sleep",
+        href: "/services/sleep",
+        icon: <Moon className="w-4 h-4" />,
+        description: "Apnea treatment & solutions",
+      },
+      {
+        label: "Botox",
+        href: "/services/botox",
+        icon: <Syringe className="w-4 h-4" />,
+        description: "Therapeutic & aesthetic Botox",
+      },
+    ],
+  },
+  {
+    label: "Patient Info",
+    items: [
+      {
+        label: "Resources",
+        href: "/patient/resources",
+        icon: <BookOpen className="w-4 h-4" />,
+        description: "Educational materials & guides",
+      },
+      {
+        label: "Financial",
+        href: "/patient/financial",
+        icon: <CreditCard className="w-4 h-4" />,
+        description: "Insurance & payment options",
+      },
+      {
+        label: "Forms",
+        href: "/patient/forms",
+        icon: <FileText className="w-4 h-4" />,
+        description: "New patient paperwork",
+      },
+      {
+        label: "Portal",
+        href: "/patient/portal",
+        icon: <User className="w-4 h-4" />,
+        description: "Access your health records",
+      },
+      {
+        label: "Wellness",
+        href: "/patient/wellness",
+        icon: <Leaf className="w-4 h-4" />,
+        description: "Holistic health integration",
+      },
+      {
+        label: "Blogs",
+        href: "/patient/blog",
+        icon: <PenLine className="w-4 h-4" />,
+        description: "Insights & dental tips",
+      },
+    ],
+  },
+];
 
 const expertise = [
   {
@@ -95,6 +238,8 @@ const doctors = [
 export default function AlternativeB() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
   const line1Ref = useRef<HTMLSpanElement>(null);
@@ -103,6 +248,17 @@ export default function AlternativeB() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = (label: string) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActiveDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 100);
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -245,6 +401,7 @@ export default function AlternativeB() {
     <div ref={containerRef} className="bg-white text-navy">
       {/* Navbar */}
       <nav
+        ref={navRef}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
@@ -262,16 +419,75 @@ export default function AlternativeB() {
               />
             </a>
 
-            <div className="hidden lg:flex items-center gap-10">
-              {["About", "Services", "Team", "Contact"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-sm text-navy/70 hover:text-green transition-colors"
+            <div className="hidden lg:flex items-center gap-1">
+              {navigation.map((dropdown) => (
+                <div
+                  key={dropdown.label}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(dropdown.label)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  {item}
-                </a>
+                  <button
+                    className={cn(
+                      "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-full",
+                      activeDropdown === dropdown.label
+                        ? "text-green bg-green/5"
+                        : "text-navy/70 hover:text-navy hover:bg-navy/5"
+                    )}
+                  >
+                    {dropdown.label}
+                    <ChevronDown
+                      className={cn(
+                        "w-3.5 h-3.5 transition-transform duration-200",
+                        activeDropdown === dropdown.label ? "rotate-180" : ""
+                      )}
+                    />
+                  </button>
+
+                  {activeDropdown === dropdown.label && (
+                    <div
+                      className={cn(
+                        "absolute top-full left-0 mt-2 rounded-2xl bg-white p-2 shadow-xl min-w-[280px]",
+                        "border border-navy/5"
+                      )}
+                      onMouseEnter={() => handleMouseEnter(dropdown.label)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div
+                        className={cn(
+                          "grid gap-0.5",
+                          dropdown.label === "Services" && "max-h-[380px] overflow-y-auto"
+                        )}
+                      >
+                        {dropdown.items.map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            className="flex items-start gap-3 p-3 rounded-xl hover:bg-navy/5 transition-colors group"
+                          >
+                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-navy/5 flex items-center justify-center text-navy/60 group-hover:bg-green group-hover:text-white transition-colors">
+                              {item.icon}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <span className="block text-sm font-medium text-navy group-hover:text-green transition-colors">
+                                {item.label}
+                              </span>
+                              {item.description && (
+                                <span className="block text-xs text-navy/40 mt-0.5">
+                                  {item.description}
+                                </span>
+                              )}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
+              <a href="/contact" className="px-4 py-2 text-sm text-navy/70 hover:text-green transition-colors">
+                Contact
+              </a>
             </div>
 
             <a
@@ -293,9 +509,42 @@ export default function AlternativeB() {
 
         {menuOpen && (
           <div className="lg:hidden bg-navy px-6 py-8">
-            {["About", "Services", "Team", "Contact"].map((item) => (
-              <a key={item} href="#" className="block py-3 text-white/80 hover:text-white">{item}</a>
+            {navigation.map((dropdown) => (
+              <div key={dropdown.label}>
+                <button
+                  onClick={() =>
+                    setMobileActiveDropdown(
+                      mobileActiveDropdown === dropdown.label ? null : dropdown.label
+                    )
+                  }
+                  className="flex items-center justify-between w-full py-3 text-left text-white/80"
+                >
+                  <span className="font-medium">{dropdown.label}</span>
+                  <ChevronDown
+                    className={cn(
+                      "w-4 h-4 transition-transform duration-200",
+                      mobileActiveDropdown === dropdown.label ? "rotate-180" : ""
+                    )}
+                  />
+                </button>
+
+                {mobileActiveDropdown === dropdown.label && (
+                  <div className="pl-4 pb-2 space-y-1">
+                    {dropdown.items.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        className="flex items-center gap-3 px-3 py-2 text-sm text-white/60 hover:text-white rounded-lg transition-colors"
+                      >
+                        <span className="text-white/40">{item.icon}</span>
+                        <span>{item.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
+            <a href="/contact" className="block py-3 text-white/80 hover:text-white font-medium">Contact</a>
             <a href="/contact" className="block w-full text-center mt-4 px-6 py-3 bg-green text-white rounded-full">
               Book Consultation
             </a>

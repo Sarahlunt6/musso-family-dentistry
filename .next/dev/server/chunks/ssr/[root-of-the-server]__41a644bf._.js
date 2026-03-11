@@ -46,6 +46,23 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield.js [app-ssr] (ecmascript) <export default as Shield>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/heart.js [app-ssr] (ecmascript) <export default as Heart>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/check.js [app-ssr] (ecmascript) <export default as Check>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-ssr] (ecmascript) <export default as ChevronDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/building-2.js [app-ssr] (ecmascript) <export default as Building2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/camera.js [app-ssr] (ecmascript) <export default as Camera>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-ssr] (ecmascript) <export default as Users>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$cpu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Cpu$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/cpu.js [app-ssr] (ecmascript) <export default as Cpu>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$stethoscope$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Stethoscope$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/stethoscope.js [app-ssr] (ecmascript) <export default as Stethoscope>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smile$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smile$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/smile.js [app-ssr] (ecmascript) <export default as Smile>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$bag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingBag$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shopping-bag.js [app-ssr] (ecmascript) <export default as ShoppingBag>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wrench$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Wrench$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/wrench.js [app-ssr] (ecmascript) <export default as Wrench>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/moon.js [app-ssr] (ecmascript) <export default as Moon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$syringe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Syringe$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/syringe.js [app-ssr] (ecmascript) <export default as Syringe>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/book-open.js [app-ssr] (ecmascript) <export default as BookOpen>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$credit$2d$card$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CreditCard$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/credit-card.js [app-ssr] (ecmascript) <export default as CreditCard>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file-text.js [app-ssr] (ecmascript) <export default as FileText>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/user.js [app-ssr] (ecmascript) <export default as User>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$leaf$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Leaf$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/leaf.js [app-ssr] (ecmascript) <export default as Leaf>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2d$line$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PenLine$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/pen-line.js [app-ssr] (ecmascript) <export default as PenLine>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils.ts [app-ssr] (ecmascript)");
 "use client";
 ;
@@ -60,6 +77,239 @@ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e
 // ALTERNATIVE B: ARCHITECTURAL ELEGANCE
 // Clean lines, premium feel, refined typography
 // ============================================
+const navigation = [
+    {
+        label: "About",
+        items: [
+            {
+                label: "About Us",
+                href: "/about",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 57,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Our philosophy and approach"
+            },
+            {
+                label: "Meet the Team",
+                href: "/team",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 63,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Expert clinicians dedicated to you"
+            },
+            {
+                label: "Office Tour",
+                href: "/tour",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__["Camera"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 69,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Experience our modern facility"
+            }
+        ]
+    },
+    {
+        label: "Services",
+        items: [
+            {
+                label: "Cosmetic",
+                href: "/services/cosmetic",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 80,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Veneers, whitening & smile design"
+            },
+            {
+                label: "Technology",
+                href: "/services/technology",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$cpu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Cpu$3e$__["Cpu"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 86,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Digital imaging & CAD/CAM"
+            },
+            {
+                label: "General",
+                href: "/services/general",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$stethoscope$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Stethoscope$3e$__["Stethoscope"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 92,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Preventive care & checkups"
+            },
+            {
+                label: "Oral Health",
+                href: "/services/oral-health",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__["Heart"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 98,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Gum health & disease prevention"
+            },
+            {
+                label: "Ortho",
+                href: "/services/orthodontics",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smile$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smile$3e$__["Smile"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 104,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Invisalign & clear aligners"
+            },
+            {
+                label: "Products",
+                href: "/services/products",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$bag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingBag$3e$__["ShoppingBag"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 110,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Professional-grade oral care"
+            },
+            {
+                label: "Restorative",
+                href: "/services/restorative",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$wrench$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Wrench$3e$__["Wrench"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 116,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Implants, crowns & bridges"
+            },
+            {
+                label: "Sleep",
+                href: "/services/sleep",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 122,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Apnea treatment & solutions"
+            },
+            {
+                label: "Botox",
+                href: "/services/botox",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$syringe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Syringe$3e$__["Syringe"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 128,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Therapeutic & aesthetic Botox"
+            }
+        ]
+    },
+    {
+        label: "Patient Info",
+        items: [
+            {
+                label: "Resources",
+                href: "/patient/resources",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 139,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Educational materials & guides"
+            },
+            {
+                label: "Financial",
+                href: "/patient/financial",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$credit$2d$card$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CreditCard$3e$__["CreditCard"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 145,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Insurance & payment options"
+            },
+            {
+                label: "Forms",
+                href: "/patient/forms",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 151,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "New patient paperwork"
+            },
+            {
+                label: "Portal",
+                href: "/patient/portal",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 157,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Access your health records"
+            },
+            {
+                label: "Wellness",
+                href: "/patient/wellness",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$leaf$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Leaf$3e$__["Leaf"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 163,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Holistic health integration"
+            },
+            {
+                label: "Blogs",
+                href: "/patient/blog",
+                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2d$line$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PenLine$3e$__["PenLine"], {
+                    className: "w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/alt-b/page.tsx",
+                    lineNumber: 169,
+                    columnNumber: 15
+                }, ("TURBOPACK compile-time value", void 0)),
+                description: "Insights & dental tips"
+            }
+        ]
+    }
+];
 const expertise = [
     {
         number: "01",
@@ -69,7 +319,7 @@ const expertise = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/src/app/alt-b/page.tsx",
-            lineNumber: 38,
+            lineNumber: 181,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -81,7 +331,7 @@ const expertise = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/src/app/alt-b/page.tsx",
-            lineNumber: 44,
+            lineNumber: 187,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -93,7 +343,7 @@ const expertise = [
             className: "w-5 h-5"
         }, void 0, false, {
             fileName: "[project]/src/app/alt-b/page.tsx",
-            lineNumber: 50,
+            lineNumber: 193,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0))
     }
@@ -151,6 +401,8 @@ const doctors = [
 function AlternativeB() {
     const [menuOpen, setMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isScrolled, setIsScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [activeDropdown, setActiveDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [mobileActiveDropdown, setMobileActiveDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const containerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const heroRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const line1Ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -159,6 +411,15 @@ function AlternativeB() {
     const ctaRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const imageRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const badgeRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const navRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const timeoutRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const handleMouseEnter = (label)=>{
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        setActiveDropdown(label);
+    };
+    const handleMouseLeave = ()=>{
+        timeoutRef.current = setTimeout(()=>setActiveDropdown(null), 100);
+    };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const handleScroll = ()=>setIsScrolled(window.scrollY > 50);
         window.addEventListener("scroll", handleScroll, {
@@ -316,6 +577,7 @@ function AlternativeB() {
         className: "bg-white text-navy",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                ref: navRef,
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("fixed top-0 left-0 right-0 z-50 transition-all duration-500", isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"),
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -334,33 +596,117 @@ function AlternativeB() {
                                         className: "h-10 w-auto"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 256,
+                                        lineNumber: 413,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 255,
+                                    lineNumber: 412,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "hidden lg:flex items-center gap-10",
+                                    className: "hidden lg:flex items-center gap-1",
                                     children: [
-                                        "About",
-                                        "Services",
-                                        "Team",
-                                        "Contact"
-                                    ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#",
-                                            className: "text-sm text-navy/70 hover:text-green transition-colors",
-                                            children: item
-                                        }, item, false, {
+                                        navigation.map((dropdown)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "relative",
+                                                onMouseEnter: ()=>handleMouseEnter(dropdown.label),
+                                                onMouseLeave: handleMouseLeave,
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-full", activeDropdown === dropdown.label ? "text-green bg-green/5" : "text-navy/70 hover:text-navy hover:bg-navy/5"),
+                                                        children: [
+                                                            dropdown.label,
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("w-3.5 h-3.5 transition-transform duration-200", activeDropdown === dropdown.label ? "rotate-180" : "")
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/alt-b/page.tsx",
+                                                                lineNumber: 439,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/alt-b/page.tsx",
+                                                        lineNumber: 430,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    activeDropdown === dropdown.label && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("absolute top-full left-0 mt-2 rounded-2xl bg-white p-2 shadow-xl min-w-[280px]", "border border-navy/5"),
+                                                        onMouseEnter: ()=>handleMouseEnter(dropdown.label),
+                                                        onMouseLeave: handleMouseLeave,
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("grid gap-0.5", dropdown.label === "Services" && "max-h-[380px] overflow-y-auto"),
+                                                            children: dropdown.items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                    href: item.href,
+                                                                    className: "flex items-start gap-3 p-3 rounded-xl hover:bg-navy/5 transition-colors group",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "flex-shrink-0 w-8 h-8 rounded-lg bg-navy/5 flex items-center justify-center text-navy/60 group-hover:bg-green group-hover:text-white transition-colors",
+                                                                            children: item.icon
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                                                            lineNumber: 468,
+                                                                            columnNumber: 29
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "flex-1 min-w-0",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: "block text-sm font-medium text-navy group-hover:text-green transition-colors",
+                                                                                    children: item.label
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/app/alt-b/page.tsx",
+                                                                                    lineNumber: 472,
+                                                                                    columnNumber: 31
+                                                                                }, this),
+                                                                                item.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: "block text-xs text-navy/40 mt-0.5",
+                                                                                    children: item.description
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/src/app/alt-b/page.tsx",
+                                                                                    lineNumber: 476,
+                                                                                    columnNumber: 33
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                                                            lineNumber: 471,
+                                                                            columnNumber: 29
+                                                                        }, this)
+                                                                    ]
+                                                                }, item.label, true, {
+                                                                    fileName: "[project]/src/app/alt-b/page.tsx",
+                                                                    lineNumber: 463,
+                                                                    columnNumber: 27
+                                                                }, this))
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                                            lineNumber: 456,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/alt-b/page.tsx",
+                                                        lineNumber: 448,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, dropdown.label, true, {
+                                                fileName: "[project]/src/app/alt-b/page.tsx",
+                                                lineNumber: 424,
+                                                columnNumber: 17
+                                            }, this)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: "/contact",
+                                            className: "px-4 py-2 text-sm text-navy/70 hover:text-green transition-colors",
+                                            children: "Contact"
+                                        }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 267,
-                                            columnNumber: 17
-                                        }, this))
-                                }, void 0, false, {
+                                            lineNumber: 488,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 265,
+                                    lineNumber: 422,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -372,13 +718,13 @@ function AlternativeB() {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 498,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 277,
+                                    lineNumber: 493,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -388,67 +734,127 @@ function AlternativeB() {
                                         className: "w-6 h-6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 289,
+                                        lineNumber: 505,
                                         columnNumber: 27
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                         className: "w-6 h-6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 289,
+                                        lineNumber: 505,
                                         columnNumber: 55
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 285,
+                                    lineNumber: 501,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 254,
+                            lineNumber: 411,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 253,
+                        lineNumber: 410,
                         columnNumber: 9
                     }, this),
                     menuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "lg:hidden bg-navy px-6 py-8",
                         children: [
-                            [
-                                "About",
-                                "Services",
-                                "Team",
-                                "Contact"
-                            ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "#",
-                                    className: "block py-3 text-white/80 hover:text-white",
-                                    children: item
-                                }, item, false, {
+                            navigation.map((dropdown)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>setMobileActiveDropdown(mobileActiveDropdown === dropdown.label ? null : dropdown.label),
+                                            className: "flex items-center justify-between w-full py-3 text-left text-white/80",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "font-medium",
+                                                    children: dropdown.label
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/alt-b/page.tsx",
+                                                    lineNumber: 522,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+                                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("w-4 h-4 transition-transform duration-200", mobileActiveDropdown === dropdown.label ? "rotate-180" : "")
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/alt-b/page.tsx",
+                                                    lineNumber: 523,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                            lineNumber: 514,
+                                            columnNumber: 17
+                                        }, this),
+                                        mobileActiveDropdown === dropdown.label && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "pl-4 pb-2 space-y-1",
+                                            children: dropdown.items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: item.href,
+                                                    className: "flex items-center gap-3 px-3 py-2 text-sm text-white/60 hover:text-white rounded-lg transition-colors",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-white/40",
+                                                            children: item.icon
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                                            lineNumber: 539,
+                                                            columnNumber: 25
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: item.label
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                                            lineNumber: 540,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    ]
+                                                }, item.label, true, {
+                                                    fileName: "[project]/src/app/alt-b/page.tsx",
+                                                    lineNumber: 534,
+                                                    columnNumber: 23
+                                                }, this))
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/alt-b/page.tsx",
+                                            lineNumber: 532,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, dropdown.label, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 513,
                                     columnNumber: 15
                                 }, this)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "/contact",
+                                className: "block py-3 text-white/80 hover:text-white font-medium",
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/alt-b/page.tsx",
+                                lineNumber: 547,
+                                columnNumber: 13
+                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: "/contact",
                                 className: "block w-full text-center mt-4 px-6 py-3 bg-green text-white rounded-full",
                                 children: "Book Consultation"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 299,
+                                lineNumber: 548,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 295,
+                        lineNumber: 511,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 247,
+                lineNumber: 403,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -470,32 +876,32 @@ function AlternativeB() {
                                     sizes: "100vw"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 314,
+                                    lineNumber: 563,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 323,
+                                    lineNumber: 572,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 324,
+                                    lineNumber: 573,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 313,
+                            lineNumber: 562,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 312,
+                        lineNumber: 561,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,7 +919,7 @@ function AlternativeB() {
                                                 children: "Precision meets"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 333,
+                                                lineNumber: 582,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -522,13 +928,13 @@ function AlternativeB() {
                                                 children: "Modern Care."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 336,
+                                                lineNumber: 585,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 332,
+                                        lineNumber: 581,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -537,7 +943,7 @@ function AlternativeB() {
                                         children: "Where clinical excellence meets genuine human connection. We craft smiles with the same meticulous attention a master artisan devotes to each creation."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 345,
+                                        lineNumber: 594,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -553,27 +959,27 @@ function AlternativeB() {
                                                         children: "Begin Your Journey"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 359,
+                                                        lineNumber: 608,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                         className: "relative z-10 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 360,
+                                                        lineNumber: 609,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 361,
+                                                        lineNumber: 610,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 355,
+                                                lineNumber: 604,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -585,12 +991,12 @@ function AlternativeB() {
                                                             className: "w-4 h-4 ml-0.5 fill-navy text-navy"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 366,
+                                                            lineNumber: 615,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 365,
+                                                        lineNumber: 614,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -598,25 +1004,25 @@ function AlternativeB() {
                                                         children: "Watch Our Story"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 368,
+                                                        lineNumber: 617,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 364,
+                                                lineNumber: 613,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 354,
+                                        lineNumber: 603,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 330,
+                                lineNumber: 579,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -642,17 +1048,17 @@ function AlternativeB() {
                                                         ][i - 1]
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 385,
+                                                        lineNumber: 634,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, i, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 381,
+                                                    lineNumber: 630,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 379,
+                                            lineNumber: 628,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -668,17 +1074,17 @@ function AlternativeB() {
                                                                 d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 399,
+                                                                lineNumber: 648,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, i, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 394,
+                                                            lineNumber: 643,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 392,
+                                                    lineNumber: 641,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -689,37 +1095,37 @@ function AlternativeB() {
                                                             children: "4.9"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 404,
+                                                            lineNumber: 653,
                                                             columnNumber: 19
                                                         }, this),
                                                         " from 500+ reviews"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 403,
+                                                    lineNumber: 652,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 391,
+                                            lineNumber: 640,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 378,
+                                    lineNumber: 627,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 374,
+                                lineNumber: 623,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 329,
+                        lineNumber: 578,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -730,7 +1136,7 @@ function AlternativeB() {
                                 children: "Scroll"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 413,
+                                lineNumber: 662,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -739,24 +1145,24 @@ function AlternativeB() {
                                     className: "w-1 h-2.5 rounded-full bg-green animate-bounce"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 417,
+                                    lineNumber: 666,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 416,
+                                lineNumber: 665,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 412,
+                        lineNumber: 661,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 307,
+                lineNumber: 556,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -773,7 +1179,7 @@ function AlternativeB() {
                                         children: stat.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 428,
+                                        lineNumber: 677,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -781,28 +1187,28 @@ function AlternativeB() {
                                         children: stat.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 431,
+                                        lineNumber: 680,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, stat.label, true, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 427,
+                                lineNumber: 676,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 425,
+                        lineNumber: 674,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 424,
+                    lineNumber: 673,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 423,
+                lineNumber: 672,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -820,14 +1226,14 @@ function AlternativeB() {
                                             className: "w-1.5 h-1.5 rounded-full bg-green"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 444,
+                                            lineNumber: 693,
                                             columnNumber: 15
                                         }, this),
                                         "The Patient Journey"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 443,
+                                    lineNumber: 692,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -840,13 +1246,13 @@ function AlternativeB() {
                                             children: "Lasting Confidence"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 449,
+                                            lineNumber: 698,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 447,
+                                    lineNumber: 696,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -854,13 +1260,13 @@ function AlternativeB() {
                                     children: "A systematic approach refined over 25 years, combining clinical science with genuine human care."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 451,
+                                    lineNumber: 700,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 442,
+                            lineNumber: 691,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -878,7 +1284,7 @@ function AlternativeB() {
                                                         children: item.number
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 466,
+                                                        lineNumber: 715,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -886,13 +1292,13 @@ function AlternativeB() {
                                                         children: item.icon
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 469,
+                                                        lineNumber: 718,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 465,
+                                                lineNumber: 714,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -900,7 +1306,7 @@ function AlternativeB() {
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 473,
+                                                lineNumber: 722,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -908,7 +1314,7 @@ function AlternativeB() {
                                                 children: item.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 476,
+                                                lineNumber: 725,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -920,40 +1326,40 @@ function AlternativeB() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 483,
+                                                        lineNumber: 732,
                                                         columnNumber: 32
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 479,
+                                                lineNumber: 728,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 464,
+                                        lineNumber: 713,
                                         columnNumber: 17
                                     }, this)
                                 }, item.number, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 460,
+                                    lineNumber: 709,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 458,
+                            lineNumber: 707,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 440,
+                    lineNumber: 689,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 439,
+                lineNumber: 688,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -971,14 +1377,14 @@ function AlternativeB() {
                                             className: "w-1.5 h-1.5 rounded-full bg-green"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 498,
+                                            lineNumber: 747,
                                             columnNumber: 15
                                         }, this),
                                         "Meet Your Dentists"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 497,
+                                    lineNumber: 746,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -990,14 +1396,14 @@ function AlternativeB() {
                                             children: "Legacy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 502,
+                                            lineNumber: 751,
                                             columnNumber: 24
                                         }, this),
                                         " of Excellence"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 501,
+                                    lineNumber: 750,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1005,13 +1411,13 @@ function AlternativeB() {
                                     children: "Three generations committed to your smile. Your care is our family tradition."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 504,
+                                    lineNumber: 753,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 496,
+                            lineNumber: 745,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1031,7 +1437,7 @@ function AlternativeB() {
                                                         className: "object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-700"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 516,
+                                                        lineNumber: 765,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1044,18 +1450,18 @@ function AlternativeB() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 524,
+                                                            lineNumber: 773,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 523,
+                                                        lineNumber: 772,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 515,
+                                                lineNumber: 764,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1071,13 +1477,13 @@ function AlternativeB() {
                                                                 children: doctor.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 532,
+                                                                lineNumber: 781,
                                                                 columnNumber: 38
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 531,
+                                                        lineNumber: 780,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1085,29 +1491,29 @@ function AlternativeB() {
                                                         children: doctor.credentials
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 534,
+                                                        lineNumber: 783,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 530,
+                                                lineNumber: 779,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 513,
+                                        lineNumber: 762,
                                         columnNumber: 17
                                     }, this)
                                 }, doctor.id, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 512,
+                                    lineNumber: 761,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 510,
+                            lineNumber: 759,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1121,29 +1527,29 @@ function AlternativeB() {
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 550,
+                                        lineNumber: 799,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 545,
+                                lineNumber: 794,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 544,
+                            lineNumber: 793,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 494,
+                    lineNumber: 743,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 493,
+                lineNumber: 742,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1167,17 +1573,17 @@ function AlternativeB() {
                                                 className: "object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 564,
+                                                lineNumber: 813,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 563,
+                                            lineNumber: 812,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 562,
+                                        lineNumber: 811,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1191,12 +1597,12 @@ function AlternativeB() {
                                                         className: "w-6 h-6 text-green"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 576,
+                                                        lineNumber: 825,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 575,
+                                                    lineNumber: 824,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1206,7 +1612,7 @@ function AlternativeB() {
                                                             children: "Top Dentist 2024"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 579,
+                                                            lineNumber: 828,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1214,30 +1620,30 @@ function AlternativeB() {
                                                             children: "D Magazine Reader's Choice"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 580,
+                                                            lineNumber: 829,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 578,
+                                                    lineNumber: 827,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 574,
+                                            lineNumber: 823,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 573,
+                                        lineNumber: 822,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 561,
+                                lineNumber: 810,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1250,14 +1656,14 @@ function AlternativeB() {
                                                 className: "w-1.5 h-1.5 rounded-full bg-green"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 589,
+                                                lineNumber: 838,
                                                 columnNumber: 17
                                             }, this),
                                             "About Our Practice"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 588,
+                                        lineNumber: 837,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1270,13 +1676,13 @@ function AlternativeB() {
                                                 children: "your confidence"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 594,
+                                                lineNumber: 843,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 592,
+                                        lineNumber: 841,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1284,7 +1690,7 @@ function AlternativeB() {
                                         children: "Dr. Michael Musso founded this practice with a simple belief—that exceptional dental care should be accessible, comfortable, and transformative."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 596,
+                                        lineNumber: 845,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1292,7 +1698,7 @@ function AlternativeB() {
                                         children: "Today, that founding philosophy guides every decision we make, from the technology we invest in to the team members we hire."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 600,
+                                        lineNumber: 849,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1306,12 +1712,12 @@ function AlternativeB() {
                                                             className: "w-3 h-3 text-green"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 610,
+                                                            lineNumber: 859,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 609,
+                                                        lineNumber: 858,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1319,18 +1725,18 @@ function AlternativeB() {
                                                         children: service
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 612,
+                                                        lineNumber: 861,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, service, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 608,
+                                                lineNumber: 857,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 606,
+                                        lineNumber: 855,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1342,35 +1748,35 @@ function AlternativeB() {
                                                 className: "w-4 h-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 622,
+                                                lineNumber: 871,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 617,
+                                        lineNumber: 866,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                lineNumber: 587,
+                                lineNumber: 836,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 559,
+                        lineNumber: 808,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 558,
+                    lineNumber: 807,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 557,
+                lineNumber: 806,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1380,14 +1786,14 @@ function AlternativeB() {
                         className: "absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-green/5 to-transparent pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 632,
+                        lineNumber: 881,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 633,
+                        lineNumber: 882,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1405,14 +1811,14 @@ function AlternativeB() {
                                             children: "commodity dentistry"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 639,
+                                            lineNumber: 888,
                                             columnNumber: 15
                                         }, this),
                                         ". We craft lasting confidence through precision, artistry, and genuine human connection.”"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 637,
+                                    lineNumber: 886,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1425,12 +1831,12 @@ function AlternativeB() {
                                                 children: "DM"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 645,
+                                                lineNumber: 894,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 644,
+                                            lineNumber: 893,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1441,7 +1847,7 @@ function AlternativeB() {
                                                     children: "Dr. Michael Musso"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 648,
+                                                    lineNumber: 897,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1449,36 +1855,36 @@ function AlternativeB() {
                                                     children: "Founder & Lead Clinician"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 649,
+                                                    lineNumber: 898,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 647,
+                                            lineNumber: 896,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 643,
+                                    lineNumber: 892,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 636,
+                            lineNumber: 885,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/alt-b/page.tsx",
-                        lineNumber: 635,
+                        lineNumber: 884,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 630,
+                lineNumber: 879,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1496,14 +1902,14 @@ function AlternativeB() {
                                             className: "w-1.5 h-1.5 rounded-full bg-green"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 662,
+                                            lineNumber: 911,
                                             columnNumber: 15
                                         }, this),
                                         "Visit Us"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 661,
+                                    lineNumber: 910,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1515,13 +1921,13 @@ function AlternativeB() {
                                             children: "Office"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 666,
+                                            lineNumber: 915,
                                             columnNumber: 24
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 665,
+                                    lineNumber: 914,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1529,13 +1935,13 @@ function AlternativeB() {
                                     children: "Conveniently located in Garland, TX. We look forward to welcoming you."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 668,
+                                    lineNumber: 917,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 660,
+                            lineNumber: 909,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1551,7 +1957,7 @@ function AlternativeB() {
                                                 children: "Contact Information"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 677,
+                                                lineNumber: 926,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1566,12 +1972,12 @@ function AlternativeB() {
                                                                     className: "w-5 h-5 text-green"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                    lineNumber: 682,
+                                                                    lineNumber: 931,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 681,
+                                                                lineNumber: 930,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1581,7 +1987,7 @@ function AlternativeB() {
                                                                         children: "Address"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 685,
+                                                                        lineNumber: 934,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1590,26 +1996,26 @@ function AlternativeB() {
                                                                             "513 W Centerville Rd",
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                                lineNumber: 686,
+                                                                                lineNumber: 935,
                                                                                 columnNumber: 79
                                                                             }, this),
                                                                             "Garland, TX 75041"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 686,
+                                                                        lineNumber: 935,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 684,
+                                                                lineNumber: 933,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 680,
+                                                        lineNumber: 929,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1621,12 +2027,12 @@ function AlternativeB() {
                                                                     className: "w-5 h-5 text-green"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                    lineNumber: 692,
+                                                                    lineNumber: 941,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 691,
+                                                                lineNumber: 940,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1636,7 +2042,7 @@ function AlternativeB() {
                                                                         children: "Phone"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 695,
+                                                                        lineNumber: 944,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1645,19 +2051,19 @@ function AlternativeB() {
                                                                         children: "(972) 278-1827"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 696,
+                                                                        lineNumber: 945,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 694,
+                                                                lineNumber: 943,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 690,
+                                                        lineNumber: 939,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1669,12 +2075,12 @@ function AlternativeB() {
                                                                     className: "w-5 h-5 text-green"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                    lineNumber: 702,
+                                                                    lineNumber: 951,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 701,
+                                                                lineNumber: 950,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1684,7 +2090,7 @@ function AlternativeB() {
                                                                         children: "Email"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 705,
+                                                                        lineNumber: 954,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1693,19 +2099,19 @@ function AlternativeB() {
                                                                         children: "info@mussofamilydentistry.com"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 706,
+                                                                        lineNumber: 955,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 704,
+                                                                lineNumber: 953,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 700,
+                                                        lineNumber: 949,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1717,12 +2123,12 @@ function AlternativeB() {
                                                                     className: "w-5 h-5 text-green"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                    lineNumber: 712,
+                                                                    lineNumber: 961,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 711,
+                                                                lineNumber: 960,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1732,7 +2138,7 @@ function AlternativeB() {
                                                                         children: "Hours"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 715,
+                                                                        lineNumber: 964,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1742,45 +2148,45 @@ function AlternativeB() {
                                                                                 children: "Mon - Fri: 8:00am - 5:00pm"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                                lineNumber: 717,
+                                                                                lineNumber: 966,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                 children: "Saturday: By Appointment"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                                lineNumber: 718,
+                                                                                lineNumber: 967,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                 children: "Sunday: Closed"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                                lineNumber: 719,
+                                                                                lineNumber: 968,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                        lineNumber: 716,
+                                                                        lineNumber: 965,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                                lineNumber: 714,
+                                                                lineNumber: 963,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 710,
+                                                        lineNumber: 959,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 679,
+                                                lineNumber: 928,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1794,24 +2200,24 @@ function AlternativeB() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                                        lineNumber: 732,
+                                                        lineNumber: 981,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/alt-b/page.tsx",
-                                                lineNumber: 725,
+                                                lineNumber: 974,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 676,
+                                        lineNumber: 925,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 675,
+                                    lineNumber: 924,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1833,34 +2239,34 @@ function AlternativeB() {
                                             className: "rounded-4xl"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 740,
+                                            lineNumber: 989,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/alt-b/page.tsx",
-                                        lineNumber: 739,
+                                        lineNumber: 988,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 738,
+                                    lineNumber: 987,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 673,
+                            lineNumber: 922,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 658,
+                    lineNumber: 907,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 657,
+                lineNumber: 906,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1875,14 +2281,14 @@ function AlternativeB() {
                                     className: "w-1.5 h-1.5 rounded-full bg-green"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 761,
+                                    lineNumber: 1010,
                                     columnNumber: 13
                                 }, this),
                                 "Get Started"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 760,
+                            lineNumber: 1009,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1895,13 +2301,13 @@ function AlternativeB() {
                                     children: "a conversation"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 766,
+                                    lineNumber: 1015,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 764,
+                            lineNumber: 1013,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1909,7 +2315,7 @@ function AlternativeB() {
                             children: "Schedule a consultation and discover what sets Musso Family Dentistry apart. No pressure. No obligation. Just honest guidance."
                         }, void 0, false, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 768,
+                            lineNumber: 1017,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1924,27 +2330,27 @@ function AlternativeB() {
                                             children: "Book Your Consultation"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 777,
+                                            lineNumber: 1026,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                             className: "relative z-10 w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 778,
+                                            lineNumber: 1027,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 779,
+                                            lineNumber: 1028,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 773,
+                                    lineNumber: 1022,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1955,31 +2361,31 @@ function AlternativeB() {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 785,
+                                            lineNumber: 1034,
                                             columnNumber: 15
                                         }, this),
                                         "(555) 123-4567"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 781,
+                                    lineNumber: 1030,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 772,
+                            lineNumber: 1021,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 759,
+                    lineNumber: 1008,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 758,
+                lineNumber: 1007,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -2001,7 +2407,7 @@ function AlternativeB() {
                                             className: "h-10 w-auto brightness-0 invert mb-6"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 797,
+                                            lineNumber: 1046,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2009,13 +2415,13 @@ function AlternativeB() {
                                             children: "Precision dentistry for the modern family. Serving Garland, TX and surrounding communities since 1999."
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 804,
+                                            lineNumber: 1053,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 796,
+                                    lineNumber: 1045,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2025,7 +2431,7 @@ function AlternativeB() {
                                             children: "Contact"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 810,
+                                            lineNumber: 1059,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2038,14 +2444,14 @@ function AlternativeB() {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 813,
+                                                            lineNumber: 1062,
                                                             columnNumber: 19
                                                         }, this),
                                                         " (555) 123-4567"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 812,
+                                                    lineNumber: 1061,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2055,14 +2461,14 @@ function AlternativeB() {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 816,
+                                                            lineNumber: 1065,
                                                             columnNumber: 19
                                                         }, this),
                                                         " hello@mussodental.com"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 815,
+                                                    lineNumber: 1064,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2072,26 +2478,26 @@ function AlternativeB() {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                                            lineNumber: 819,
+                                                            lineNumber: 1068,
                                                             columnNumber: 19
                                                         }, this),
                                                         " Garland, TX"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 818,
+                                                    lineNumber: 1067,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 811,
+                                            lineNumber: 1060,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 809,
+                                    lineNumber: 1058,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2101,7 +2507,7 @@ function AlternativeB() {
                                             children: "Hours"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 824,
+                                            lineNumber: 1073,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2111,39 +2517,39 @@ function AlternativeB() {
                                                     children: "Monday – Friday: 8am – 6pm"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 826,
+                                                    lineNumber: 1075,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: "Saturday: 9am – 2pm"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 827,
+                                                    lineNumber: 1076,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: "Sunday: Closed"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                                    lineNumber: 828,
+                                                    lineNumber: 1077,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 825,
+                                            lineNumber: 1074,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 823,
+                                    lineNumber: 1072,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 795,
+                            lineNumber: 1044,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2158,7 +2564,7 @@ function AlternativeB() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 833,
+                                    lineNumber: 1082,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2170,7 +2576,7 @@ function AlternativeB() {
                                             children: "Privacy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 837,
+                                            lineNumber: 1086,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2179,36 +2585,36 @@ function AlternativeB() {
                                             children: "Terms"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/alt-b/page.tsx",
-                                            lineNumber: 840,
+                                            lineNumber: 1089,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/alt-b/page.tsx",
-                                    lineNumber: 836,
+                                    lineNumber: 1085,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/alt-b/page.tsx",
-                            lineNumber: 832,
+                            lineNumber: 1081,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/alt-b/page.tsx",
-                    lineNumber: 794,
+                    lineNumber: 1043,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/alt-b/page.tsx",
-                lineNumber: 793,
+                lineNumber: 1042,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/alt-b/page.tsx",
-        lineNumber: 245,
+        lineNumber: 401,
         columnNumber: 5
     }, this);
 }
