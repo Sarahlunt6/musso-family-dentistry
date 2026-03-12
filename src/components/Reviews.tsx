@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
@@ -49,13 +49,26 @@ const reviews = [
     text: "Our whole family goes here - from my 5-year-old to my 75-year-old mother. They're great with patients of all ages and always make us feel welcome.",
     service: "Family Dentistry",
   },
+  {
+    id: 6,
+    name: "Robert H.",
+    location: "Plano, TX",
+    rating: 5,
+    text: "Professional, punctual, and painless. The team here goes above and beyond. I've recommended them to all my coworkers.",
+    service: "General Dentistry",
+  },
 ];
 
-export default function Reviews() {
+interface ReviewsProps {
+  variant?: "default" | "carousel";
+}
+
+export default function Reviews({ variant = "default" }: ReviewsProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   const goToPrevious = () => {
     if (isAnimating) return;
@@ -64,12 +77,23 @@ export default function Reviews() {
     setTimeout(() => setIsAnimating(false), 300);
   };
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) => (prev + 1) % reviews.length);
     setTimeout(() => setIsAnimating(false), 300);
-  };
+  }, [isAnimating]);
+
+  // Auto-scroll for carousel variant
+  useEffect(() => {
+    if (variant !== "carousel" || isPaused) return;
+
+    const interval = setInterval(() => {
+      goToNext();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [variant, isPaused, goToNext]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -111,6 +135,173 @@ export default function Reviews() {
 
   const currentReview = reviews[currentIndex];
 
+  // Get visible reviews for carousel (3 at a time)
+  const getVisibleReviews = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % reviews.length;
+      visible.push({ ...reviews[index], displayIndex: i });
+    }
+    return visible;
+  };
+
+  // Carousel variant - 3 square cards with auto-scroll
+  if (variant === "carousel") {
+    return (
+      <section
+        ref={sectionRef}
+        className="py-16 sm:py-20 lg:py-24 bg-[#FDFBF7]"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {/* Section Header */}
+          <div ref={headerRef} className="text-center mb-10 sm:mb-12">
+            <p className="text-xs sm:text-sm text-[#245532] font-medium uppercase tracking-wide mb-3 sm:mb-4">
+              Patient Stories
+            </p>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1f2f5f]">
+              What our patients say.
+            </h2>
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base text-[#1f2f5f]/60 max-w-2xl mx-auto">
+              Real experiences from real patients. See why families trust us with their smiles.
+            </p>
+          </div>
+
+          {/* Stats Bar */}
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto mb-10 sm:mb-12">
+            <div className="text-center">
+              <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#245532] font-semibold">4.9</p>
+              <div className="flex items-center justify-center gap-0.5 mt-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-[#245532] text-[#245532]" />
+                ))}
+              </div>
+              <p className="text-xs sm:text-sm text-[#1f2f5f]/50 mt-1">Average Rating</p>
+            </div>
+            <div className="text-center">
+              <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#245532] font-semibold">500+</p>
+              <p className="text-xs sm:text-sm text-[#1f2f5f]/50 mt-2">Google Reviews</p>
+            </div>
+            <div className="text-center">
+              <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#245532] font-semibold">98%</p>
+              <p className="text-xs sm:text-sm text-[#1f2f5f]/50 mt-2">Recommend Us</p>
+            </div>
+          </div>
+
+          {/* Carousel Cards */}
+          <div className="relative">
+            {/* Cards Container */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              {getVisibleReviews().map((review, idx) => (
+                <div
+                  key={`${review.id}-${currentIndex}`}
+                  className={cn(
+                    "aspect-square bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 flex flex-col shadow-sm border border-[#1f2f5f]/5 transition-all duration-500",
+                    isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
+                  )}
+                  style={{ transitionDelay: `${idx * 100}ms` }}
+                >
+                  {/* Quote Icon */}
+                  <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-[#245532]/20 mb-3 sm:mb-4" />
+
+                  {/* Stars */}
+                  <div className="flex items-center gap-0.5 mb-3 sm:mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-[#245532] text-[#245532]" />
+                    ))}
+                  </div>
+
+                  {/* Review Text */}
+                  <p className="text-[#1f2f5f]/70 text-sm sm:text-base leading-relaxed flex-grow line-clamp-4">
+                    &ldquo;{review.text}&rdquo;
+                  </p>
+
+                  {/* Author */}
+                  <div className="mt-4 sm:mt-6 pt-4 border-t border-[#1f2f5f]/10">
+                    <p className="font-medium text-[#1f2f5f] text-sm sm:text-base">{review.name}</p>
+                    <div className="flex items-center justify-between mt-1">
+                      <p className="text-xs sm:text-sm text-[#1f2f5f]/50">{review.location}</p>
+                      <span className="px-2 py-1 rounded-full bg-[#245532]/10 text-[#245532] text-xs font-medium">
+                        {review.service}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                onClick={goToPrevious}
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#1f2f5f]/10 flex items-center justify-center text-[#1f2f5f]/50 hover:text-[#245532] hover:border-[#245532] transition-colors"
+                aria-label="Previous reviews"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              {/* Dots */}
+              <div className="flex items-center gap-2">
+                {reviews.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      if (!isAnimating) {
+                        setIsAnimating(true);
+                        setCurrentIndex(index);
+                        setTimeout(() => setIsAnimating(false), 300);
+                      }
+                    }}
+                    className={cn(
+                      "h-2 rounded-full transition-all duration-300",
+                      index === currentIndex
+                        ? "w-6 bg-[#245532]"
+                        : "w-2 bg-[#1f2f5f]/20 hover:bg-[#1f2f5f]/40"
+                    )}
+                    aria-label={`Go to review ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={goToNext}
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#1f2f5f]/10 flex items-center justify-center text-[#1f2f5f]/50 hover:text-[#245532] hover:border-[#245532] transition-colors"
+                aria-label="Next reviews"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Auto-scroll indicator */}
+            <p className="text-center text-xs text-[#1f2f5f]/40 mt-4">
+              {isPaused ? "Paused" : "Auto-scrolling"} • Hover to pause
+            </p>
+          </div>
+
+          {/* Google Review Link */}
+          <div className="text-center mt-8">
+            <a
+              href="https://www.google.com/maps/place/Musso+Family+Dentistry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#245532] hover:text-[#1f2f5f] transition-colors font-medium"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+              Read All Reviews on Google
+            </a>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Default variant
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 bg-[#FAFAF8]">
       <div className="max-w-6xl mx-auto px-6">

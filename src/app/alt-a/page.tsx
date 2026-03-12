@@ -766,7 +766,7 @@ export default function AlternativeA() {
       </section>
 
       {/* Reviews */}
-      <Reviews />
+      <Reviews variant="carousel" />
 
       {/* CTA */}
       <section className="py-24 bg-[#FDFBF7]">
