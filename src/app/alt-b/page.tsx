@@ -427,8 +427,8 @@ export default function AlternativeB() {
       <nav
         ref={navRef}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-navy/90 backdrop-blur-sm"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/95 backdrop-blur-md",
+          isScrolled && "shadow-sm"
         )}
       >
         <div className="max-w-7xl mx-auto px-6">
@@ -455,10 +455,8 @@ export default function AlternativeB() {
                     className={cn(
                       "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-full",
                       activeDropdown === dropdown.label
-                        ? "text-green bg-green/10"
-                        : isScrolled
-                          ? "text-navy/70 hover:text-navy hover:bg-navy/5"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
+                        ? "text-green bg-green/5"
+                        : "text-navy/70 hover:text-navy hover:bg-navy/5"
                     )}
                   >
                     {dropdown.label}
@@ -511,17 +509,14 @@ export default function AlternativeB() {
                   )}
                 </div>
               ))}
-              <a href="#" className={cn(
-                "px-4 py-2 text-sm transition-colors",
-                isScrolled ? "text-navy/70 hover:text-green" : "text-white/80 hover:text-white"
-              )}>
+              <a href="#" className="px-4 py-2 text-sm text-navy/70 hover:text-green transition-colors">
                 Contact
               </a>
             </div>
 
             <a
               href="#"
-              className="hidden lg:flex items-center gap-2 px-6 py-3 bg-green text-white text-sm font-medium rounded-full hover:bg-white hover:text-navy transition-colors"
+              className="hidden lg:flex items-center gap-2 px-6 py-3 bg-green text-white text-sm font-medium rounded-full hover:bg-navy transition-colors"
             >
               Book Consultation
               <ArrowUpRight className="w-4 h-4" />
@@ -529,7 +524,7 @@ export default function AlternativeB() {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={cn("lg:hidden p-2", isScrolled ? "text-navy" : "text-white")}
+              className="lg:hidden p-2 text-navy"
             >
               {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
