@@ -119,15 +119,15 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 w-full pt-20">
         <div className="max-w-3xl">
           {/* Headline - Contrast Driven Typography */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
-            <span ref={line1Ref} className="block hero-sans">
-              Top Garland Dentist:
+          <h1 className="leading-[0.95] tracking-tight">
+            <span ref={line1Ref} className="block text-lg sm:text-xl lg:text-2xl text-navy/60 font-medium uppercase tracking-widest mb-4">
+              Musso Family Dentistry
             </span>
             <span
               ref={line2Ref}
-              className="block hero-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl mt-1"
+              className="block hero-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
             >
-              Musso Family Dentistry
+              Garland&apos;s Premier Dentist
             </span>
           </h1>
 

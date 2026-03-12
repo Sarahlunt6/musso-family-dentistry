@@ -494,9 +494,13 @@ export default function AlternativeA() {
                 Welcoming New Patients
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#1f2f5f] leading-[1.1]">
-                Top Garland Dentist:
-                <span className="block text-[#245532] mt-1 sm:mt-2">Musso Family Dentistry</span>
+              <h1 className="leading-[1.1]">
+                <span className="block text-sm sm:text-base lg:text-lg text-[#1f2f5f]/60 font-medium uppercase tracking-widest mb-3">
+                  Musso Family Dentistry
+                </span>
+                <span className="block font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#245532]">
+                  Garland&apos;s Premier Dentist
+                </span>
               </h1>
 
               <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#1f2f5f]/60 leading-relaxed max-w-lg">

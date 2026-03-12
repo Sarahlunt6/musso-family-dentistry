@@ -596,15 +596,15 @@ export default function AlternativeB() {
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">
-                <span ref={line1Ref} className="block text-white/70 font-medium">
-                  Top Garland Dentist:
+              <h1 className="leading-[1.05] tracking-tight">
+                <span ref={line1Ref} className="block text-sm sm:text-base lg:text-lg text-white/50 font-medium uppercase tracking-widest mb-4">
+                  Musso Family Dentistry
                 </span>
                 <span
                   ref={line2Ref}
-                  className="block text-white hero-serif mt-2"
+                  className="block text-white hero-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl"
                 >
-                  Musso Family Dentistry
+                  Garland&apos;s Premier Dentist
                 </span>
               </h1>
 
