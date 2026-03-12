@@ -495,8 +495,8 @@ export default function AlternativeA() {
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#1f2f5f] leading-[1.1]">
-                Where families find their
-                <span className="block text-[#245532] mt-1 sm:mt-2">forever dentist.</span>
+                Top Garland Dentist:
+                <span className="block text-[#245532] mt-1 sm:mt-2">Musso Family Dentistry</span>
               </h1>
 
               <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#1f2f5f]/60 leading-relaxed max-w-lg">

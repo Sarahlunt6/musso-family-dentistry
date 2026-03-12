@@ -121,13 +121,13 @@ export default function Hero() {
           {/* Headline - Contrast Driven Typography */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
             <span ref={line1Ref} className="block hero-sans">
-              Legacy meets
+              Top Garland Dentist:
             </span>
             <span
               ref={line2Ref}
               className="block hero-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl mt-1"
             >
-              Modern Artistry.
+              Musso Family Dentistry
             </span>
           </h1>
 

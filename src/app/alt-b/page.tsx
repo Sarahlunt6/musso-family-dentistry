@@ -604,13 +604,13 @@ export default function AlternativeB() {
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
               <span ref={line1Ref} className="block hero-sans">
-                Precision meets
+                Top Garland Dentist:
               </span>
               <span
                 ref={line2Ref}
                 className="block hero-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mt-1"
               >
-                Modern Care.
+                Musso Family Dentistry
               </span>
             </h1>
 
