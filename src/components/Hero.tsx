@@ -27,7 +27,7 @@ export default function Hero() {
       });
       gsap.set(imageRef.current, {
         opacity: 0,
-        scale: 1.05,
+        scale: 1,
         clipPath: "inset(100% 0 0 0)",
       });
       gsap.set(badgeRef.current, {
@@ -108,7 +108,8 @@ export default function Hero() {
             priority
             className="object-cover object-center"
             sizes="100vw"
-            quality={90}
+            quality={100}
+            unoptimized
           />
           {/* Gradient Overlay for text contrast */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/20" />

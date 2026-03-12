@@ -40,6 +40,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Specialties from "@/components/Specialties";
+import Reviews from "@/components/Reviews";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -1038,8 +1039,11 @@ export default function AlternativeB() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <Reviews />
+
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-[#FAFAF8]">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/5 text-green text-sm font-medium mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-green" />

@@ -41,6 +41,7 @@ import {
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Specialties from "@/components/Specialties";
+import Reviews from "@/components/Reviews";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -763,6 +764,9 @@ export default function AlternativeA() {
           </div>
         </div>
       </section>
+
+      {/* Reviews */}
+      <Reviews />
 
       {/* CTA */}
       <section className="py-24 bg-[#FDFBF7]">
