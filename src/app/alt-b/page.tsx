@@ -590,14 +590,14 @@ export default function AlternativeB() {
 
             <div className="relative max-w-xl">
               {/* Badge */}
-              <div ref={badgeRef} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-green text-sm font-medium mb-8">
+              <div ref={badgeRef} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green/20 text-green text-sm font-medium mb-8">
                 <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
                 Now Accepting New Patients
               </div>
 
               {/* Headline */}
               <h1 className="leading-[1.05] tracking-tight">
-                <span ref={line1Ref} className="block text-sm sm:text-base lg:text-lg text-white/50 font-medium uppercase tracking-widest mb-4">
+                <span ref={line1Ref} className="block text-sm sm:text-base lg:text-lg text-white/70 font-medium uppercase tracking-widest mb-4">
                   Musso Family Dentistry
                 </span>
                 <span
@@ -611,7 +611,7 @@ export default function AlternativeB() {
               {/* Subline */}
               <p
                 ref={sublineRef}
-                className="mt-6 sm:mt-8 text-base sm:text-lg text-white/50 leading-relaxed"
+                className="mt-6 sm:mt-8 text-base sm:text-lg text-white/70 leading-relaxed"
               >
                 Where clinical excellence meets genuine human connection. Serving
                 Garland families with precision care for over 25 years.

@@ -265,9 +265,9 @@ export default function Navbar() {
             <Image
               src="/logo.webp"
               alt="Musso Family Dentistry"
-              width={180}
-              height={45}
-              className="h-9 w-auto"
+              width={220}
+              height={55}
+              className="h-12 w-auto"
               priority
             />
           </a>
