@@ -437,9 +437,9 @@ export default function AlternativeB() {
               <Image
                 src="/logo.webp"
                 alt="Musso Family Dentistry"
-                width={180}
-                height={45}
-                className="h-10 w-auto"
+                width={220}
+                height={55}
+                className="h-14 w-auto"
               />
             </a>
 
@@ -576,119 +576,126 @@ export default function AlternativeB() {
         )}
       </nav>
 
-      {/* Hero - Split Layout */}
+      {/* Hero - Split Screen Layout */}
       <section
         ref={heroRef}
-        className="relative min-h-[100dvh] flex items-center overflow-hidden bg-white"
+        className="relative min-h-[100dvh] flex items-stretch overflow-hidden"
       >
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <div ref={imageRef} className="relative w-full h-full">
+        {/* Left Side - Navy Background with Content */}
+        <div className="relative w-full lg:w-1/2 bg-navy flex items-center">
+          <div className="relative w-full px-6 sm:px-12 lg:px-16 py-24 lg:py-0">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-green/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
+
+            <div className="relative max-w-xl">
+              {/* Badge */}
+              <div ref={badgeRef} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-green text-sm font-medium mb-8">
+                <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
+                Now Accepting New Patients
+              </div>
+
+              {/* Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">
+                <span ref={line1Ref} className="block text-white/70 font-medium">
+                  Top Garland Dentist:
+                </span>
+                <span
+                  ref={line2Ref}
+                  className="block text-white hero-serif mt-2"
+                >
+                  Musso Family Dentistry
+                </span>
+              </h1>
+
+              {/* Subline */}
+              <p
+                ref={sublineRef}
+                className="mt-6 sm:mt-8 text-base sm:text-lg text-white/50 leading-relaxed"
+              >
+                Where clinical excellence meets genuine human connection. Serving
+                Garland families with precision care for over 25 years.
+              </p>
+
+              {/* CTA Buttons */}
+              <div ref={ctaRef} className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <a
+                  href="#"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-green text-white font-medium rounded-full hover:bg-white hover:text-navy transition-colors"
+                >
+                  <span>Book Consultation</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <a
+                  href="tel:+19722781827"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 text-white rounded-full hover:bg-white/10 transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>(972) 278-1827</span>
+                </a>
+              </div>
+
+              {/* Stats Row */}
+              <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-3 gap-6">
+                <div>
+                  <p className="text-3xl font-display text-green">25+</p>
+                  <p className="text-sm text-white/40 mt-1">Years</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-display text-green">15k+</p>
+                  <p className="text-sm text-white/40 mt-1">Patients</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-display text-green">4.9★</p>
+                  <p className="text-sm text-white/40 mt-1">Rating</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Image */}
+        <div className="hidden lg:block w-1/2 relative">
+          <div ref={imageRef} className="absolute inset-0">
             <Image
               src="/dental-office.jpg"
               alt="Musso Family Dentistry office"
               fill
               priority
               className="object-cover"
-              sizes="100vw"
+              sizes="50vw"
             />
-            {/* Professional gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40" />
-            <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full pt-24 sm:pt-20">
-          <div className="max-w-3xl">
-            {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
-              <span ref={line1Ref} className="block hero-sans">
-                Top Garland Dentist:
-              </span>
-              <span
-                ref={line2Ref}
-                className="block hero-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mt-1"
-              >
-                Musso Family Dentistry
-              </span>
-            </h1>
-
-            {/* Subline */}
-            <p
-              ref={sublineRef}
-              className="mt-5 sm:mt-8 text-base sm:text-lg md:text-xl text-navy/60 leading-relaxed max-w-xl"
-            >
-              Where clinical excellence meets genuine human connection. We craft smiles
-              with the same meticulous attention a master artisan devotes to each creation.
-            </p>
-
-            {/* CTA Buttons */}
-            <div ref={ctaRef} className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <a
-                href="#"
-                className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-green text-white text-sm sm:text-base font-medium rounded-full overflow-hidden"
-              >
-                <span className="relative z-10">Begin Your Journey</span>
-                <ArrowRight className="relative z-10 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </a>
-
-              <button className="group flex items-center justify-center gap-3 px-6 py-3.5 sm:py-4 text-navy/70 hover:text-navy transition-colors">
-                <span className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-clinical group-hover:shadow-clinical-lg transition-shadow">
-                  <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-0.5 fill-navy text-navy" />
-                </span>
-                <span className="font-medium text-sm sm:text-base">Watch Our Story</span>
-              </button>
-            </div>
+            {/* Subtle overlay */}
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-navy/20" />
           </div>
 
-          {/* Floating Badge */}
-          <div
-            ref={badgeRef}
-            className="absolute bottom-12 right-6 lg:right-12 hidden md:block"
-          >
-            <div className="clinical-container px-6 py-4 flex items-center gap-4">
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-navy/10 border-2 border-white flex items-center justify-center"
-                  >
-                    <span className="text-xs font-medium text-navy/60">
-                      {["JM", "SK", "DR"][i - 1]}
-                    </span>
-                  </div>
+          {/* Floating Review Card */}
+          <div className="absolute bottom-12 left-12 right-12">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-green text-green" />
                 ))}
               </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-4 h-4 text-green fill-green"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-sm text-navy/60 mt-1">
-                  <span className="font-semibold text-navy">4.9</span> from 500+ reviews
-                </p>
-              </div>
+              <p className="text-navy/80 italic">
+                &ldquo;The best dental experience I&apos;ve ever had. Professional, caring, and truly exceptional results.&rdquo;
+              </p>
+              <p className="mt-3 text-sm text-navy/50">— Sarah M., Garland Patient</p>
             </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-[10px] text-navy/30 uppercase tracking-[0.2em]">
-            Scroll
-          </span>
-          <div className="w-5 h-8 rounded-full border border-navy/20 flex items-start justify-center p-1">
-            <div className="w-1 h-2.5 rounded-full bg-green animate-bounce" />
-          </div>
+        {/* Mobile Image (shown below content on mobile) */}
+        <div className="lg:hidden absolute inset-0 -z-10">
+          <Image
+            src="/dental-office.jpg"
+            alt="Musso Family Dentistry office"
+            fill
+            priority
+            className="object-cover opacity-10"
+            sizes="100vw"
+          />
         </div>
       </section>
 
